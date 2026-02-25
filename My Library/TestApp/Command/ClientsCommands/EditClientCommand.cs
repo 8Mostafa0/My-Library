@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace My_Library.Command.ClientsCommands
 {
-    public class EditClientCommand : CommandBase
+    public class EditClientCommand : CommandBase, IEditClientCommand
     {
         #region Dependencies
         private IClientsStore _clientsStore;
