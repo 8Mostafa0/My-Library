@@ -28,7 +28,7 @@ namespace My_Library.ViewModel.SettingsViewModel
             }
         }
         private ISettingsStore _settingsStore;
-        private SettingNavigationStore _settingNavigationStore;
+        private ISettingNavigationStore _settingNavigationStore;
         #endregion
 
         #region Commands
@@ -36,7 +36,7 @@ namespace My_Library.ViewModel.SettingsViewModel
         #endregion
 
         #region Contructor
-        public SecuritySettingsViewModel(SettingNavigationStore settingNavigationStore)
+        public SecuritySettingsViewModel(ISettingNavigationStore settingNavigationStore)
         {
             _settingsStore = new SettingsStore();
             _settingNavigationStore = settingNavigationStore;

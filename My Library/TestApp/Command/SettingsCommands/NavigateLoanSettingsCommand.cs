@@ -6,7 +6,7 @@ namespace My_Library.Command.SettingsCommands
     public class NavigateLoanSettingsCommand : CommandBase
     {
         #region Dependencies
-        private SettingNavigationStore _navigationStore;
+        private ISettingNavigationStore _navigationStore;
         private ILoanSettingsViewModel _loanSettingsViewModel = new LoanSettingsViewModel();
         #endregion
 
@@ -15,7 +15,7 @@ namespace My_Library.Command.SettingsCommands
         /// set current view model of setting navigation to loan loan settings
         /// </summary>
         /// <param name="navigationStore"></param>
-        public NavigateLoanSettingsCommand(SettingNavigationStore navigationStore)
+        public NavigateLoanSettingsCommand(ISettingNavigationStore navigationStore)
         {
             _navigationStore = navigationStore;
         }

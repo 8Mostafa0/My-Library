@@ -7,7 +7,7 @@ namespace My_Library.Command.SettingsCommands
     public class NavigateLayoutSettingCommand : CommandBase
     {
         #region Dependencies
-        private SettingNavigationStore _settingNavigationStore;
+        private ISettingNavigationStore _settingNavigationStore;
         private IMainLayoutSettingViewModel _mainLayoutSettingViewModel = new MainLayoutSettingViewModel();
         #endregion
 
@@ -16,7 +16,7 @@ namespace My_Library.Command.SettingsCommands
         /// set setting view of setting navigation to main setting navigation
         /// </summary>
         /// <param name="settingNavigationStore"></param>
-        public NavigateLayoutSettingCommand(SettingNavigationStore settingNavigationStore)
+        public NavigateLayoutSettingCommand(ISettingNavigationStore settingNavigationStore)
         {
             _settingNavigationStore = settingNavigationStore;
 
