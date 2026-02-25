@@ -16,5 +16,5 @@ C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\App.xaml
 222-580933553
 Component\BooksView.xaml;Component\ClientsView.xaml;Component\DatabaseTestView.xaml;Component\HomeView.xaml;Component\LayoutView.xaml;Component\LoanComponents\AddEditeLoanView.xaml;Component\LoanComponents\LoansView.xaml;Component\LoginView.xaml;Component\NavigationBarView.xaml;Component\ReserveBookViews\AddEditeReserveBookView.xaml;Component\ReserveBookViews\ReservedBooksView.xaml;Component\SettingsViews\HomeLayoutSettingsView.xaml;Component\SettingsViews\LoansSettingsView.xaml;Component\SettingsViews\SecureitySettingsView.xaml;Component\SettingsViews\SettingsView.xaml;Component\StatusBarView.xaml;MainWindow.xaml;
 
-False
+True
 

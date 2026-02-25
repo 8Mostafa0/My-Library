@@ -1,12 +1,12 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows;
-using System.Windows.Data;
-using System.Windows.Input;
-using My_Library.Command;
+﻿using My_Library.Command;
 using My_Library.Command.ClientsCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
@@ -127,7 +127,7 @@ namespace My_Library.ViewModel
         private void OnClientDeleted(Client client)
         {
             _clients.Remove(client);
-            MessageBox.Show("کاربر با موفقیت حذف شد", "عملیات حذف");
+            MessageBox.Show("کاربر با موفقیت حذف شد", "حذف کاربر");
         }
 
         /// <summary>

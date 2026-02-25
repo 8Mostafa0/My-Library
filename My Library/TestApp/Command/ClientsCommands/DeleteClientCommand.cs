@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using My_Library.Model;
+﻿using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel;
+using System.Windows;
 
 namespace My_Library.Command.ClientsCommands
 {
@@ -47,7 +47,7 @@ namespace My_Library.Command.ClientsCommands
         {
             if (_clientsViewModel.SelectedClient is null)
             {
-                MessageBox.Show("لطفا ابتدا کاربری را برای حذف انتخاب کنید", "عملیات حذف");
+                MessageBox.Show("لطفا ابتدا کاربری را برای حذف انتخاب کنید", "حذف کاربر");
                 return;
             }
             List<Loan> UserLoans = await _loanRepository.GetAllClientLoans(_clientsViewModel.SelectedClient.ID);
@@ -58,7 +58,7 @@ namespace My_Library.Command.ClientsCommands
             }
             else
             {
-                MessageBoxResult AskToDelete = MessageBox.Show("کاربر حذف شود؟", "عملیات حذف", MessageBoxButton.YesNo);
+                MessageBoxResult AskToDelete = MessageBox.Show("کاربر حذف شود؟", "حذف کاربر", MessageBoxButton.YesNo);
                 if (AskToDelete == MessageBoxResult.Yes)
                 {
                     await _reservedBooksRepository.RemoveClientReservedBooks(_clientsViewModel.SelectedClient.ID);
