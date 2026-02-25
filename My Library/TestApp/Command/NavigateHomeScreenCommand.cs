@@ -3,7 +3,7 @@ using My_Library.ViewModel;
 
 namespace My_Library.Command
 {
-    public class NavigateHomeScreenCommand : CommandBase
+    public class NavigateHomeScreenCommand : CommandBase, INavigateHomeScreenCommand
     {
         #region Dependencies
         private ILoansStore _loansStore;
