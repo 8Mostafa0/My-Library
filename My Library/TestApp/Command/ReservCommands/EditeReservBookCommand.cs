@@ -15,7 +15,7 @@ namespace My_Library.Command.ReservCommands
         private IReservedBooksStore _reservedBooksStore;
         private IModalNavigationStore _modalNavigationStore;
         private IReservedBooksViewModel _reservedBooksViewModel;
-        private ReservedBooksRepository _reservedBooksRepository;
+        private IReservedBooksRepository _reservedBooksRepository;
         #endregion
 
 
@@ -39,7 +39,7 @@ namespace My_Library.Command.ReservCommands
             IReservedBooksStore reservedBooksStore,
             IModalNavigationStore modalNavigationStore,
             IReservedBooksViewModel reservedBooksViewModel,
-            ReservedBooksRepository reservedBooksRepository
+            IReservedBooksRepository reservedBooksRepository
             )
         {
             _booksStore = booksStore;

@@ -47,7 +47,7 @@ namespace My_Library.ViewModel
             LoanRepository loanRepository,
             ISettingsStore settingsStore,
             BooksRepository booksRepository,
-            ReservedBooksRepository reservedBooksRepository,
+            IReservedBooksRepository reservedBooksRepository,
             ClientsRepository clientsRepository
             )
         {

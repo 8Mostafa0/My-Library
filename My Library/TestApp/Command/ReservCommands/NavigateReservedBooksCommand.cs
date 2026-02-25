@@ -35,7 +35,7 @@ namespace My_Library.Command.ReservCommands
             IBooksStore booksStore,
             LoanRepository loansRepository,
             ClientsRepository clientsRepository,
-            ReservedBooksRepository reservedBooksRepository
+            IReservedBooksRepository reservedBooksRepository
             )
         {
             _booksStore = booksStore;

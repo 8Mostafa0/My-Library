@@ -20,7 +20,7 @@ namespace My_Library
             ISettingsStore settingsStore = new SettingsStore();
             LoanRepository loanRepository = new();
             IReservedBooksStore reservedBooksStore = new ReservedBooksStore();
-            ReservedBooksRepository reservedBooksRepository = new();
+            IReservedBooksRepository reservedBooksRepository = new ReservedBooksRepository();
             BooksRepository booksRepository = new();
             ClientsRepository clientsRepository = new();
             navigationStore.ContentScreen = new HomeViewModel(clientsStore, booksStore, loansStore);

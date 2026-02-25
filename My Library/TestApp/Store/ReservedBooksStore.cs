@@ -6,7 +6,7 @@ namespace My_Library.Store
     public class ReservedBooksStore : IReservedBooksStore
     {
         #region Dependencies
-        private ReservedBooksRepository _resrvedBooksRepository;
+        private IReservedBooksRepository _resrvedBooksRepository;
         private List<IReservedBook> _reservedBooks;
 
         public IEnumerable<IReservedBook> ReservedBook => _reservedBooks;

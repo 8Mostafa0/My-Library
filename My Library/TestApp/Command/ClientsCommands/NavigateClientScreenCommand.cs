@@ -20,7 +20,7 @@ namespace My_Library.Command.ClientsCommands
         /// <param name="clientsStore"></param>
         /// <param name="loanRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public NavigateClientScreenCommand(INavigationStore navigationStore, IClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
+        public NavigateClientScreenCommand(INavigationStore navigationStore, IClientsStore clientsStore, LoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository)
         {
             _navigationStore = navigationStore;
             _clientsStore = clientsStore;
