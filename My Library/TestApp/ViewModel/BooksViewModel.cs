@@ -1,11 +1,11 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows;
-using System.Windows.Data;
-using System.Windows.Input;
-using My_Library.Command.BooksCommands;
+﻿using My_Library.Command.BooksCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
@@ -117,7 +117,7 @@ namespace My_Library.ViewModel
         public BooksViewModel(BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
         {
             _booksStore = booksStore;
-            _books = new ObservableCollection<Book>();
+            _books = [];
             LoadBooksCommand = new LoadBooksCommand(_booksStore);
             AddNewBookCommand = new AddNewBookCommand(_booksStore, this, booksRepository);
             EditBookCommand = new EditBookCommand(this, _booksStore, booksRepository);
@@ -128,6 +128,7 @@ namespace My_Library.ViewModel
             _booksStore.BookEdited += BookEdited;
             _booksStore.BookAdded += AddNewBook;
             _booksStore.BookDeleted += BookDeleted;
+            Subject = "رمان";
         }
         #endregion
 
@@ -192,7 +193,7 @@ namespace My_Library.ViewModel
         /// <returns></returns>
         public static BooksViewModel LoadViewModel(BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
         {
-            BooksViewModel ViewModel = new BooksViewModel(booksStore, loanRepository, reservedBooksRepository, booksRepository);
+            BooksViewModel ViewModel = new(booksStore, loanRepository, reservedBooksRepository, booksRepository);
             ViewModel.LoadBooksCommand.Execute(null);
             return ViewModel;
         }
