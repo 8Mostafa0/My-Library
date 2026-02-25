@@ -9,7 +9,7 @@ namespace My_Library.Command.LoansCommands
     {
         #region Dependencies
         private ModalNavigationStore _modalNavigationStore;
-        private AddEditeLoanViewModel _addEditeLoanViewModel;
+        private IAddEditeLoanViewModel _addEditeLoanViewModel;
         #endregion
 
 

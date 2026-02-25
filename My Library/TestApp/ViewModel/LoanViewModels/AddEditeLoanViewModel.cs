@@ -229,9 +229,9 @@ namespace My_Library.ViewModel.LoanViewModels
         /// <param name="reservedBooksRepository"></param>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public static AddEditeLoanViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, BooksStore booksStore, ClientsStore clientsStore, LoansStore loansStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
+        public static IAddEditeLoanViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, BooksStore booksStore, ClientsStore clientsStore, LoansStore loansStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
         {
-            AddEditeLoanViewModel ViewModel = new(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
+            IAddEditeLoanViewModel ViewModel = new AddEditeLoanViewModel(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
             ViewModel.LoadBooksCommand.Execute(null);
             ViewModel.LoadClientsCommand.Execute(null);
             ViewModel.SelectedLoan = loan;

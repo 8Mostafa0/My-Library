@@ -16,7 +16,7 @@ namespace My_Library.Command.LoansCommands
         private LoanRepository _loanRepository;
         private BooksRepository _booksRepository;
         private ModalNavigationStore _modalNavigationStore;
-        private AddEditeLoanViewModel _addEditeLoanViewModel;
+        private IAddEditeLoanViewModel _addEditeLoanViewModel;
         private ReservedBooksRepository _reservedBooksRepository;
         #endregion
 
