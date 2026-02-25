@@ -2,7 +2,7 @@
 
 namespace My_Library.Command
 {
-    public class LoadClientsCommand : CommandBase
+    public class LoadClientsCommand : CommandBase, ILoadClientsCommand
     {
         #region Dependencies
         private readonly IClientsStore _clientsStore;
