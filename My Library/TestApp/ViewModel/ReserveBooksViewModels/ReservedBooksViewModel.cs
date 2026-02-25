@@ -54,7 +54,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         public IViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
 
         public ICommand AddNewReservBookCommand { get; }
-        public ICommand RemoveReservBookCommand { get; }
+        public RemoveReservBookCommand RemoveReservBookCommand { get; }
 
         public ICommand EditeReservBookCommand { get; }
         public ResetReservBookCommand ResetReservBookCommand { get; }

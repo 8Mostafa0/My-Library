@@ -14,7 +14,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         ICommand EditeReservBookCommand { get; }
         bool IsModalOpen { get; }
         ICommand LoadReservedBooksCommand { get; }
-        ICommand RemoveReservBookCommand { get; }
+        RemoveReservBookCommand RemoveReservBookCommand { get; }
         IEnumerable<IReservedBookViewModel> ReservedBooks { get; }
         ResetReservBookCommand ResetReservBookCommand { get; }
         SearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
