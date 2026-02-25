@@ -1,4 +1,5 @@
 ﻿using My_Library.Command;
+using My_Library.Command.ReservCommands;
 using My_Library.Command.SettingsCommands;
 using System.Windows.Input;
 
@@ -12,7 +13,7 @@ namespace My_Library.ViewModel
         ICommand NavigateBooksCommand { get; }
         INavigateHomeScreenCommand NavigateHomeCommand { get; }
         ICommand NavigateLoansCommand { get; }
-        ICommand NavigateReservedBooksCommand { get; }
+        NavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
         INavigateToSettingsCommand NavigateToSettingsCommand { get; }
         ICommand OpenModalCommand { get; }
         virtual void Dispose() { }
