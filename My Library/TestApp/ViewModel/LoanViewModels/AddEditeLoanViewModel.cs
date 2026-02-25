@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
-    public class AddEditeLoanViewModel : ViewModelBase
+    public class AddEditeLoanViewModel : ViewModelBase, IAddEditeLoanViewModel
     {
 
         #region Dependencies
