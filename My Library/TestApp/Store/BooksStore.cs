@@ -4,18 +4,18 @@ using My_Library.Service;
 namespace My_Library.Store
 {
 
-    public class BooksStore
+    public class BooksStore : IBooksStore
     {
         #region Dependencies
         private List<IBook> _books;
         private BooksRepository _booksRepository;
         public IEnumerable<IBook> Books => _books;
 
-        public Action BooksUpdated;
         public Lazy<Task> _initilizerLazy;
-        public Action<IBook> BookAdded;
-        public Action<IBook> BookEdited;
-        public Action<IBook> BookDeleted;
+        public event Action BooksUpdated;
+        public event Action<IBook> BookAdded;
+        public event Action<IBook> BookEdited;
+        public event Action<IBook> BookDeleted;
 
         public string SearchBookName { get; set; }
         public int SearchSubject { get; set; }
