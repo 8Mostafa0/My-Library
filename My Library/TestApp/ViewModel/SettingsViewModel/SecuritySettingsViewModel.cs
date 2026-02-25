@@ -1,8 +1,8 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using System.Windows;
-using System.Windows.Input;
 using My_Library.Command.SettingsCommands;
 using My_Library.Store;
+using System.Windows;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
@@ -15,8 +15,6 @@ namespace My_Library.ViewModel.SettingsViewModel
             get => _password;
             set
             {
-                MessageBox.Show((!value.IsNullOrEmpty()).ToString());
-                MessageBox.Show(value.Count().ToString());
                 if (!value.IsNullOrEmpty() || value.Count() >= 5)
                 {
                     _password = value;
