@@ -1,8 +1,8 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
-using Serilog;
 using My_Library.DbContext;
 using My_Library.Model;
+using Serilog;
 
 namespace My_Library.Service
 {
@@ -176,7 +176,7 @@ namespace My_Library.Service
         /// <returns></returns>
         public async Task DeleteReservedBookToDb(int bookId)
         {
-            string DeleteReservSql = $"DELETE FROM ReservedBooks WHERE Id='{bookId}'";
+            string DeleteReservSql = $"DELETE FROM ReservedBooks WHERE BookId='{bookId}'";
             await _dbContextFactory.ExecuteQueryAsync(DeleteReservSql, "DeleteReservedBook");
         }
         #endregion

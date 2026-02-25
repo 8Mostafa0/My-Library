@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using My_Library.Model;
+﻿using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel;
+using System.Windows;
 
 namespace My_Library.Command.BooksCommands
 {
