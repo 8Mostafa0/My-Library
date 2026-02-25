@@ -56,7 +56,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         public ICommand AddNewReservBookCommand { get; }
         public RemoveReservBookCommand RemoveReservBookCommand { get; }
 
-        public ICommand EditeReservBookCommand { get; }
+        public EditeReservBookCommand EditeReservBookCommand { get; }
         public ResetReservBookCommand ResetReservBookCommand { get; }
 
         public LoadReservedBooksCommand LoadReservedBooksCommand { get; }

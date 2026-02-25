@@ -11,7 +11,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         ICommand AddNewReservBookCommand { get; }
         string BookName { get; set; }
         IViewModelBase CurrentModalViewModel { get; }
-        ICommand EditeReservBookCommand { get; }
+        EditeReservBookCommand EditeReservBookCommand { get; }
         bool IsModalOpen { get; }
         LoadReservedBooksCommand LoadReservedBooksCommand { get; }
         RemoveReservBookCommand RemoveReservBookCommand { get; }
