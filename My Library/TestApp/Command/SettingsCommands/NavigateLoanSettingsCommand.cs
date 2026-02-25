@@ -7,7 +7,7 @@ namespace My_Library.Command.SettingsCommands
     {
         #region Dependencies
         private SettingNavigationStore _navigationStore;
-        private LoanSettingsViewModel _loanSettingsViewModel = new LoanSettingsViewModel();
+        private ILoanSettingsViewModel _loanSettingsViewModel = new LoanSettingsViewModel();
         #endregion
 
         #region Contructor
