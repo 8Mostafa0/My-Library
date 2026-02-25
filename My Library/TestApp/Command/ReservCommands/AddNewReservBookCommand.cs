@@ -4,7 +4,7 @@ using My_Library.ViewModel.ReserveBooksViewModels;
 
 namespace My_Library.Command.ReservCommands
 {
-    public class AddNewReservBookCommand : CommandBase
+    public class AddNewReservBookCommand : CommandBase, IAddNewReservBookCommand
     {
         #region Dependencies
         private IBooksStore _booksStore;
