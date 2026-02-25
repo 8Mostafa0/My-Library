@@ -20,8 +20,8 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         ICloseModalCommand CloseModalCommand { get; }
         ICommand LoadBooksCommand { get; }
         ILoadClientsCommand LoadClientsCommand { get; }
-        ICommand OrderBooksBySubjectCommand { get; }
-        ICommand OrderBooksCommand { get; }
+        IOrderBooksBySubjectCommand OrderBooksBySubjectCommand { get; }
+        IOrderBooksBySubjectCommand OrderBooksCommand { get; }
         SaveReservationDataCommand SaveReservedBookDataCommand { get; }
         ISearchBookNameCommand SearchBookNameCommand { get; }
         ISearchClientNameCommand SearchClientNameCommand { get; }

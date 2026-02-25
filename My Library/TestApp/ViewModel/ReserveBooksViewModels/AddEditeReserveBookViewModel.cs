@@ -106,8 +106,8 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         public ISearchClientNameCommand SearchClientNameCommand { get; }
         public ILoadClientsCommand LoadClientsCommand { get; }
         public ICommand LoadBooksCommand { get; }
-        public ICommand OrderBooksCommand { get; }
-        public ICommand OrderBooksBySubjectCommand { get; }
+        public IOrderBooksBySubjectCommand OrderBooksCommand { get; }
+        public IOrderBooksBySubjectCommand OrderBooksBySubjectCommand { get; }
 
 
         #endregion

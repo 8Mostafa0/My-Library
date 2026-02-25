@@ -128,7 +128,7 @@ namespace My_Library.ViewModel.LoanViewModels
         public ICloseModalCommand CloseModalCommand { get; }
         public ISaveLoanDataCommand SaveLoanDataCommand { get; }
         public ISearchBookNameCommand SearchBookNameCommand { get; }
-        public ICommand OrderBooksBySubjectCommand { get; }
+        public IOrderBooksBySubjectCommand OrderBooksBySubjectCommand { get; }
         public ISearchClientNameCommand SearchClientNameCommand { get; }
         #endregion
 
