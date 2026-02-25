@@ -1,4 +1,5 @@
-﻿using My_Library.Command.ClientsCommands;
+﻿using My_Library.Command;
+using My_Library.Command.ClientsCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
@@ -14,7 +15,7 @@ namespace My_Library.ViewModel
         ICommand EditClientCommand { get; }
         string FirstName { get; set; }
         string LastName { get; set; }
-        ICommand LoadClientsCommand { get; }
+        ILoadClientsCommand LoadClientsCommand { get; }
         IOrderClientsCommand OrderClientsCommand { get; }
         IReloadClientsCommand ReloadClientsCommand { get; }
         IClient SelectedClient { get; set; }

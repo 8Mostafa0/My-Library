@@ -17,7 +17,7 @@ namespace My_Library.ViewModel.LoanViewModels
         ICloseModalCommand CloseModalCommand { get; }
         IViewModelBase CurrentModelViewModel { get; }
         ICommand LoadBooksCommand { get; }
-        ICommand LoadClientsCommand { get; }
+        ILoadClientsCommand LoadClientsCommand { get; }
         ICommand OrderBooksBySubjectCommand { get; }
         DateTime ReturnDate { get; set; }
         ISaveLoanDataCommand SaveLoanDataCommand { get; }

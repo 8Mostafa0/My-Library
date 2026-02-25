@@ -104,7 +104,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         public SaveReservationDataCommand SaveReservedBookDataCommand { get; }
         public ICommand SearchBookNameCommand { get; }
         public ISearchClientNameCommand SearchClientNameCommand { get; }
-        public ICommand LoadClientsCommand { get; }
+        public ILoadClientsCommand LoadClientsCommand { get; }
         public ICommand LoadBooksCommand { get; }
         public ICommand OrderBooksCommand { get; }
         public ICommand OrderBooksBySubjectCommand { get; }

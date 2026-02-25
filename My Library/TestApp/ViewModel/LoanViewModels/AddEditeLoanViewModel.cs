@@ -124,7 +124,7 @@ namespace My_Library.ViewModel.LoanViewModels
 
         public IViewModelBase CurrentModelViewModel => _modalNavigationStore.CurrentViewModel;
         public ICommand LoadBooksCommand { get; }
-        public ICommand LoadClientsCommand { get; }
+        public ILoadClientsCommand LoadClientsCommand { get; }
         public ICloseModalCommand CloseModalCommand { get; }
         public ISaveLoanDataCommand SaveLoanDataCommand { get; }
         public ICommand SearchBookNameCommand { get; }
