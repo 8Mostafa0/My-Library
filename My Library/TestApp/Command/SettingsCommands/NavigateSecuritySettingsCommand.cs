@@ -7,7 +7,7 @@ namespace My_Library.Command.SettingsCommands
     {
         #region Dependencies
         private SettingNavigationStore _settingNavigationStore;
-        private SecuritySettingsViewModel _securitySettingsViewModel;
+        private ISecuritySettingsViewModel _securitySettingsViewModel;
         #endregion
 
         #region Contructor
