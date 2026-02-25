@@ -1,9 +1,9 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
-using Serilog;
-using System.Windows;
 using My_Library.DbContext;
 using My_Library.Model;
+using Serilog;
+using System.Windows;
 
 namespace My_Library.Service
 {
@@ -33,7 +33,7 @@ namespace My_Library.Service
         /// <returns List<Loan>></returns>
         public async Task<List<Loan>> GetAllLoans(string customSql = "")
         {
-            List<Loan> Loans = new List<Loan>();
+            List<Loan> Loans = [];
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -70,7 +70,7 @@ namespace My_Library.Service
         /// <returns Loan></returns>
         public async Task<Loan?> GetLoan(string customSql, string executionPart)
         {
-            Loan? loan = new Loan();
+            Loan? loan = new();
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -116,7 +116,7 @@ namespace My_Library.Service
         /// <returns></returns>
         public async Task UpdateLoanAtDb(Loan loan)
         {
-            string UpdateLoanSql = $"UPDATE Loans SET ClientId='{loan.ClientId}',BookId='{loan.BookId}',ReturnDate='{loan.ReturnDate}',ReturnedDate='{loan.ReturnedDate}',UpdatedAt=GETDATE() WHERE Id='{loan.Id}'";
+            string UpdateLoanSql = $"UPDATE Loans SET ClientId='{loan.ClientId}',BookId='{loan.BookId}',ReturnDate='{loan.ReturnDate}',UpdatedAt=GETDATE() WHERE Id='{loan.Id}'";
             await _dbContextFactory.ExecuteQueryAsync(UpdateLoanSql, "DeleteLoanAtDb");
         }
 
