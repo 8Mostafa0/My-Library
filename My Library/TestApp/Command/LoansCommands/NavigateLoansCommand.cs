@@ -4,7 +4,7 @@ using My_Library.ViewModel.LoanViewModels;
 
 namespace My_Library.Command.LoansCommands
 {
-    public class NavigateLoansCommand : CommandBase
+    public class NavigateLoansCommand : CommandBase, INavigateLoansCommand
     {
         #region Dependencies
         private ILoansViewModel _loansViewModel;
