@@ -113,7 +113,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="reservedBook"></param>
         /// <returns></returns>
-        public async Task EditReservBookToDb(ReservedBook reservedBook)
+        public async Task EditReservBookToDb(IReservedBook reservedBook)
         {
             string EditeReservSql = $"UPDATE ReservedBook SET BookId='{reservedBook.BookId}',ClientI='{reservedBook.ClientId}',UpdatedAt=GETDATE() WHERE Id='{reservedBook.ID}'";
             await _dbContextFactory.ExecuteQueryAsync(EditeReservSql, "EditReservBookToDb");

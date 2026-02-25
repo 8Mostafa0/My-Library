@@ -70,7 +70,7 @@ namespace My_Library.Service
         /// <returns Loan></returns>
         public async Task<Loan?> GetLoan(string customSql, string executionPart)
         {
-            ILoan? loan = new Loan();
+            Loan? loan = new();
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -104,7 +104,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task AddNewLoanToDb(Loan loan)
+        public async Task AddNewLoanToDb(ILoan loan)
         {
             string AddLoanSql = $"INSERT INTO Loans(ClientId,BookId,ReturnDate,ReturnedDate,CreatedAt,UpdatedAt)VALUES('{loan.ClientId}','{loan.BookId}','{loan.ReturnDate}',NULL,GETDATE(),GETDATE())";
             await _dbContextFactory.ExecuteQueryAsync(AddLoanSql, "AddNewLoan");
@@ -114,7 +114,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task UpdateLoanAtDb(Loan loan)
+        public async Task UpdateLoanAtDb(ILoan loan)
         {
             string UpdateLoanSql = $"UPDATE Loans SET ClientId='{loan.ClientId}',BookId='{loan.BookId}',ReturnDate='{loan.ReturnDate}',UpdatedAt=GETDATE() WHERE Id='{loan.Id}'";
             await _dbContextFactory.ExecuteQueryAsync(UpdateLoanSql, "DeleteLoanAtDb");
@@ -125,7 +125,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task DeleteLoanInDB(Loan loan)
+        public async Task DeleteLoanInDB(ILoan loan)
         {
             string DeleteLoanSql = $"DELETE FROM Loans WHERE Id='{loan.Id}'";
             await _dbContextFactory.ExecuteQueryAsync(DeleteLoanSql, "DEleteLoanInDB");

@@ -15,7 +15,7 @@ namespace My_Library.ViewModel.LoanViewModels
     {
 
         #region Dependencies
-        private Loan _selectedLoan;
+        private ILoan _selectedLoan;
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
         private ObservableCollection<IBook> _books;

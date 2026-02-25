@@ -119,7 +119,7 @@ namespace My_Library.ViewModel.LoanViewModels
         /// cal each time new loan add and add it to the loans list
         /// </summary>
         /// <param name="loan"></param>
-        private void LoanAdded(Loan loan)
+        private void LoanAdded(ILoan loan)
         {
             loan.Id = _loans.Any() ? _loans.Last().ID + 1 : 1;
             var vm = new LoanViewModel(loan, _clientsStore, _booksStore);
