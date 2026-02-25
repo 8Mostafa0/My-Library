@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace My_Library.Command.ClientsCommands
 {
-    public class DeleteClientCommand : CommandBase
+    public class DeleteClientCommand : CommandBase, IDeleteClientCommand
     {
         #region Dependencies
         private ILoanRepository _loanRepository;
