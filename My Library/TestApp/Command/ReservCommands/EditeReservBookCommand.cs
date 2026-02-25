@@ -12,7 +12,7 @@ namespace My_Library.Command.ReservCommands
         private ClientsStore _clientsStore;
         private LoanRepository _loansRepository;
         private ClientsRepository _clientRepository;
-        private ReservedBooksStore _reservedBooksStore;
+        private IReservedBooksStore _reservedBooksStore;
         private ModalNavigationStore _modalNavigationStore;
         private IReservedBooksViewModel _reservedBooksViewModel;
         private ReservedBooksRepository _reservedBooksRepository;
@@ -36,7 +36,7 @@ namespace My_Library.Command.ReservCommands
             ClientsStore clientsStore,
             LoanRepository loanRepository,
             ClientsRepository clientsRepository,
-            ReservedBooksStore reservedBooksStore,
+            IReservedBooksStore reservedBooksStore,
             ModalNavigationStore modalNavigationStore,
             IReservedBooksViewModel reservedBooksViewModel,
             ReservedBooksRepository reservedBooksRepository

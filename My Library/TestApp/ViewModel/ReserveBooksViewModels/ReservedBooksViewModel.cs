@@ -15,7 +15,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private ModalNavigationStore _modalNavigationStore;
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;
-        private ReservedBooksStore _reservedBooksStore;
+        private IReservedBooksStore _reservedBooksStore;
         private string _bookName;
         private ObservableCollection<IReservedBookViewModel> _reservedBooks;
 
@@ -66,7 +66,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 
         #region Contructor
 
-        public ReservedBooksViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
+        public ReservedBooksViewModel(IReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _reservedBooks = [];
             _modalNavigationStore = modalNavigationStore;
@@ -74,10 +74,10 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
             _booksStore = booksStore;
             _reservedBooksStore = reservedBooksStore;
             _modalNavigationStore.CurrentViewModelChanged += OnModalViewModelChanged;
-            _reservedBooksStore.ReseredBooksUpdated += UpdateReservedBooks;
-            _reservedBooksStore.ReservBookEdited += OnReservedBookUpdate;
-            _reservedBooksStore.ReservBookAdded += OnReservedBookAdded;
-            _reservedBooksStore.ReservBookDeleted += OnReservedBookDeleted;
+            _reservedBooksStore.ReservedBooksUpdated += UpdateReservedBooks;
+            _reservedBooksStore.ReservedBookEdited += OnReservedBookUpdate;
+            _reservedBooksStore.ReservedBookAdded += OnReservedBookAdded;
+            _reservedBooksStore.ReservedBookDeleted += OnReservedBookDeleted;
             LoadReservedBooksCommand = new LoadReservedBooksCommand(_reservedBooksStore);
             EditeReservBookCommand = new EditeReservBookCommand(
                 _booksStore,
@@ -169,7 +169,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <param name="clientsRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <returns></returns>
-        public static IReservedBooksViewModel LoadViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
+        public static IReservedBooksViewModel LoadViewModel(IReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
         {
             IReservedBooksViewModel ViewModel = new ReservedBooksViewModel(reservedBooksStore, modalNavigationStore, clientsStore, booksStore, loansRepository, clientsRepository, reservedBooksRepository);
             ViewModel.LoadReservedBooksCommand.Execute(null);

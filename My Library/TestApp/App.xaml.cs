@@ -19,7 +19,7 @@ namespace My_Library
             BooksStore booksStore = new();
             ISettingsStore settingsStore = new SettingsStore();
             LoanRepository loanRepository = new();
-            ReservedBooksStore reservedBooksStore = new();
+            IReservedBooksStore reservedBooksStore = new ReservedBooksStore();
             ReservedBooksRepository reservedBooksRepository = new();
             BooksRepository booksRepository = new();
             ClientsRepository clientsRepository = new();

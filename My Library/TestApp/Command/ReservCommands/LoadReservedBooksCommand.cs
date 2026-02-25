@@ -5,7 +5,7 @@ namespace My_Library.Command.ReservCommands
     public class LoadReservedBooksCommand : CommandBase
     {
         #region Dependencies
-        private ReservedBooksStore _reservedBooksStore;
+        private IReservedBooksStore _reservedBooksStore;
         #endregion
 
 
@@ -14,7 +14,7 @@ namespace My_Library.Command.ReservCommands
         /// load all reservations from ReserveBooks table to reserved books store
         /// </summary>
         /// <param name="reservedBooksStore"></param>
-        public LoadReservedBooksCommand(ReservedBooksStore reservedBooksStore)
+        public LoadReservedBooksCommand(IReservedBooksStore reservedBooksStore)
         {
             _reservedBooksStore = reservedBooksStore;
         }

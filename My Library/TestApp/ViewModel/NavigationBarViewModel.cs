@@ -16,7 +16,7 @@ namespace My_Library.ViewModel
         #region Dependencies
         private readonly NavigationStore _navigationStore;
         private readonly ModalNavigationStore _modalNavigationStore;
-        private ReservedBooksStore _reservedBooksStore;
+        private IReservedBooksStore _reservedBooksStore;
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;
         private LoansStore _loansStore;
@@ -40,7 +40,7 @@ namespace My_Library.ViewModel
         #region Constructr
         public NavigationBarViewModel(
             NavigationStore navigationStore,
-            ReservedBooksStore reservedBooksStore,
+            IReservedBooksStore reservedBooksStore,
             ClientsStore clientsStore,
             BooksStore booksStore,
             LoansStore loansStore,

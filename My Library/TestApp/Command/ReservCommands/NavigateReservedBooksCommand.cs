@@ -10,7 +10,7 @@ namespace My_Library.Command.ReservCommands
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;
         private NavigationStore _navigationStore;
-        private ReservedBooksStore _reservedBooksStore;
+        private IReservedBooksStore _reservedBooksStore;
         private ModalNavigationStore _modalNavigationStore;
         private IReservedBooksViewModel _reservedBooksViewModel;
         #endregion
@@ -30,7 +30,7 @@ namespace My_Library.Command.ReservCommands
         public NavigateReservedBooksCommand(
             NavigationStore navigationStore,
             ModalNavigationStore modalNavigationStore,
-            ReservedBooksStore reservedBooksStore,
+            IReservedBooksStore reservedBooksStore,
             ClientsStore clientsStore,
             BooksStore booksStore,
             LoanRepository loansRepository,

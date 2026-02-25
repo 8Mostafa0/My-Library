@@ -25,6 +25,6 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         IReservedBook SelectedReservedBook { get; set; }
         string TitleOfLoanScreen { get; set; }
 
-        static abstract IAddEditeReserveBookViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, ReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, IReservedBook reservedBook = null);
+        static abstract IAddEditeReserveBookViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, IReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, IReservedBook reservedBook = null);
     }
 }

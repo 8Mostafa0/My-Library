@@ -15,7 +15,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
     {
         #region Dependencies
         private ModalNavigationStore _modalNavigationStore;
-        private ReservedBooksStore _reservedBooksStore;
+        private IReservedBooksStore _reservedBooksStore;
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
         private IBook _selectedBook;
@@ -114,7 +114,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 
         #region Constructor
 
-        public AddEditeReserveBookViewModel(ModalNavigationStore modalNavigationStore, ReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, IReservedBook reservedBook = null)
+        public AddEditeReserveBookViewModel(ModalNavigationStore modalNavigationStore, IReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, IReservedBook reservedBook = null)
         {
             _clients = [];
             _books = [];
@@ -192,7 +192,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <param name="clientsRepository"></param>
         /// <param name="reservedBook"></param>
         /// <returns></returns>
-        public static IAddEditeReserveBookViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, ReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, IReservedBook reservedBook = null)
+        public static IAddEditeReserveBookViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, IReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, IReservedBook reservedBook = null)
         {
             IAddEditeReserveBookViewModel ViewModel = new AddEditeReserveBookViewModel(modalNavigationStore, reservedBooksStore, clientsStore, booksStore, loanRepository, reservedBooksRepository, clientsRepository, reservedBook);
             ViewModel.LoadBooksCommand.Execute(null);

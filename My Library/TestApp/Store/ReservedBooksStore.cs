@@ -11,10 +11,11 @@ namespace My_Library.Store
 
         public IEnumerable<IReservedBook> ReservedBook => _reservedBooks;
         public Lazy<Task> _initilizeLazy;
-        public Action ReseredBooksUpdated;
-        public Action<IReservedBook> ReservBookAdded;
-        public Action<IReservedBook> ReservBookEdited;
-        public Action<IReservedBook> ReservBookDeleted;
+        public event Action ReservedBooksUpdated;
+        public event Action<IReservedBook> ReservedBookAdded;
+        public event Action<IReservedBook> ReservedBookEdited;
+        public event Action<IReservedBook> ReservedBookDeleted;
+
 
         #endregion
 
@@ -28,6 +29,7 @@ namespace My_Library.Store
             _initilizeLazy = new Lazy<Task>(Initilize);
             _resrvedBooksRepository = new ReservedBooksRepository();
         }
+
         #endregion
 
         #region Methods
@@ -48,7 +50,7 @@ namespace My_Library.Store
         public async Task UpdateReservedBook(IReservedBook reservedBook)
         {
             await _resrvedBooksRepository.EditReservBookToDb(reservedBook);
-            ReservBookEdited?.Invoke(reservedBook);
+            ReservedBookEdited?.Invoke(reservedBook);
         }
         /// <summary>
         /// call add new reservedbook method of database and invoe add new reservedbook event
@@ -58,7 +60,7 @@ namespace My_Library.Store
         public async Task AddReservBook(IReservedBook reservedBook)
         {
             await _resrvedBooksRepository.AddNewReservedBookToDb(reservedBook);
-            ReservBookAdded?.Invoke(reservedBook);
+            ReservedBookAdded?.Invoke(reservedBook);
         }
 
         /// <summary>
@@ -69,7 +71,7 @@ namespace My_Library.Store
         public async Task DeleteReservBook(IReservedBook reservedBook)
         {
             await _resrvedBooksRepository.DeleteReservedBookWithClientToDb(reservedBook);
-            ReservBookDeleted?.Invoke(reservedBook);
+            ReservedBookDeleted?.Invoke(reservedBook);
         }
 
         /// <summary>
@@ -90,7 +92,7 @@ namespace My_Library.Store
             IEnumerable<IReservedBook> reservedBooks = await _resrvedBooksRepository.GetAllReservedBooks(customSql);
             _reservedBooks.Clear();
             _reservedBooks.AddRange(reservedBooks);
-            ReseredBooksUpdated?.Invoke();
+            ReservedBooksUpdated?.Invoke();
         }
 
         /// <summary>
@@ -102,7 +104,7 @@ namespace My_Library.Store
             IEnumerable<IReservedBook> reservedBooks = await _resrvedBooksRepository.GetAllReservedBooks();
             _reservedBooks.Clear();
             _reservedBooks.AddRange(reservedBooks);
-            ReseredBooksUpdated?.Invoke();
+            ReservedBooksUpdated?.Invoke();
         }
         #endregion
     }
