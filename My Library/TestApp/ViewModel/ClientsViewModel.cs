@@ -87,7 +87,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Constructor
-        public ClientsViewModel(IClientsStore clientsStore, LoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository)
+        public ClientsViewModel(IClientsStore clientsStore, ILoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository)
         {
             _clients = [];
             _clientsStore = clientsStore;
@@ -186,7 +186,7 @@ namespace My_Library.ViewModel
         /// <param name="loanRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <returns></returns>
-        public static IClientsViewModel LoadViewModel(IClientsStore clientStore, LoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository)
+        public static IClientsViewModel LoadViewModel(IClientsStore clientStore, ILoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository)
         {
             IClientsViewModel ViewModel = new ClientsViewModel(clientStore, loanRepository, reservedBooksRepository);
             ViewModel.LoadClientsCommand.Execute(null);

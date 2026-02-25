@@ -13,7 +13,7 @@ namespace My_Library.Command.LoansCommands
         private IClientsStore _clientsStore;
         private ISettingsStore _settingsStore;
         private ILoansViewModel _loansViewModel;
-        private LoanRepository _loanRepository;
+        private ILoanRepository _loanRepository;
         private BooksRepository _booksRepository;
         private IModalNavigationStore _modalNavigationStore;
         private IAddEditeLoanViewModel _addEditeLoanViewModel;
@@ -34,7 +34,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="settingsStore"></param>
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public ShowEditLoanViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IBooksStore booksStore, IClientsStore clientsStore, ILoansViewModel loansViewModel, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository)
+        public ShowEditLoanViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IBooksStore booksStore, IClientsStore clientsStore, ILoansViewModel loansViewModel, ILoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository)
         {
             _loansStore = loansStore;
             _booksStore = booksStore;

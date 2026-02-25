@@ -17,7 +17,7 @@ namespace My_Library.ViewModel.LoanViewModels
         private ILoansStore _loansStore;
         private IClientsStore _clientsStore;
         private IBooksStore _booksStore;
-        private LoanRepository _loanRepository;
+        private ILoanRepository _loanRepository;
         private ISettingsStore _settingsStore;
         private BooksRepository _booksRepository;
         private IReservedBooksRepository _reservedBooksRepository;
@@ -69,7 +69,7 @@ namespace My_Library.ViewModel.LoanViewModels
         #endregion
 
         #region Constructor
-        public LoansViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IClientsStore clientsStore, IBooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository)
+        public LoansViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IClientsStore clientsStore, IBooksStore booksStore, ILoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository)
         {
             _loans = [];
             _modalNavigationStore = modalNavigationStore;
@@ -157,7 +157,7 @@ namespace My_Library.ViewModel.LoanViewModels
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <returns></returns>
-        public static ILoansViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IClientsStore clientsStore, IBooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository)
+        public static ILoansViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IClientsStore clientsStore, IBooksStore booksStore, ILoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository)
         {
             ILoansViewModel viewModel = new LoansViewModel(modalNavigationStore, loansStore, clientsStore, booksStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository);
             viewModel.LoadLoansCommand.Execute(null);

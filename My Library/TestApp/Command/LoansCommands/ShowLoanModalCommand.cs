@@ -26,7 +26,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <param name="loan"></param>
-        public ShowLoanModalCommand(IModalNavigationStore modalNavigationStore, IBooksStore booksStore, IClientsStore clientsStore, ILoansStore loansStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository, ILoan loan = null)
+        public ShowLoanModalCommand(IModalNavigationStore modalNavigationStore, IBooksStore booksStore, IClientsStore clientsStore, ILoansStore loansStore, ILoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository, ILoan loan = null)
         {
             _modalNavigationStore = modalNavigationStore;
             _addEditeLoanViewModel = AddEditeLoanViewModel.LoadViewModel(modalNavigationStore, booksStore, clientsStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);

@@ -12,7 +12,7 @@ namespace My_Library.Store
         #region Dependencies
         public IEnumerable<ILoanViewModel> Loans => _loans;
         private List<ILoanViewModel> _loans;
-        private LoanRepository _loanRepository;
+        private ILoanRepository _loanRepository;
         private IClientsStore _clientsStore;
         private IBooksStore _booksStore;
 

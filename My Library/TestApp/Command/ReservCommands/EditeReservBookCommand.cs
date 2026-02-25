@@ -10,7 +10,7 @@ namespace My_Library.Command.ReservCommands
         #region Dependencies
         private IBooksStore _booksStore;
         private IClientsStore _clientsStore;
-        private LoanRepository _loansRepository;
+        private ILoanRepository _loansRepository;
         private ClientsRepository _clientRepository;
         private IReservedBooksStore _reservedBooksStore;
         private IModalNavigationStore _modalNavigationStore;
@@ -34,7 +34,7 @@ namespace My_Library.Command.ReservCommands
         public EditeReservBookCommand(
             IBooksStore booksStore,
             IClientsStore clientsStore,
-            LoanRepository loanRepository,
+            ILoanRepository loanRepository,
             ClientsRepository clientsRepository,
             IReservedBooksStore reservedBooksStore,
             IModalNavigationStore modalNavigationStore,

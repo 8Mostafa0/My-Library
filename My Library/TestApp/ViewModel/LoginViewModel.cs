@@ -31,7 +31,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Constructor
-        public LoginViewModel(IModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, ISettingsStore settingsStore)
+        public LoginViewModel(IModalNavigationStore modalNavigationStore, ILoanRepository loanRepository, DbContextFactory dbContextFactory, ISettingsStore settingsStore)
         {
             CloseAppCommand = new CloseAppCommand();
             LoginCommand = new LoginCommand(this, modalNavigationStore, loanRepository, dbContextFactory, settingsStore);

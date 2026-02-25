@@ -6,7 +6,7 @@ namespace My_Library.Command
     public class CheckDatabaseCommand : CommandBase
     {
         #region Dependencies
-        private LoanRepository _loansRepository;
+        private ILoanRepository _loansRepository;
         private DbContextFactory _dbContextFactory;
         #endregion
 
@@ -14,7 +14,7 @@ namespace My_Library.Command
         /// <summary>
         /// check ans validate database and tables
         /// </summary>
-        public CheckDatabaseCommand(LoanRepository loanRepository, DbContextFactory dbContextFactory)
+        public CheckDatabaseCommand(ILoanRepository loanRepository, DbContextFactory dbContextFactory)
         {
             _loansRepository = loanRepository;
             _dbContextFactory = dbContextFactory;

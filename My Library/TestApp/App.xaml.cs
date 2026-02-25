@@ -18,7 +18,7 @@ namespace My_Library
             ILoansStore loansStore = new LoansStore();
             IBooksStore booksStore = new BooksStore();
             ISettingsStore settingsStore = new SettingsStore();
-            LoanRepository loanRepository = new();
+            ILoanRepository loanRepository = new LoanRepository();
             IReservedBooksStore reservedBooksStore = new ReservedBooksStore();
             IReservedBooksRepository reservedBooksRepository = new ReservedBooksRepository();
             BooksRepository booksRepository = new();

@@ -10,7 +10,7 @@ namespace My_Library.Command.LoginCommands
     {
         #region Dependencies
         private ISettingsStore _settinsStore;
-        private LoanRepository _loanRepository;
+        private ILoanRepository _loanRepository;
         private ILoginViewModel _loginViewModel;
         private DbContextFactory _dbContextFactory;
         private IModalNavigationStore _modalNavigationStore;
@@ -26,7 +26,7 @@ namespace My_Library.Command.LoginCommands
         /// <param name="loanRepository"></param>
         /// <param name="dbContextFactory"></param>
         /// <param name="settingsStore"></param>
-        public LoginCommand(ILoginViewModel loginViewModel, IModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, ISettingsStore settingsStore)
+        public LoginCommand(ILoginViewModel loginViewModel, IModalNavigationStore modalNavigationStore, ILoanRepository loanRepository, DbContextFactory dbContextFactory, ISettingsStore settingsStore)
         {
             _loginViewModel = loginViewModel;
             _loanRepository = loanRepository;

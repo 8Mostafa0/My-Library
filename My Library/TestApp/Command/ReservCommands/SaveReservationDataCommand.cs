@@ -9,7 +9,7 @@ namespace My_Library.Command.ReservCommands
     public class SaveReservationDataCommand : CommandBase
     {
         #region Dependencies
-        private LoanRepository _loanRepository;
+        private ILoanRepository _loanRepository;
         private ClientsRepository _clientsRepository;
         private IReservedBooksStore _reservedBookStore;
         private IModalNavigationStore _modalNavigationStore;
@@ -32,7 +32,7 @@ namespace My_Library.Command.ReservCommands
             IAddEditeReserveBookViewModel addediteReserveBookViewModel,
             IModalNavigationStore modalNavigationStore,
             IReservedBooksStore reservedBooksStore,
-            LoanRepository loanRepository,
+            ILoanRepository loanRepository,
             IReservedBooksRepository reservedBooksRepository,
             ClientsRepository clientsRepository
             )
