@@ -5,7 +5,7 @@ using My_Library.ViewModel.LoanViewModels;
 
 namespace My_Library.Command.LoansCommands
 {
-    public class ShowLoanModalCommand : CommandBase
+    public class ShowLoanModalCommand : CommandBase, IShowLoanModalCommand
     {
         #region Dependencies
         private IModalNavigationStore _modalNavigationStore;

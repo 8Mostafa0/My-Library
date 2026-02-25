@@ -1,4 +1,5 @@
-﻿using My_Library.Service;
+﻿using My_Library.Command.LoansCommands;
+using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.ModelsViewModel;
 using System.Windows.Input;
@@ -20,7 +21,7 @@ namespace My_Library.ViewModel.LoanViewModels
         ICommand ShowAddLoanModalCommand { get; }
         ICommand ShowEditLoanViewModel { get; }
         int SortIndex { get; set; }
-        ICommand SortLoansListCommand { get; }
+        SortLoansListCommand SortLoansListCommand { get; }
 
         static abstract ILoansViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IClientsStore clientsStore, IBooksStore booksStore, ILoanRepository loanRepository, ISettingsStore settingsStore, IBooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository);
         void UpdateLoans();
