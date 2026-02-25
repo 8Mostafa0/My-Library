@@ -7,7 +7,7 @@ using My_Library.Store;
 
 namespace My_Library.ViewModel
 {
-    public class LoginViewModel : ViewModelBase
+    public class LoginViewModel : ViewModelBase, ILoginViewModel
     {
         #region Dependencies
         private string _password;
