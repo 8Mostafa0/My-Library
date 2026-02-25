@@ -11,7 +11,7 @@ namespace My_Library.ViewModel
         ICommand AddNewBookCommand { get; }
         IEnumerable<IBook> Books { get; }
         ICommand DeleteBookCommand { get; }
-        ICommand EditBookCommand { get; }
+        IEditBookCommand EditBookCommand { get; }
         ILoadBooksCommand LoadBooksCommand { get; }
         string Name { get; set; }
         IOrderBooksByStateCommand OrderBooksCommand { get; }

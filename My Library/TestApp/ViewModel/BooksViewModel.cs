@@ -106,7 +106,7 @@ namespace My_Library.ViewModel
         public ICommand AddNewBookCommand { get; }
 
         public ICommand DeleteBookCommand { get; }
-        public ICommand EditBookCommand { get; }
+        public IEditBookCommand EditBookCommand { get; }
         public IOrderBooksByStateCommand OrderBooksCommand { get; }
 
         public IReloadBooksCommand ReloadBooksCommand { get; }
