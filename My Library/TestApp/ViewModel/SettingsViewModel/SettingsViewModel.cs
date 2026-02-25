@@ -1,6 +1,6 @@
-﻿using System.Windows.Input;
-using My_Library.Command.SettingsCommands;
+﻿using My_Library.Command.SettingsCommands;
 using My_Library.Store;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
@@ -9,7 +9,7 @@ namespace My_Library.ViewModel.SettingsViewModel
         #region Dependencies
         private SettingNavigationStore _settingNavigationStore;
 
-        public ViewModelBase CurrentSettingViewModel => _settingNavigationStore.CurrentSettingViewModel;
+        public IViewModelBase CurrentSettingViewModel => _settingNavigationStore.CurrentSettingViewModel;
 
         #endregion
 

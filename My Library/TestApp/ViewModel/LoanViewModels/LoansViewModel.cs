@@ -21,7 +21,7 @@ namespace My_Library.ViewModel.LoanViewModels
         private SettingsStore _settingsStore;
         private BooksRepository _booksRepository;
         private ReservedBooksRepository _reservedBooksRepository;
-        public ViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
+        public IViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
         public IEnumerable<LoanViewModel> Loans => _loans;
 
         private int _sortIndex;

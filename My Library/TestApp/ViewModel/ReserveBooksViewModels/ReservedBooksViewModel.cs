@@ -51,7 +51,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         #endregion
 
         #region Commands
-        public ViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
+        public IViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
 
         public ICommand AddNewReservBookCommand { get; }
         public ICommand RemoveReservBookCommand { get; }

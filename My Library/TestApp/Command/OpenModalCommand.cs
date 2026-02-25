@@ -6,7 +6,7 @@ namespace My_Library.Command
     public class OpenModalCommand : CommandBase
     {
         #region Dependencies
-        private Func<ViewModelBase> _createViewModel;
+        private Func<IViewModelBase> _createViewModel;
         private ModalNavigationStore _modalNavigationStore;
         #endregion
 
@@ -16,7 +16,7 @@ namespace My_Library.Command
         /// </summary>
         /// <param name="modalNavigationStore"></param>
         /// <param name="createViewModel"></param>
-        public OpenModalCommand(ModalNavigationStore modalNavigationStore, Func<ViewModelBase> createViewModel)
+        public OpenModalCommand(ModalNavigationStore modalNavigationStore, Func<IViewModelBase> createViewModel)
         {
             _modalNavigationStore = modalNavigationStore;
             _createViewModel = createViewModel;

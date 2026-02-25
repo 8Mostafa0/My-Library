@@ -3,7 +3,7 @@ using My_Library.ViewModel;
 
 namespace My_Library.Service
 {
-    public class ModalNavigationService<TViewModel> : INavigationService where TViewModel : ViewModelBase
+    public class ModalNavigationService<TViewModel> : INavigationService where TViewModel : IViewModelBase
     {
         #region Dependencies
         private readonly ModalNavigationStore _navigationStore;
