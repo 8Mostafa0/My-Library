@@ -1,9 +1,9 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using System.Windows;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel;
+using System.Windows;
 
 namespace My_Library.Command.BooksCommands
 {
@@ -74,20 +74,6 @@ namespace My_Library.Command.BooksCommands
                 return;
             }
 
-            List<Book> CopiesOfBook = await _booksRepository.GetBooksByName(_booksViewModel.Name);
-            bool IsBookExists = false;
-            foreach (Book book in CopiesOfBook)
-            {
-                if (book.Name == _booksViewModel.Name && book.Publisher == _booksViewModel.Publisher)
-                {
-                    IsBookExists = true;
-                }
-            }
-            if (IsBookExists)
-            {
-                MessageBox.Show("این کتاب با این منشتر کننده موجود است", "افزودن کتاب");
-                return;
-            }
 
 
             SelectedBook.Name = _booksViewModel.Name;
