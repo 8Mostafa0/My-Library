@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace My_Library.Command.LoansCommands
 {
-    public class SaveLoanDataCommand : CommandBase
+    public class SaveLoanDataCommand : CommandBase, ISaveLoanDataCommand
     {
         #region Dependencies
         private ILoansStore _loansStore;
