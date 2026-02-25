@@ -109,7 +109,7 @@ namespace My_Library.ViewModel
         public ICommand EditBookCommand { get; }
         public ICommand OrderBooksCommand { get; }
 
-        public ICommand ReloadClientsCommand { get; }
+        public IReloadBooksCommand ReloadBooksCommand { get; }
 
         #endregion
 
@@ -123,7 +123,7 @@ namespace My_Library.ViewModel
             EditBookCommand = new EditBookCommand(this, _booksStore, booksRepository);
             DeleteBookCommand = new DeleteBookCommand(this, _booksStore, loanRepository, reservedBooksRepository);
             OrderBooksCommand = new OrderBooksByStateCommand(this, _booksStore);
-            ReloadClientsCommand = new ReloadClientsCommand(_booksStore);
+            ReloadBooksCommand = new ReloadBooksCommand(_booksStore);
             _booksStore.BooksUpdated += UpdateBooks;
             _booksStore.BookEdited += BookEdited;
             _booksStore.BookAdded += AddNewBook;

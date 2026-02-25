@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.BooksCommands
 {
-    public class ReloadClientsCommand : CommandBase, IReloadClientsCommand
+    public class ReloadBooksCommand : CommandBase, IReloadBooksCommand
     {
         #region Dependencies
         private IBooksStore _booksStore;
@@ -14,7 +14,7 @@ namespace My_Library.Command.BooksCommands
         /// 
         /// </summary>
         /// <param name="booksStore"></param>
-        public ReloadClientsCommand(IBooksStore booksStore)
+        public ReloadBooksCommand(IBooksStore booksStore)
         {
             _booksStore = booksStore;
         }

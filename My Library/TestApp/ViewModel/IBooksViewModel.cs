@@ -1,4 +1,5 @@
-﻿using My_Library.Model;
+﻿using My_Library.Command.BooksCommands;
+using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using System.Windows.Input;
@@ -16,7 +17,7 @@ namespace My_Library.ViewModel
         ICommand OrderBooksCommand { get; }
         string PublicationDate { get; set; }
         string Publisher { get; set; }
-        ICommand ReloadClientsCommand { get; }
+        IReloadBooksCommand ReloadBooksCommand { get; }
         IBook SelectedBook { get; set; }
         int SortIndex { get; set; }
         string Subject { get; set; }

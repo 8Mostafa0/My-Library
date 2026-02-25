@@ -1,6 +1,6 @@
 ﻿namespace My_Library.Command.BooksCommands
 {
-    public interface IReloadClientsCommand
+    public interface IReloadBooksCommand
     {
         void Execute(object? parameter);
     }

@@ -1,4 +1,5 @@
 ﻿using My_Library.Command;
+using My_Library.Command.ClientsCommands;
 using My_Library.Command.LoansCommands;
 using My_Library.Command.LoginCommands;
 using My_Library.Command.ReservCommands;
