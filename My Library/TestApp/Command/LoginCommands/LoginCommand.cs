@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace My_Library.Command.LoginCommands
 {
-    public class LoginCommand : CommandBase
+    public class LoginCommand : CommandBase, ILoginCommand
     {
         #region Dependencies
         private ISettingsStore _settinsStore;
