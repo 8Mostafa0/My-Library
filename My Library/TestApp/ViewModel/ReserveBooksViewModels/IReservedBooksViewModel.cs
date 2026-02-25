@@ -19,6 +19,6 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         ICommand SearchBookNameInReservedBookCommand { get; }
         ReservedBookViewModel SelectedReservedBook { get; set; }
 
-        static abstract ReservedBooksViewModel LoadViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository);
+        static abstract IReservedBooksViewModel LoadViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository);
     }
 }

@@ -12,7 +12,7 @@ namespace My_Library.Command.ReservCommands
         private NavigationStore _navigationStore;
         private ReservedBooksStore _reservedBooksStore;
         private ModalNavigationStore _modalNavigationStore;
-        private ReservedBooksViewModel _reservedBooksViewModel;
+        private IReservedBooksViewModel _reservedBooksViewModel;
         #endregion
 
         #region Contructor

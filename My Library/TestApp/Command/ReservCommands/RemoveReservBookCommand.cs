@@ -1,6 +1,6 @@
-﻿using System.Windows;
-using My_Library.Store;
+﻿using My_Library.Store;
 using My_Library.ViewModel.ReserveBooksViewModels;
+using System.Windows;
 
 namespace My_Library.Command.ReservCommands
 {
@@ -8,7 +8,7 @@ namespace My_Library.Command.ReservCommands
     {
         #region Dependencies
         private ReservedBooksStore _reservedBooksStore;
-        private ReservedBooksViewModel _reservedBooksViewModel;
+        private IReservedBooksViewModel _reservedBooksViewModel;
         #endregion
 
         #region Contructor
@@ -17,7 +17,7 @@ namespace My_Library.Command.ReservCommands
         /// </summary>
         /// <param name="reservedBooksViewModel"></param>
         /// <param name="reservedBooksStore"></param>
-        public RemoveReservBookCommand(ReservedBooksViewModel reservedBooksViewModel, ReservedBooksStore reservedBooksStore)
+        public RemoveReservBookCommand(IReservedBooksViewModel reservedBooksViewModel, ReservedBooksStore reservedBooksStore)
         {
             _reservedBooksStore = reservedBooksStore;
             _reservedBooksViewModel = reservedBooksViewModel;

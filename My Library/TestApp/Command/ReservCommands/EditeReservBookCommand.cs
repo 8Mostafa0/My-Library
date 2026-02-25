@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using My_Library.Service;
+﻿using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.ReserveBooksViewModels;
+using System.Windows;
 
 namespace My_Library.Command.ReservCommands
 {
@@ -14,7 +14,7 @@ namespace My_Library.Command.ReservCommands
         private ClientsRepository _clientRepository;
         private ReservedBooksStore _reservedBooksStore;
         private ModalNavigationStore _modalNavigationStore;
-        private ReservedBooksViewModel _reservedBooksViewModel;
+        private IReservedBooksViewModel _reservedBooksViewModel;
         private ReservedBooksRepository _reservedBooksRepository;
         #endregion
 
@@ -38,7 +38,7 @@ namespace My_Library.Command.ReservCommands
             ClientsRepository clientsRepository,
             ReservedBooksStore reservedBooksStore,
             ModalNavigationStore modalNavigationStore,
-            ReservedBooksViewModel reservedBooksViewModel,
+            IReservedBooksViewModel reservedBooksViewModel,
             ReservedBooksRepository reservedBooksRepository
             )
         {

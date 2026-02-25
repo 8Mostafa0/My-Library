@@ -169,9 +169,9 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <param name="clientsRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <returns></returns>
-        public static ReservedBooksViewModel LoadViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
+        public static IReservedBooksViewModel LoadViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            ReservedBooksViewModel ViewModel = new(reservedBooksStore, modalNavigationStore, clientsStore, booksStore, loansRepository, clientsRepository, reservedBooksRepository);
+            IReservedBooksViewModel ViewModel = new ReservedBooksViewModel(reservedBooksStore, modalNavigationStore, clientsStore, booksStore, loansRepository, clientsRepository, reservedBooksRepository);
             ViewModel.LoadReservedBooksCommand.Execute(null);
             return ViewModel;
         }
