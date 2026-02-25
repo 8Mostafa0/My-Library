@@ -33,7 +33,7 @@ namespace My_Library.Command.ClientsCommands
         /// <param name="parameter">no parametes needed</param>
         public override async void Execute(object? parameter)
         {
-            Client client = _clientsViewModel.SelectedClient;
+            IClient client = _clientsViewModel.SelectedClient;
             if (client == null)
             {
                 MessageBox.Show("لطفا کاربری را برای ویرایش انتخاب کنید", "ویرایش کاربر");

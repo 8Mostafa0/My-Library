@@ -13,14 +13,14 @@ namespace My_Library.ViewModel
     public class ClientsViewModel : ViewModelBase
     {
         #region Dependencies
-        private ObservableCollection<Client> _clients;
-        public IEnumerable<Client> Clients => _clients;
+        private ObservableCollection<IClient> _clients;
+        public IEnumerable<IClient> Clients => _clients;
 
         private ClientsStore _clientsStore;
 
-        private Client _selectedClient;
+        private IClient _selectedClient;
 
-        public Client SelectedClient
+        public IClient SelectedClient
         {
             get => _selectedClient;
             set
@@ -89,7 +89,7 @@ namespace My_Library.ViewModel
         #region Constructor
         public ClientsViewModel(ClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            _clients = new ObservableCollection<Client>();
+            _clients = [];
             _clientsStore = clientsStore;
             _clientsStore.ClientAdded += OnClientAdded;
             _clientsStore.ClientsUpdated += UpdateClients;
@@ -110,7 +110,7 @@ namespace My_Library.ViewModel
         /// called each time client update trigred and update it to clients list
         /// </summary>
         /// <param name="client"></param>
-        private void ClientEdited(Client client)
+        private void ClientEdited(IClient client)
         {
             int index = _clients.IndexOf(_clients.FirstOrDefault(c => c.ID == client.ID)!);
             if (index >= 0)
@@ -124,7 +124,7 @@ namespace My_Library.ViewModel
         /// called each time client delete event trigred and delete it from clients list
         /// </summary>
         /// <param name="client"></param>
-        private void OnClientDeleted(Client client)
+        private void OnClientDeleted(IClient client)
         {
             ClearInputs();
             _clients.Remove(client);
@@ -148,7 +148,7 @@ namespace My_Library.ViewModel
         {
             ClearInputs();
             _clients.Clear();
-            foreach (Client client in _clientsStore.Clients)
+            foreach (IClient client in _clientsStore.Clients)
             {
                 _clients.Add(client);
             }
@@ -157,7 +157,7 @@ namespace My_Library.ViewModel
         /// called each time add new client event trigred and add it to clients list
         /// </summary>
         /// <param name="client"></param>
-        private void OnClientAdded(Client client)
+        private void OnClientAdded(IClient client)
         {
             ClearInputs();
             client.ID = _clients.Any() ? _clients.Last().ID + 1 : 1;
@@ -169,7 +169,7 @@ namespace My_Library.ViewModel
         /// fill value of first name and last name when select a client
         /// </summary>
         /// <param name="client"></param>
-        private void SelectedClientChanged(Client client)
+        private void SelectedClientChanged(IClient client)
         {
             if (client != null)
             {
@@ -188,7 +188,7 @@ namespace My_Library.ViewModel
         /// <returns></returns>
         public static ClientsViewModel LoadViewModel(ClientsStore clientStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            ClientsViewModel ViewModel = new ClientsViewModel(clientStore, loanRepository, reservedBooksRepository);
+            ClientsViewModel ViewModel = new(clientStore, loanRepository, reservedBooksRepository);
             ViewModel.LoadClientsCommand.Execute(null);
             return ViewModel;
         }

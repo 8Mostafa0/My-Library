@@ -8,15 +8,15 @@ namespace My_Library.ViewModel
     public class MainViewModel : ViewModelBase
     {
         #region Dependencies
-        private readonly LayoutViewModel _layoutViewModel;
+        private readonly IViewModelBase _layoutViewModel;
         private ModalNavigationStore _modalNavigationStore;
-        public ViewModelBase CurrentViewModel => _layoutViewModel;
-        public ViewModelBase CurrentModalView => _modalNavigationStore.CurrentViewModel;
+        public IViewModelBase CurrentViewModel => _layoutViewModel;
+        public IViewModelBase CurrentModalView => _modalNavigationStore.CurrentViewModel;
 
         public bool IsModalOpen => _modalNavigationStore.IsModalOpen;
         #endregion
         #region Constructor
-        public MainViewModel(LayoutViewModel layoutViewModel)
+        public MainViewModel(IViewModelBase layoutViewModel)
         {
             _layoutViewModel = layoutViewModel;
             _modalNavigationStore = new ModalNavigationStore();

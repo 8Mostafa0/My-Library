@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using My_Library.Service;
+﻿using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel;
+using System.Windows;
 
 namespace My_Library
 {
@@ -13,16 +13,16 @@ namespace My_Library
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            NavigationStore navigationStore = new NavigationStore();
-            ClientsStore clientsStore = new ClientsStore();
-            LoansStore loansStore = new LoansStore();
-            BooksStore booksStore = new BooksStore();
-            SettingsStore settingsStore = new SettingsStore();
-            LoanRepository loanRepository = new LoanRepository();
-            ReservedBooksStore reservedBooksStore = new ReservedBooksStore();
-            ReservedBooksRepository reservedBooksRepository = new ReservedBooksRepository();
-            BooksRepository booksRepository = new BooksRepository();
-            ClientsRepository clientsRepository = new ClientsRepository();
+            NavigationStore navigationStore = new();
+            ClientsStore clientsStore = new();
+            LoansStore loansStore = new();
+            BooksStore booksStore = new();
+            SettingsStore settingsStore = new();
+            LoanRepository loanRepository = new();
+            ReservedBooksStore reservedBooksStore = new();
+            ReservedBooksRepository reservedBooksRepository = new();
+            BooksRepository booksRepository = new();
+            ClientsRepository clientsRepository = new();
             navigationStore.ContentScreen = new HomeViewModel(clientsStore, booksStore, loansStore);
             navigationStore.StatusBarViewModel = new StatusBarViewModel();
 
@@ -39,7 +39,7 @@ namespace My_Library
                 clientsRepository
                 );
 
-            LayoutViewModel layoutViewModel = new LayoutViewModel(navigationStore);
+            IViewModelBase layoutViewModel = new LayoutViewModel(navigationStore);
 
             MainWindow = new MainWindow()
             {

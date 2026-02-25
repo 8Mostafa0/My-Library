@@ -43,7 +43,7 @@ namespace My_Library.Command.ClientsCommands
                 MessageBox.Show("لطفا ابتدا فامیلی را وارد کنید", "افزودن کاربر");
                 return;
             }
-            Client client = new Client()
+            IClient client = new Client()
             {
                 FirstName = _clientViewModel.FirstName,
                 LastName = _clientViewModel.LastName,

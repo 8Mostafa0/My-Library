@@ -1,6 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
-using My_Library.Command;
+﻿using My_Library.Command;
 using My_Library.Command.BooksCommands;
 using My_Library.Command.ClientsCommands;
 using My_Library.Command.LoansCommands;
@@ -8,6 +6,8 @@ using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
@@ -19,8 +19,8 @@ namespace My_Library.ViewModel.LoanViewModels
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
         private ObservableCollection<Book> _books;
-        private ObservableCollection<Client> _clients;
-        private Client _seletedClient;
+        private ObservableCollection<IClient> _clients;
+        private IClient _seletedClient;
         private Book _selectedBook;
         private LoansStore _loansStore;
         private LoanRepository _loanRepository;
@@ -48,8 +48,8 @@ namespace My_Library.ViewModel.LoanViewModels
             }
         }
         public IEnumerable<Book> Books => _books;
-        public IEnumerable<Client> Clients => _clients;
-        public Client SelectedClient
+        public IEnumerable<IClient> Clients => _clients;
+        public IClient SelectedClient
         {
             get => _seletedClient;
             set
@@ -135,8 +135,8 @@ namespace My_Library.ViewModel.LoanViewModels
         #region Contructor
         public AddEditeLoanViewModel(ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoansStore loanStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, Loan loan = null)
         {
-            _clients = new ObservableCollection<Client>();
-            _books = new ObservableCollection<Book>();
+            _clients = [];
+            _books = [];
             _clientsStore = clientsStore;
             _clientsStore.ClientsUpdated += OnClientsUpdated;
             _booksStore = booksStore;
@@ -188,7 +188,7 @@ namespace My_Library.ViewModel.LoanViewModels
         private void OnClientsUpdated()
         {
             _clients.Clear();
-            foreach (Client client in _clientsStore.Clients)
+            foreach (IClient client in _clientsStore.Clients)
             {
                 _clients.Add(client);
             }
@@ -204,7 +204,7 @@ namespace My_Library.ViewModel.LoanViewModels
 
                 Book? book = _books.SingleOrDefault(b => b.ID == _selectedLoan.BookId);
                 SelectedBook = book;
-                Client? client = _clients.SingleOrDefault(c => c.ID == _selectedLoan.ClientId);
+                IClient? client = _clients.SingleOrDefault(c => c.ID == _selectedLoan.ClientId);
                 SelectedClient = client;
             }
         }
@@ -231,7 +231,7 @@ namespace My_Library.ViewModel.LoanViewModels
         /// <returns></returns>
         public static AddEditeLoanViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, BooksStore booksStore, ClientsStore clientsStore, LoansStore loansStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, Loan loan = null)
         {
-            AddEditeLoanViewModel ViewModel = new AddEditeLoanViewModel(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
+            AddEditeLoanViewModel ViewModel = new(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
             ViewModel.LoadBooksCommand.Execute(null);
             ViewModel.LoadClientsCommand.Execute(null);
             ViewModel.SelectedLoan = loan;

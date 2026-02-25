@@ -9,18 +9,18 @@ namespace My_Library.Store
         #region Dependencies
 
         private readonly ClientsRepository _clientRepository;
-        private List<Client> _clients;
+        private List<IClient> _clients;
 
         private readonly Lazy<Task> _initiilizeLazy;
 
 
-        public IEnumerable<Client> Clients => _clients;
+        public IEnumerable<IClient> Clients => _clients;
 
-        public event Action<Client> ClientAdded;
+        public event Action<IClient> ClientAdded;
 
-        public event Action<Client> ClientEdited;
+        public event Action<IClient> ClientEdited;
 
-        public event Action<Client> ClientRemoved;
+        public event Action<IClient> ClientRemoved;
 
         public event Action ClientsUpdated;
 
@@ -36,7 +36,7 @@ namespace My_Library.Store
         {
             _clientRepository = new ClientsRepository();
             _initiilizeLazy = new Lazy<Task>(Initilize);
-            _clients = new List<Client>();
+            _clients = [];
         }
         #endregion
 
@@ -50,9 +50,9 @@ namespace My_Library.Store
         /// <summary>
         /// call for add new client method of database and invoke Client added event
         /// </summary>
-        /// <param name="client"></param>
+        /// <param name="IClient"></param>
         /// <returns></returns>
-        public async Task AddNewClient(Client client)
+        public async Task AddNewClient(IClient client)
         {
             await _clientRepository.AddNewClientToDb(client);
             ClientAdded?.Invoke(client);
@@ -62,7 +62,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="client"></param>
         /// <returns></returns>
-        public async Task EditClient(Client client)
+        public async Task EditClient(IClient client)
         {
             await _clientRepository.EditeClientToDb(client);
             ClientEdited?.Invoke(client);
@@ -73,7 +73,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="client"></param>
         /// <returns></returns>
-        public async Task DeleteClient(Client client)
+        public async Task DeleteClient(IClient client)
         {
             await _clientRepository.DeleteClientToDb(client);
             ClientRemoved?.Invoke(client);
@@ -86,7 +86,7 @@ namespace My_Library.Store
         /// <returns></returns>
         public async Task GetOrderedClients(string customSql = "")
         {
-            IEnumerable<Client> clients = await _clientRepository.GetAllClients(customSql);
+            IEnumerable<IClient> clients = await _clientRepository.GetAllClients(customSql);
             _clients.Clear();
             _clients.AddRange(clients);
             ClientsUpdated?.Invoke();
@@ -97,7 +97,7 @@ namespace My_Library.Store
         /// <returns></returns>
         private async Task Initilize()
         {
-            IEnumerable<Client> clients = await _clientRepository.GetAllClients();
+            IEnumerable<IClient> clients = await _clientRepository.GetAllClients();
             _clients.Clear();
             _clients.AddRange(clients);
             ClientsUpdated?.Invoke();

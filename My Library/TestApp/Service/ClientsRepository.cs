@@ -1,8 +1,8 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
-using Serilog;
 using My_Library.DbContext;
 using My_Library.Model;
+using Serilog;
 
 namespace My_Library.Service
 {
@@ -29,7 +29,7 @@ namespace My_Library.Service
         /// <returns List<Client>></returns>
         public async Task<List<Client>> GetAllClients(string customSql = "")
         {
-            List<Client> clients = new List<Client>();
+            List<Client> clients = [];
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -62,9 +62,9 @@ namespace My_Library.Service
         /// <param name="customSql"></param>
         /// <param name="executionPart"></param>
         /// <returns Client></returns>
-        public async Task<Client> GetClient(string customSql, string executionPart)
+        public async Task<IClient> GetClient(string customSql, string executionPart)
         {
-            Client FetchedClient = new Client();
+            IClient FetchedClient = new Client();
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -78,7 +78,7 @@ namespace My_Library.Service
                     {
                         GetClientSQl = customSql;
                     }
-                    FetchedClient = Connection.QuerySingle<Client>(GetClientSQl);
+                    FetchedClient = Connection.QuerySingle<IClient>(GetClientSQl);
                 }
                 catch (SqlException e)
                 {
@@ -97,7 +97,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="client"></param>
         /// <returns></returns>
-        public async Task AddNewClientToDb(Client client)
+        public async Task AddNewClientToDb(IClient client)
         {
             string CreateClientSql = $"INSERT INTO Clients(FirstName,LastName,Tier,CreatedAt,UpdatedAt)VALUES(N'{client.FirstName}',N'{client.LastName}','{client.Tier}',GETDATE(),GETDATE())";
             await _dbContextFactory.ExecuteQueryAsync(CreateClientSql, "AddNewClientToDb");
@@ -107,7 +107,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="client"></param>
         /// <returns></returns>
-        public async Task EditeClientToDb(Client client)
+        public async Task EditeClientToDb(IClient client)
         {
             string EditeClientSql = $"UPDATE Clients SET FirstName=N'{client.FirstName}',LastName=N'{client.LastName}',Tier='{client.Tier}',UpdatedAt=GETDATE() WHERE Id='{client.ID}'";
             await _dbContextFactory.ExecuteQueryAsync(EditeClientSql, "EditeClientToDb");
@@ -117,7 +117,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="client"></param>
         /// <returns></returns>
-        public async Task DeleteClientToDb(Client client)
+        public async Task DeleteClientToDb(IClient client)
         {
             string DeleteClientSql = $"DELETE FROM Clients WHERE Id='{client.ID}'";
             await _dbContextFactory.ExecuteQueryAsync(DeleteClientSql, "DeleteClientToDb");

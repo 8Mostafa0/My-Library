@@ -1,6 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
-using My_Library.Command;
+﻿using My_Library.Command;
 using My_Library.Command.BooksCommands;
 using My_Library.Command.ClientsCommands;
 using My_Library.Command.LoansCommands;
@@ -8,6 +6,8 @@ using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
@@ -19,17 +19,17 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
         private Book _selectedBook;
-        private Client _selectedClient;
+        private IClient _selectedClient;
         private ReservedBook _selectedReservedBook;
         private string _bookName;
         private string _clientName;
         private int _bookSubject;
 
         private ObservableCollection<Book> _books;
-        private ObservableCollection<Client> _clients;
+        private ObservableCollection<IClient> _clients;
 
         public IEnumerable<Book> Books => _books;
-        public IEnumerable<Client> Clients => _clients;
+        public IEnumerable<IClient> Clients => _clients;
 
         public string BookName
         {
@@ -64,7 +64,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
             }
         }
 
-        public Client SelectedClient
+        public IClient SelectedClient
         {
             get => _selectedClient;
             set
@@ -116,8 +116,8 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 
         public AddEditeReserveBookViewModel(ModalNavigationStore modalNavigationStore, ReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, ReservedBook reservedBook = null)
         {
-            _clients = new ObservableCollection<Client>();
-            _books = new ObservableCollection<Book>();
+            _clients = [];
+            _books = [];
             _modalNavigationStore = modalNavigationStore;
             _reservedBooksStore = reservedBooksStore;
             _clientsStore = clientsStore;
@@ -165,7 +165,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private void OnClientsUpdated()
         {
             _clients.Clear();
-            foreach (Client client in _clientsStore.Clients)
+            foreach (IClient client in _clientsStore.Clients)
             {
                 _clients.Add(client);
             }
@@ -177,7 +177,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         {
             Book? book = _books.SingleOrDefault(b => b.ID == _selectedReservedBook.BookId);
             _selectedBook = book;
-            Client? client = _clients.SingleOrDefault(c => c.ID == _selectedReservedBook.ClientId);
+            IClient? client = _clients.SingleOrDefault(c => c.ID == _selectedReservedBook.ClientId);
             _selectedClient = client;
         }
         /// <summary>
@@ -194,7 +194,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <returns></returns>
         public static AddEditeReserveBookViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, ReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, ReservedBook reservedBook = null)
         {
-            AddEditeReserveBookViewModel ViewModel = new AddEditeReserveBookViewModel(modalNavigationStore, reservedBooksStore, clientsStore, booksStore, loanRepository, reservedBooksRepository, clientsRepository, reservedBook);
+            AddEditeReserveBookViewModel ViewModel = new(modalNavigationStore, reservedBooksStore, clientsStore, booksStore, loanRepository, reservedBooksRepository, clientsRepository, reservedBook);
             ViewModel.LoadBooksCommand.Execute(null);
             ViewModel.LoadClientsCommand.Execute(null);
             return ViewModel;
