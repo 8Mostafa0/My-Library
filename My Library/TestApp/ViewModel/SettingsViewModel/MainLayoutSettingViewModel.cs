@@ -2,7 +2,7 @@
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
-    public class MainLayoutSettingViewModel : ViewModelBase
+    public class MainLayoutSettingViewModel : ViewModelBase, IMainLayoutSettingViewModel
     {
         #region Dependencies
         private SettingsStore _settingStore;
