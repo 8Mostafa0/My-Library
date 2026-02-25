@@ -131,7 +131,7 @@ namespace My_Library.Command.LoansCommands
                     bool IsUserReservedBook = false;
                     if (BookReservs.Count > 0)
                     {
-                        foreach (ReservedBook reservedBook in BookReservs)
+                        foreach (IReservedBook reservedBook in BookReservs)
                         {
                             if (reservedBook.ClientId == _addEditeLoanViewModel.SelectedClient.ID)
                             {

@@ -110,7 +110,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// get called each time a reserved book event get trigred to change its value in reservedbooks list
         /// </summary>
         /// <param name="book"></param>
-        private void OnReservedBookUpdate(ReservedBook book)
+        private void OnReservedBookUpdate(IReservedBook book)
         {
             ReservedBookViewModel Reserv = new(book, _clientsStore, _booksStore);
             int index = _reservedBooks.IndexOf(Reserv);
@@ -121,7 +121,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// get call each time a reserved book event triger to remove it from reserved books list
         /// </summary>
         /// <param name="book"></param>
-        private void OnReservedBookDeleted(ReservedBook book)
+        private void OnReservedBookDeleted(IReservedBook book)
         {
             _reservedBooks.Remove(_selectedReservBook);
             MessageBox.Show("رزرو کتاب با موفقیت حذف شد", "حذف رزرو");
@@ -131,7 +131,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// </summary>
         /// <param name="book"></param>
 
-        private void OnReservedBookAdded(ReservedBook book)
+        private void OnReservedBookAdded(IReservedBook book)
         {
             book.ID = _reservedBooks.Any() ? _reservedBooks.Last().ID + 1 : 1;
             ReservedBookViewModel Reserv = new(book, _clientsStore, _booksStore);
@@ -145,7 +145,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private void UpdateReservedBooks()
         {
             _reservedBooks.Clear();
-            foreach (ReservedBook reservedBooks in _reservedBooksStore.ReservedBook)
+            foreach (IReservedBook reservedBooks in _reservedBooksStore.ReservedBook)
                 _reservedBooks.Add(new ReservedBookViewModel(reservedBooks, _clientsStore, _booksStore));
         }
 

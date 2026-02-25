@@ -7,14 +7,14 @@ namespace My_Library.Store
     {
         #region Dependencies
         private ReservedBooksRepository _resrvedBooksRepository;
-        private List<ReservedBook> _reservedBooks;
+        private List<IReservedBook> _reservedBooks;
 
-        public IEnumerable<ReservedBook> ReservedBook => _reservedBooks;
+        public IEnumerable<IReservedBook> ReservedBook => _reservedBooks;
         public Lazy<Task> _initilizeLazy;
         public Action ReseredBooksUpdated;
-        public Action<ReservedBook> ReservBookAdded;
-        public Action<ReservedBook> ReservBookEdited;
-        public Action<ReservedBook> ReservBookDeleted;
+        public Action<IReservedBook> ReservBookAdded;
+        public Action<IReservedBook> ReservBookEdited;
+        public Action<IReservedBook> ReservBookDeleted;
 
         #endregion
 
@@ -24,7 +24,7 @@ namespace My_Library.Store
         /// </summary>
         public ReservedBooksStore()
         {
-            _reservedBooks = new List<ReservedBook>();
+            _reservedBooks = [];
             _initilizeLazy = new Lazy<Task>(Initilize);
             _resrvedBooksRepository = new ReservedBooksRepository();
         }
@@ -45,7 +45,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="reservedBook"></param>
         /// <returns></returns>
-        public async Task UpdateReservedBook(ReservedBook reservedBook)
+        public async Task UpdateReservedBook(IReservedBook reservedBook)
         {
             await _resrvedBooksRepository.EditReservBookToDb(reservedBook);
             ReservBookEdited?.Invoke(reservedBook);
@@ -55,7 +55,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="reservedBook"></param>
         /// <returns></returns>
-        public async Task AddReservBook(ReservedBook reservedBook)
+        public async Task AddReservBook(IReservedBook reservedBook)
         {
             await _resrvedBooksRepository.AddNewReservedBookToDb(reservedBook);
             ReservBookAdded?.Invoke(reservedBook);
@@ -66,7 +66,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="reservedBook"></param>
         /// <returns></returns>
-        public async Task DeleteReservBook(ReservedBook reservedBook)
+        public async Task DeleteReservBook(IReservedBook reservedBook)
         {
             await _resrvedBooksRepository.DeleteReservedBookWithClientToDb(reservedBook);
             ReservBookDeleted?.Invoke(reservedBook);
@@ -87,7 +87,7 @@ namespace My_Library.Store
         /// <returns></returns>
         public async Task GetReservedBooksAsync(string customSql = "")
         {
-            IEnumerable<ReservedBook> reservedBooks = await _resrvedBooksRepository.GetAllReservedBooks(customSql);
+            IEnumerable<IReservedBook> reservedBooks = await _resrvedBooksRepository.GetAllReservedBooks(customSql);
             _reservedBooks.Clear();
             _reservedBooks.AddRange(reservedBooks);
             ReseredBooksUpdated?.Invoke();
@@ -99,7 +99,7 @@ namespace My_Library.Store
         /// <returns></returns>
         private async Task Initilize()
         {
-            IEnumerable<ReservedBook> reservedBooks = await _resrvedBooksRepository.GetAllReservedBooks();
+            IEnumerable<IReservedBook> reservedBooks = await _resrvedBooksRepository.GetAllReservedBooks();
             _reservedBooks.Clear();
             _reservedBooks.AddRange(reservedBooks);
             ReseredBooksUpdated?.Invoke();
