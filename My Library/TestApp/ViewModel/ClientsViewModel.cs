@@ -82,7 +82,7 @@ namespace My_Library.ViewModel
         public ICommand AddNewClientCommand { get; }
         public IOrderClientsCommand OrderClientsCommand { get; }
 
-        public ICommand EditClientCommand { get; }
+        public IEditClientCommand EditClientCommand { get; }
 
         #endregion
 

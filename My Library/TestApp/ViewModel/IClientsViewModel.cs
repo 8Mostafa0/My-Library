@@ -12,7 +12,7 @@ namespace My_Library.ViewModel
         ICommand AddNewClientCommand { get; }
         IEnumerable<IClient> Clients { get; }
         ICommand DeleteClientCommand { get; }
-        ICommand EditClientCommand { get; }
+        IEditClientCommand EditClientCommand { get; }
         string FirstName { get; set; }
         string LastName { get; set; }
         ILoadClientsCommand LoadClientsCommand { get; }
