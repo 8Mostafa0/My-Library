@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.ReservCommands
 {
-    public class LoadReservedBooksCommand : CommandBase
+    public class LoadReservedBooksCommand : CommandBase, ILoadReservedBooksCommand
     {
         #region Dependencies
         private IReservedBooksStore _reservedBooksStore;
