@@ -1,4 +1,5 @@
-﻿using My_Library.Model;
+﻿using My_Library.Command.ReservCommands;
+using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using System.Windows.Input;
@@ -17,7 +18,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         ICommand LoadClientsCommand { get; }
         ICommand OrderBooksBySubjectCommand { get; }
         ICommand OrderBooksCommand { get; }
-        ICommand SaveReservedBookDataCommand { get; }
+        SaveReservationDataCommand SaveReservedBookDataCommand { get; }
         ICommand SearchBookNameCommand { get; }
         ICommand SearchClientNameCommand { get; }
         IBook SelectedBook { get; set; }

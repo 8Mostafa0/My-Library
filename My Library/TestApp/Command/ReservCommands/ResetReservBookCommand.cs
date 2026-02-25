@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.ReservCommands
 {
-    public class ResetReservBookCommand : CommandBase
+    public class ResetReservBookCommand : CommandBase, IResetReservBookCommand
     {
         #region Dependencies
         private IReservedBooksStore _reservedBooksStore;
