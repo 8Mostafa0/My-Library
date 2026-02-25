@@ -10,10 +10,10 @@ namespace My_Library.ViewModel
         ICommand CloseAppCommand { get; }
         ICommand DatabaseCommand { get; }
         ICommand NavigateBooksCommand { get; }
-        NavigateHomeScreenCommand NavigateHomeCommand { get; }
+        INavigateHomeScreenCommand NavigateHomeCommand { get; }
         ICommand NavigateLoansCommand { get; }
         ICommand NavigateReservedBooksCommand { get; }
-        NavigateToSettingsCommand NavigateToSettingsCommand { get; }
+        INavigateToSettingsCommand NavigateToSettingsCommand { get; }
         ICommand OpenModalCommand { get; }
         virtual void Dispose() { }
     }
