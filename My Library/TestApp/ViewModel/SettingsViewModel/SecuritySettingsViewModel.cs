@@ -2,7 +2,6 @@
 using My_Library.Command.SettingsCommands;
 using My_Library.Store;
 using System.Windows;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
@@ -32,7 +31,7 @@ namespace My_Library.ViewModel.SettingsViewModel
         #endregion
 
         #region Commands
-        public ICommand ChangeLoginPasswordCommand { get; }
+        public ChangeLoginPasswordCommand ChangeLoginPasswordCommand { get; }
         #endregion
 
         #region Contructor
