@@ -1,6 +1,6 @@
 ﻿namespace My_Library.Model
 {
-    public class Loan
+    public class Loan : ILoan
     {
         public int Id { get; set; }
         public int ClientId { get; set; }
