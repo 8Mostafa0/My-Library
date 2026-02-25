@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
   <diagram name="Page-1" id="aLzEVtOWzkobaYBW7M3l">
-    <mxGraphModel dx="5101" dy="2085" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="6183" dy="1780" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -153,7 +153,7 @@
           <mxGeometry height="80" width="80" x="-1042" y="1400" as="geometry" />
         </mxCell>
         <mxCell id="OFmIvhZD1-SFWkANH96S-97" edge="1" parent="1" source="OFmIvhZD1-SFWkANH96S-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OFmIvhZD1-SFWkANH96S-98" value="Clients Screen">
-          <mxGeometry relative="1" x="0.9209" as="geometry">
+          <mxGeometry relative="1" x="0.7958" y="-5" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="-2148" y="972" as="targetPoint" />
           </mxGeometry>
@@ -168,9 +168,16 @@
             <mxPoint x="-660" y="1128" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="OFmIvhZD1-SFWkANH96S-140" edge="1" parent="1" source="OFmIvhZD1-SFWkANH96S-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OFmIvhZD1-SFWkANH96S-150">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="OFmIvhZD1-SFWkANH96S-140" edge="1" parent="1" source="OFmIvhZD1-SFWkANH96S-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OFmIvhZD1-SFWkANH96S-150" value="Loans Screen">
+          <mxGeometry relative="1" x="0.6842" as="geometry">
+            <mxPoint as="offset" />
             <mxPoint x="-1320" y="312" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-1" edge="1" parent="1" source="OFmIvhZD1-SFWkANH96S-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-3" value="Reserve Screen">
+          <mxGeometry relative="1" x="0.9311" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-3327.3333333333335" y="504" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OFmIvhZD1-SFWkANH96S-55" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="Navigation" vertex="1">
@@ -447,12 +454,6 @@
             <mxPoint x="-2244" y="144" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="OFmIvhZD1-SFWkANH96S-248" edge="1" parent="1" source="OFmIvhZD1-SFWkANH96S-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OFmIvhZD1-SFWkANH96S-249" value="Reserv Book">
-          <mxGeometry relative="1" x="0.9506" as="geometry">
-            <mxPoint as="offset" />
-            <mxPoint x="-2628" y="96" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="OFmIvhZD1-SFWkANH96S-153" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="Actions" vertex="1">
           <mxGeometry height="80" width="80" x="-1362" y="204" as="geometry" />
         </mxCell>
@@ -698,8 +699,162 @@
         <mxCell id="OFmIvhZD1-SFWkANH96S-245" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="Update Client To Database&lt;div&gt;Update Client To ClientsStore&lt;/div&gt;" vertex="1">
           <mxGeometry height="72" width="139" x="-2314.5" y="-300" as="geometry" />
         </mxCell>
-        <mxCell id="OFmIvhZD1-SFWkANH96S-249" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="Not Impimented" vertex="1">
-          <mxGeometry height="60" width="120" x="-2688" y="74" as="geometry" />
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-7" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Load ReservedBooks&lt;br&gt;&lt;br&gt;Set ReservedBooksViewModel&lt;br&gt;To CurrentViewModel" vertex="1">
+          <mxGeometry height="78" width="172" x="-3484" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-8" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Get ReservedBooks From ReservedBooksStore&lt;br&gt;Fill ReservedBooksList" vertex="1">
+          <mxGeometry height="60" width="172" x="-3484" y="396" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-11" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Show ReservedBooksList" vertex="1">
+          <mxGeometry height="60" width="172" x="-3484" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-14" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-13" value="Order">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-19" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-18" value="Add Reserve">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-20" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-44" value="Update Reserve">
+          <mxGeometry relative="1" x="0.9105" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="-4410" y="30" />
+            </Array>
+            <mxPoint x="-4395" y="-148" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-54" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-55" value="Delete Reserve">
+          <mxGeometry relative="1" x="0.9477" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-5064" y="-180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-10" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="User Action" vertex="1">
+          <mxGeometry height="80" width="80" x="-3438" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-15" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-3144" y="304" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-13" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="Order ReservedBooks lis" vertex="1">
+          <mxGeometry height="60" width="120" x="-3204" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-27" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-26" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-29" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-30" value="Yes">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-3084" y="-218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-18" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="Selected Book in Reserve" vertex="1">
+          <mxGeometry height="140" width="186" x="-3491" y="-288" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-31" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-30" value="Yes">
+          <mxGeometry relative="1" x="-0.5279" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-34" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-26" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="User Have Dialyed Loan" vertex="1">
+          <mxGeometry height="142" width="186" x="-3491" y="-528" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-30" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" value="Show Error" vertex="1">
+          <mxGeometry height="80" width="80" x="-3116" y="-258" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-35" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-38" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-33" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="User Have Reserved book" vertex="1">
+          <mxGeometry height="96" width="204" x="-3500" y="-756" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-40" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-39" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-37" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="Add New ReserveBook To database&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Add New ReserveBook To ReservedBooks Store&lt;/div&gt;" vertex="1">
+          <mxGeometry height="106" width="178" x="-3487" y="-960" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-41" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2868" y="-1107" />
+              <mxPoint x="-2868" y="304" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-39" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="Triger Update ReserveBooks List Event" vertex="1">
+          <mxGeometry height="89" width="170" x="-3483" y="-1152" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-42" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-47" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-43" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-48" value="Yes">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-4096" y="-230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-44" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="Selected Book in Reserve" vertex="1">
+          <mxGeometry height="140" width="186" x="-4503" y="-300" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-45" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-48" value="Yes">
+          <mxGeometry relative="1" x="-0.5279" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-46" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-51" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-47" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="User Have Dialyed Loan" vertex="1">
+          <mxGeometry height="142" width="186" x="-4503" y="-540" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-48" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" value="Show Error" vertex="1">
+          <mxGeometry height="80" width="80" x="-4128" y="-270" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-49" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-50" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OF8qS-E-Gp-ey2EAyWvu-52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-51" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="User Have Reserved book" vertex="1">
+          <mxGeometry height="96" width="204" x="-4512" y="-768" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-53" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-4410" y="-1107" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-52" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="Edit New ReserveBook To database&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Edit New ReserveBook To ReservedBooks Store&lt;/div&gt;" vertex="1">
+          <mxGeometry height="106" width="178" x="-4499" y="-972" as="geometry" />
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-56" edge="1" parent="1" source="OF8qS-E-Gp-ey2EAyWvu-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OF8qS-E-Gp-ey2EAyWvu-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-5035" y="-1107" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OF8qS-E-Gp-ey2EAyWvu-55" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="Delte ReserveBook To database&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Delte ReserveBook To ReservedBooks Store&lt;/div&gt;" vertex="1">
+          <mxGeometry height="106" width="178" x="-5124" y="-317" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
