@@ -14,7 +14,7 @@ namespace My_Library.Command.ReservCommands
         private ReservedBooksStore _reservedBookStore;
         private ModalNavigationStore _modalNavigationStore;
         private ReservedBooksRepository _reservedbooksRepository;
-        private AddEditeReserveBookViewModel _addediteReserveBookViewModel;
+        private IAddEditeReserveBookViewModel _addediteReserveBookViewModel;
         #endregion
 
 
@@ -29,7 +29,7 @@ namespace My_Library.Command.ReservCommands
         /// <param name="reservedBooksRepository"></param>
         /// <param name="clientsRepository"></param>
         public SaveReservationDataCommand(
-            AddEditeReserveBookViewModel addediteReserveBookViewModel,
+            IAddEditeReserveBookViewModel addediteReserveBookViewModel,
             ModalNavigationStore modalNavigationStore,
             ReservedBooksStore reservedBooksStore,
             LoanRepository loanRepository,
