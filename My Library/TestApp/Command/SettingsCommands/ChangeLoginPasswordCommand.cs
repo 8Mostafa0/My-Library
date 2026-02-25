@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace My_Library.Command.SettingsCommands
 {
-    public class ChangeLoginPasswordCommand : CommandBase
+    public class ChangeLoginPasswordCommand : CommandBase, IChangeLoginPasswordCommand
     {
         #region Dependencies
         private ISettingsStore _settingsStore;
