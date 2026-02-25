@@ -1,11 +1,11 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows;
-using System.Windows.Input;
-using My_Library.Command.LoansCommands;
+﻿using My_Library.Command.LoansCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.ModelsViewModel;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
@@ -71,7 +71,7 @@ namespace My_Library.ViewModel.LoanViewModels
         #region Constructor
         public LoansViewModel(ModalNavigationStore modalNavigationStore, LoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            _loans = new ObservableCollection<LoanViewModel>();
+            _loans = [];
             _modalNavigationStore = modalNavigationStore;
             _loansStore = loansStore;
             _clientsStore = clientsStore;
@@ -91,6 +91,7 @@ namespace My_Library.ViewModel.LoanViewModels
             _loansStore.LoanIsAdded += LoanAdded;
             _loansStore.LoanIsUpdated += LoanIsUpdated;
             _modalNavigationStore.CurrentViewModelChanged += OnModalViewModelChanged;
+            SelectedLoan = LoanViewModel.Empty();
         }
         #endregion
 
@@ -158,7 +159,7 @@ namespace My_Library.ViewModel.LoanViewModels
         /// <returns></returns>
         public static LoansViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, LoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            LoansViewModel viewModel = new LoansViewModel(modalNavigationStore, loansStore, clientsStore, booksStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository);
+            LoansViewModel viewModel = new(modalNavigationStore, loansStore, clientsStore, booksStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository);
             viewModel.LoadLoansCommand.Execute(null);
             return viewModel;
         }
