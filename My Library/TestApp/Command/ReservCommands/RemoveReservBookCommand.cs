@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace My_Library.Command.ReservCommands
 {
-    public class RemoveReservBookCommand : CommandBase
+    public class RemoveReservBookCommand : CommandBase, IRemoveReservBookCommand
     {
         #region Dependencies
         private IReservedBooksStore _reservedBooksStore;
