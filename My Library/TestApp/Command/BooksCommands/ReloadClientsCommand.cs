@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.BooksCommands
 {
-    public class ReloadClientsCommand : CommandBase
+    public class ReloadClientsCommand : CommandBase, IReloadClientsCommand
     {
         #region Dependencies
         private IBooksStore _booksStore;
