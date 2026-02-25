@@ -62,6 +62,10 @@ namespace My_Library.ViewModel.ModelsViewModel
                 UpdatedAt = UpdatedAt
             };
         }
+        public static LoanViewModel Empty()
+        {
+            return new LoanViewModel(new Loan() { Id = 0, BookId = 0, ClientId = 0 }, null, null);
+        }
         #endregion
     }
 }
