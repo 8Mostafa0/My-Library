@@ -100,7 +100,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 
         #region Commands
 
-        public ICommand CloseModalCommand { get; }
+        public ICloseModalCommand CloseModalCommand { get; }
         public SaveReservationDataCommand SaveReservedBookDataCommand { get; }
         public ICommand SearchBookNameCommand { get; }
         public ICommand SearchClientNameCommand { get; }

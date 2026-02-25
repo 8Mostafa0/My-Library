@@ -13,7 +13,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         int BookSubject { get; set; }
         string ClientName { get; set; }
         IEnumerable<IClient> Clients { get; }
-        ICommand CloseModalCommand { get; }
+        ICloseModalCommand CloseModalCommand { get; }
         ICommand LoadBooksCommand { get; }
         ICommand LoadClientsCommand { get; }
         ICommand OrderBooksBySubjectCommand { get; }

@@ -13,7 +13,7 @@ namespace My_Library.ViewModel.LoanViewModels
         int BooksSortOrder { get; set; }
         IEnumerable<IClient> Clients { get; }
         string ClientSearch { get; set; }
-        ICommand CloseModalCommand { get; }
+        ICloseModalCommand CloseModalCommand { get; }
         IViewModelBase CurrentModelViewModel { get; }
         ICommand LoadBooksCommand { get; }
         ICommand LoadClientsCommand { get; }
