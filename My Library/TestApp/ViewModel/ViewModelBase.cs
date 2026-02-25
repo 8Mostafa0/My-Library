@@ -2,7 +2,7 @@
 
 namespace My_Library.ViewModel
 {
-    public class ViewModelBase : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged, IViewModelBase
     {
         #region Dependencies
         public event PropertyChangedEventHandler PropertyChanged;
