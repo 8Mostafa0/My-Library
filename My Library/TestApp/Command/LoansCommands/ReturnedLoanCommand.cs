@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace My_Library.Command.LoansCommands
 {
-    public class ReturnedLoanCommand : CommandBase
+    public class ReturnedLoanCommand : CommandBase, IReturnedLoanCommand
     {
         #region Dependencies
         private ILoansStore _loansStore;
