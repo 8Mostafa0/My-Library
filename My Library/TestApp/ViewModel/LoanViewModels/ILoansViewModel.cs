@@ -19,7 +19,7 @@ namespace My_Library.ViewModel.LoanViewModels
         ICommand SearchBookCommand { get; }
         ILoanViewModel SelectedLoan { get; set; }
         IShowLoanModalCommand ShowAddLoanModalCommand { get; }
-        ICommand ShowEditLoanViewModel { get; }
+        IShowEditLoanViewModel ShowEditLoanViewModel { get; }
         int SortIndex { get; set; }
         ISortLoansListCommand SortLoansListCommand { get; }
 
