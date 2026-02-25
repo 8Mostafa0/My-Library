@@ -1,6 +1,6 @@
 ﻿namespace My_Library.Store
 {
-    public class TimeStore
+    public class TimeStore : ITimeStore
     {
         #region Dependencies
         public event Action CurrentViewModelChanged;
