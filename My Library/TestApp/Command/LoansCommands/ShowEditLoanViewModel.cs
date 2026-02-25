@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace My_Library.Command.LoansCommands
 {
-    public class ShowEditLoanViewModel : CommandBase
+    public class ShowEditLoanViewModel : CommandBase, IShowEditLoanViewModel
     {
         #region Dependencies
         private ILoansStore _loansStore;
