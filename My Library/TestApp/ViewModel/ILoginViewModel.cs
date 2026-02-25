@@ -1,5 +1,4 @@
 ﻿using My_Library.Command.LoginCommands;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
@@ -7,7 +6,7 @@ namespace My_Library.ViewModel
     {
         CloseAppCommand CloseAppCommand { get; }
         bool FirstOpen { get; }
-        ICommand LoginCommand { get; }
+        LoginCommand LoginCommand { get; }
         string Password { get; set; }
         string Title { get; set; }
     }

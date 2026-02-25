@@ -3,7 +3,6 @@ using My_Library.Command.LoginCommands;
 using My_Library.DbContext;
 using My_Library.Service;
 using My_Library.Store;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
@@ -26,7 +25,7 @@ namespace My_Library.ViewModel
 
         #region Commands
         public CloseAppCommand CloseAppCommand { get; }
-        public ICommand LoginCommand { get; }
+        public LoginCommand LoginCommand { get; }
 
         #endregion
 
