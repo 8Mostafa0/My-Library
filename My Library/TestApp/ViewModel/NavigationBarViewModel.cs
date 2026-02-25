@@ -34,7 +34,7 @@ namespace My_Library.ViewModel
         public ICommand NavigateLoansCommand { get; }
         public INavigateToSettingsCommand NavigateToSettingsCommand { get; }
         public NavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
-        public ICommand CloseAppCommand { get; }
+        public CloseAppCommand CloseAppCommand { get; }
         #endregion
 
         #region Constructr

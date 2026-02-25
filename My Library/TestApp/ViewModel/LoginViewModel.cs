@@ -25,7 +25,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Commands
-        public ICommand CloseAppCommand { get; }
+        public CloseAppCommand CloseAppCommand { get; }
         public ICommand LoginCommand { get; }
 
         #endregion
