@@ -1,6 +1,6 @@
 ﻿namespace My_Library.Model
 {
-    public class Client
+    public class Client : IClient
     {
         public int ID { get; set; }
         public string FirstName { get; set; }
