@@ -2,7 +2,7 @@
 
 namespace My_Library.ViewModel
 {
-    public class HomeViewModel : ViewModelBase
+    public class HomeViewModel : ViewModelBase, IHomeViewModel
     {
 
         #region Dependencies
