@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
-    public class BooksViewModel : ViewModelBase
+    public class BooksViewModel : ViewModelBase, IBooksViewModel
     {
         #region Dependencies
         private BooksStore _booksStore;
@@ -201,9 +201,9 @@ namespace My_Library.ViewModel
         /// <param name="reservedBooksRepository"></param>
         /// <param name="booksRepository"></param>
         /// <returns></returns>
-        public static BooksViewModel LoadViewModel(BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
+        public static IBooksViewModel LoadViewModel(BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
         {
-            BooksViewModel ViewModel = new(booksStore, loanRepository, reservedBooksRepository, booksRepository);
+            IBooksViewModel ViewModel = new BooksViewModel(booksStore, loanRepository, reservedBooksRepository, booksRepository);
             ViewModel.LoadBooksCommand.Execute(null);
             return ViewModel;
         }
