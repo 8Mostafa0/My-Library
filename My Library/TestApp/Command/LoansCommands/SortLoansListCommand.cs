@@ -3,7 +3,7 @@ using My_Library.ViewModel.LoanViewModels;
 
 namespace My_Library.Command.LoansCommands
 {
-    public class SortLoansListCommand : CommandBase
+    public class SortLoansListCommand : CommandBase, ISortLoansListCommand
     {
         #region Dependencies
         private ILoansStore _loansStore;
