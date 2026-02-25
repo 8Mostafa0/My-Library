@@ -10,7 +10,7 @@ namespace My_Library.ViewModel
     {
         ICommand AddNewBookCommand { get; }
         IEnumerable<IBook> Books { get; }
-        ICommand DeleteBookCommand { get; }
+        IDeleteBookCommand DeleteBookCommand { get; }
         IEditBookCommand EditBookCommand { get; }
         ILoadBooksCommand LoadBooksCommand { get; }
         string Name { get; set; }
