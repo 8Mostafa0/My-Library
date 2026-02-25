@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
-    public class ClientsViewModel : ViewModelBase
+    public class ClientsViewModel : ViewModelBase, IClientsViewModel
     {
         #region Dependencies
         private ObservableCollection<IClient> _clients;
