@@ -186,9 +186,9 @@ namespace My_Library.ViewModel
         /// <param name="loanRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <returns></returns>
-        public static ClientsViewModel LoadViewModel(ClientsStore clientStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
+        public static IClientsViewModel LoadViewModel(ClientsStore clientStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            ClientsViewModel ViewModel = new(clientStore, loanRepository, reservedBooksRepository);
+            IClientsViewModel ViewModel = new ClientsViewModel(clientStore, loanRepository, reservedBooksRepository);
             ViewModel.LoadClientsCommand.Execute(null);
             return ViewModel;
         }

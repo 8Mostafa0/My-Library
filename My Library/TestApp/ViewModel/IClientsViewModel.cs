@@ -20,7 +20,7 @@ namespace My_Library.ViewModel
         string SortOrder { get; set; }
         int Tier { get; set; }
 
-        static abstract ClientsViewModel LoadViewModel(ClientsStore clientStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository);
+        static abstract IClientsViewModel LoadViewModel(ClientsStore clientStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository);
         void UpdateClients();
     }
 }
