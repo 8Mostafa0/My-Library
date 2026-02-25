@@ -102,7 +102,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Commands
-        public ICommand LoadBooksCommand { get; }
+        public ILoadBooksCommand LoadBooksCommand { get; }
         public ICommand AddNewBookCommand { get; }
 
         public ICommand DeleteBookCommand { get; }

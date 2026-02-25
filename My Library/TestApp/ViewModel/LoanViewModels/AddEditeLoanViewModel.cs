@@ -7,7 +7,6 @@ using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using System.Collections.ObjectModel;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
@@ -123,7 +122,7 @@ namespace My_Library.ViewModel.LoanViewModels
         #region Commands
 
         public IViewModelBase CurrentModelViewModel => _modalNavigationStore.CurrentViewModel;
-        public ICommand LoadBooksCommand { get; }
+        public ILoadBooksCommand LoadBooksCommand { get; }
         public ILoadClientsCommand LoadClientsCommand { get; }
         public ICloseModalCommand CloseModalCommand { get; }
         public ISaveLoanDataCommand SaveLoanDataCommand { get; }

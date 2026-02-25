@@ -6,7 +6,6 @@ using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
@@ -18,7 +17,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         string ClientName { get; set; }
         IEnumerable<IClient> Clients { get; }
         ICloseModalCommand CloseModalCommand { get; }
-        ICommand LoadBooksCommand { get; }
+        ILoadBooksCommand LoadBooksCommand { get; }
         ILoadClientsCommand LoadClientsCommand { get; }
         IOrderBooksBySubjectCommand OrderBooksBySubjectCommand { get; }
         IOrderBooksBySubjectCommand OrderBooksCommand { get; }

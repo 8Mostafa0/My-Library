@@ -6,7 +6,6 @@ using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
@@ -19,7 +18,7 @@ namespace My_Library.ViewModel.LoanViewModels
         string ClientSearch { get; set; }
         ICloseModalCommand CloseModalCommand { get; }
         IViewModelBase CurrentModelViewModel { get; }
-        ICommand LoadBooksCommand { get; }
+        ILoadBooksCommand LoadBooksCommand { get; }
         ILoadClientsCommand LoadClientsCommand { get; }
         IOrderBooksBySubjectCommand OrderBooksBySubjectCommand { get; }
         DateTime ReturnDate { get; set; }

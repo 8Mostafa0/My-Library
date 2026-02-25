@@ -12,7 +12,7 @@ namespace My_Library.ViewModel
         IEnumerable<IBook> Books { get; }
         ICommand DeleteBookCommand { get; }
         ICommand EditBookCommand { get; }
-        ICommand LoadBooksCommand { get; }
+        ILoadBooksCommand LoadBooksCommand { get; }
         string Name { get; set; }
         IOrderBooksByStateCommand OrderBooksCommand { get; }
         string PublicationDate { get; set; }

@@ -7,7 +7,6 @@ using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using System.Collections.ObjectModel;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
@@ -105,7 +104,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         public ISearchBookNameCommand SearchBookNameCommand { get; }
         public ISearchClientNameCommand SearchClientNameCommand { get; }
         public ILoadClientsCommand LoadClientsCommand { get; }
-        public ICommand LoadBooksCommand { get; }
+        public ILoadBooksCommand LoadBooksCommand { get; }
         public IOrderBooksBySubjectCommand OrderBooksCommand { get; }
         public IOrderBooksBySubjectCommand OrderBooksBySubjectCommand { get; }
 
