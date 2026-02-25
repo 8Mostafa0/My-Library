@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.BooksCommands
 {
-    public class SearchBookNameCommand : CommandBase
+    public class SearchBookNameCommand : CommandBase, ISearchBookNameCommand
     {
         #region Dependencies
         private IBooksStore _booksStore;
