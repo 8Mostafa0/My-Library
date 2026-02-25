@@ -8,7 +8,7 @@ namespace My_Library.Command.BooksCommands
     {
         #region Dipendencies
         private BooksStore _booksStore;
-        private BooksViewModel _booksViewModel;
+        private IBooksViewModel _booksViewModel;
         private NavigationStore _navigationStore;
         #endregion
 
