@@ -3,7 +3,7 @@ using My_Library.ViewModel.LoanViewModels;
 
 namespace My_Library.Command.LoansCommands
 {
-    public class SearchBookCommand : CommandBase
+    public class SearchBookCommand : CommandBase, ISearchBookCommand
     {
         #region Dependencies
         private ILoansStore _loansStore;
