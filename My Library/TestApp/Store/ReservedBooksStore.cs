@@ -3,7 +3,7 @@ using My_Library.Service;
 
 namespace My_Library.Store
 {
-    public class ReservedBooksStore
+    public class ReservedBooksStore : IReservedBooksStore
     {
         #region Dependencies
         private ReservedBooksRepository _resrvedBooksRepository;
