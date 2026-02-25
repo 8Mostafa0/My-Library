@@ -4,7 +4,7 @@ using My_Library.ViewModel.SettingsViewModel;
 namespace My_Library.Command.SettingsCommands
 {
 
-    public class NavigateLayoutSettingCommand : CommandBase
+    public class NavigateLayoutSettingCommand : CommandBase, INavigateLayoutSettingCommand
     {
         #region Dependencies
         private ISettingNavigationStore _settingNavigationStore;
