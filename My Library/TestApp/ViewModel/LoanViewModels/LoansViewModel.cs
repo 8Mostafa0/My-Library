@@ -60,7 +60,7 @@ namespace My_Library.ViewModel.LoanViewModels
 
         public IShowLoanModalCommand ShowAddLoanModalCommand { get; }
         public IShowEditLoanViewModel ShowEditLoanViewModel { get; }
-        public ICommand LoadLoansCommand { get; }
+        public ILoadLoansCommand LoadLoansCommand { get; }
         public ICommand OrderBooksCommand { get; }
         public ISearchBookCommand SearchBookCommand { get; }
         public IReturnedLoanCommand ReturnedLoanCommand { get; }

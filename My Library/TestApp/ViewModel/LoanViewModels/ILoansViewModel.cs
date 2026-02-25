@@ -11,7 +11,7 @@ namespace My_Library.ViewModel.LoanViewModels
         string BookName { get; set; }
         IViewModelBase CurrentModalViewModel { get; }
         bool IsModalOpen { get; }
-        ICommand LoadLoansCommand { get; }
+        ILoadLoansCommand LoadLoansCommand { get; }
         IEnumerable<ILoanViewModel> Loans { get; }
         ICommand OrderBooksCommand { get; }
         IReloadLoansListCommand ReloadLoansListCommand { get; }
