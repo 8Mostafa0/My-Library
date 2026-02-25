@@ -18,7 +18,7 @@ namespace My_Library.ViewModel
         private readonly IModalNavigationStore _modalNavigationStore;
         private IReservedBooksStore _reservedBooksStore;
         private BooksStore _booksStore;
-        private ClientsStore _clientsStore;
+        private IClientsStore _clientsStore;
         private ILoansStore _loansStore;
         #endregion
 
@@ -41,7 +41,7 @@ namespace My_Library.ViewModel
         public NavigationBarViewModel(
             INavigationStore navigationStore,
             IReservedBooksStore reservedBooksStore,
-            ClientsStore clientsStore,
+            IClientsStore clientsStore,
             BooksStore booksStore,
             ILoansStore loansStore,
             LoanRepository loanRepository,

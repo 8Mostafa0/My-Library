@@ -8,7 +8,7 @@ namespace My_Library.Command.ReservCommands
     {
         #region Dependencies
         private BooksStore _booksStore;
-        private ClientsStore _clientsStore;
+        private IClientsStore _clientsStore;
         private IReservedBooksStore _reservedBooksStore;
         private IModalNavigationStore _modalNavigationStore;
         private ReservedBooksRepository _reservedBooksRepository;
@@ -32,7 +32,7 @@ namespace My_Library.Command.ReservCommands
         public AddNewReservBookCommand(
             IModalNavigationStore modalNavigationStore,
             IReservedBooksStore reservedBooksStore,
-            ClientsStore clientsStore,
+            IClientsStore clientsStore,
             BooksStore booksStore,
             LoanRepository loanRepository,
             ReservedBooksRepository reservedBooksRepository,

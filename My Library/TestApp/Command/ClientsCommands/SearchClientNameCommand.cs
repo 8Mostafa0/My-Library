@@ -5,7 +5,7 @@ namespace My_Library.Command.ClientsCommands
     public class SearchClientNameCommand : CommandBase
     {
         #region Dependencies
-        private ClientsStore _clientsStore;
+        private IClientsStore _clientsStore;
         #endregion
 
 
@@ -14,7 +14,7 @@ namespace My_Library.Command.ClientsCommands
         /// search in clients database base on first name and last name
         /// </summary>
         /// <param name="clientsStore"></param>
-        public SearchClientNameCommand(ClientsStore clientsStore)
+        public SearchClientNameCommand(IClientsStore clientsStore)
         {
             _clientsStore = clientsStore;
         }

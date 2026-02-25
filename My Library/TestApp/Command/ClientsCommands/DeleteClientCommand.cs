@@ -10,7 +10,7 @@ namespace My_Library.Command.ClientsCommands
     {
         #region Dependencies
         private LoanRepository _loanRepository;
-        private readonly ClientsStore _clientsStore;
+        private readonly IClientsStore _clientsStore;
         private readonly IClientsViewModel _clientsViewModel;
         private ReservedBooksRepository _reservedBooksRepository;
         #endregion
@@ -27,7 +27,7 @@ namespace My_Library.Command.ClientsCommands
         /// <param name="clientsStore"></param>
         /// <param name="loanRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public DeleteClientCommand(IClientsViewModel clientsViewModel, ClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
+        public DeleteClientCommand(IClientsViewModel clientsViewModel, IClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _clientsViewModel = clientsViewModel;
             _clientsStore = clientsStore;

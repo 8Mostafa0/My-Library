@@ -14,7 +14,7 @@ namespace My_Library
         protected override void OnStartup(StartupEventArgs e)
         {
             INavigationStore navigationStore = new NavigationStore();
-            ClientsStore clientsStore = new();
+            IClientsStore clientsStore = new ClientsStore();
             ILoansStore loansStore = new LoansStore();
             BooksStore booksStore = new();
             ISettingsStore settingsStore = new SettingsStore();

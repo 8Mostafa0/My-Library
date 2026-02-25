@@ -13,7 +13,7 @@ namespace My_Library.Store
         public IEnumerable<ILoanViewModel> Loans => _loans;
         private List<ILoanViewModel> _loans;
         private LoanRepository _loanRepository;
-        private ClientsStore _clientsStore;
+        private IClientsStore _clientsStore;
         private BooksStore _booksStore;
 
         public event Action LoansUpdated;

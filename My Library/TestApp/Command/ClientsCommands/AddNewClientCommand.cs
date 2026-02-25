@@ -8,7 +8,7 @@ namespace My_Library.Command.ClientsCommands
     public class AddNewClientCommand : CommandBase
     {
         #region Dependencies
-        private readonly ClientsStore _clientStore;
+        private readonly IClientsStore _clientStore;
         private readonly IClientsViewModel _clientViewModel;
         #endregion
 
@@ -18,7 +18,7 @@ namespace My_Library.Command.ClientsCommands
         /// </summary>
         /// <param name="clientsViewModel"></param>
         /// <param name="clientStore"></param>
-        public AddNewClientCommand(IClientsViewModel clientsViewModel, ClientsStore clientStore)
+        public AddNewClientCommand(IClientsViewModel clientsViewModel, IClientsStore clientStore)
         {
             _clientStore = clientStore;
             _clientViewModel = clientsViewModel;

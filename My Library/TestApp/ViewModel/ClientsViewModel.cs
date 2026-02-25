@@ -16,7 +16,7 @@ namespace My_Library.ViewModel
         private ObservableCollection<IClient> _clients;
         public IEnumerable<IClient> Clients => _clients;
 
-        private ClientsStore _clientsStore;
+        private IClientsStore _clientsStore;
 
         private IClient _selectedClient;
 
@@ -87,7 +87,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Constructor
-        public ClientsViewModel(ClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
+        public ClientsViewModel(IClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _clients = [];
             _clientsStore = clientsStore;
@@ -186,7 +186,7 @@ namespace My_Library.ViewModel
         /// <param name="loanRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <returns></returns>
-        public static IClientsViewModel LoadViewModel(ClientsStore clientStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
+        public static IClientsViewModel LoadViewModel(IClientsStore clientStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
         {
             IClientsViewModel ViewModel = new ClientsViewModel(clientStore, loanRepository, reservedBooksRepository);
             ViewModel.LoadClientsCommand.Execute(null);

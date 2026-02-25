@@ -6,7 +6,7 @@ namespace My_Library.ViewModel.ModelsViewModel
     public class LoanViewModel : ViewModelBase, ILoanViewModel
     {
         #region Properties
-        private ClientsStore _clientsStore;
+        private IClientsStore _clientsStore;
         private BooksStore _booksStore;
         public ILoan _loan;
         public int ID => _loan.Id;
@@ -26,7 +26,7 @@ namespace My_Library.ViewModel.ModelsViewModel
 
         #region Contructor
 
-        public LoanViewModel(ILoan loan, ClientsStore clientsStore, BooksStore booksStore)
+        public LoanViewModel(ILoan loan, IClientsStore clientsStore, BooksStore booksStore)
         {
             if (clientsStore is not null && booksStore is not null)
             {

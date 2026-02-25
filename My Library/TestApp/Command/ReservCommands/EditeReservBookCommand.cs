@@ -9,7 +9,7 @@ namespace My_Library.Command.ReservCommands
     {
         #region Dependencies
         private BooksStore _booksStore;
-        private ClientsStore _clientsStore;
+        private IClientsStore _clientsStore;
         private LoanRepository _loansRepository;
         private ClientsRepository _clientRepository;
         private IReservedBooksStore _reservedBooksStore;
@@ -33,7 +33,7 @@ namespace My_Library.Command.ReservCommands
         /// <param name="reservedBooksRepository"></param>
         public EditeReservBookCommand(
             BooksStore booksStore,
-            ClientsStore clientsStore,
+            IClientsStore clientsStore,
             LoanRepository loanRepository,
             ClientsRepository clientsRepository,
             IReservedBooksStore reservedBooksStore,
