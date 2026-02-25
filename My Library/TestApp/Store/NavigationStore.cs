@@ -2,7 +2,7 @@
 
 namespace My_Library.Store
 {
-    public class NavigationStore
+    public class NavigationStore : INavigationStore
     {
         #region Dependencies
         public event Action MainContentViewModelChanged;
