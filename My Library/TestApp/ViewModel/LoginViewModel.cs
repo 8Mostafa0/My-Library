@@ -31,11 +31,11 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Constructor
-        public LoginViewModel(ModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, SettingsStore settingsStore)
+        public LoginViewModel(ModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, ISettingsStore settingsStore)
         {
             CloseAppCommand = new CloseAppCommand();
             LoginCommand = new LoginCommand(this, modalNavigationStore, loanRepository, dbContextFactory, settingsStore);
-            if (new SettingsStore().GetHashedPassword().IsNullOrEmpty())
+            if (settingsStore.GetHashedPassword().IsNullOrEmpty())
             {
                 FirstOpen = true;
                 Title = "رمزی برای پنل مشخص کنید";

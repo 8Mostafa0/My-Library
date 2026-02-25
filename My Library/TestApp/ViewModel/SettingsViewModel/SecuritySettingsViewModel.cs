@@ -27,7 +27,7 @@ namespace My_Library.ViewModel.SettingsViewModel
                 }
             }
         }
-        private SettingsStore _settingsStore;
+        private ISettingsStore _settingsStore;
         private SettingNavigationStore _settingNavigationStore;
         #endregion
 

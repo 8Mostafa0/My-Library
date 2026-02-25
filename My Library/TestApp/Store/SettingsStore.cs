@@ -53,11 +53,11 @@ namespace My_Library.Store
         /// <returns>Dictionary<string, int></returns>
         public Dictionary<string, int> GetLoansSetting()
         {
-            Dictionary<string, int> Data = new Dictionary<string, int>();
-            List<string> Keys = new List<string>() {
+            Dictionary<string, int> Data = [];
+            List<string> Keys = [
                 "MaxBooksLoan",
                 "MaxLoanDays"
-            };
+            ];
             foreach (string key in Keys)
             {
                 if (int.TryParse(GetDataFromRegistry(key), out int _))
@@ -95,13 +95,13 @@ namespace My_Library.Store
         /// <returns> Dictionary<string, bool></returns>
         public Dictionary<string, bool> GetLayoutSettings()
         {
-            Dictionary<string, bool> Data = new Dictionary<string, bool>();
-            List<string> Keys = new List<string>() {
+            Dictionary<string, bool> Data = [];
+            List<string> Keys = [
                 "ShowClientsCount",
                 "ShowBooksCount",
                 "ShowLoanedBooksCount",
                 "ShowNotReturnedLoans"
-            };
+            ];
             foreach (string key in Keys)
             {
                 if (bool.TryParse(GetDataFromRegistry(key), out bool _))

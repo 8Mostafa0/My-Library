@@ -8,7 +8,7 @@ namespace My_Library.Command.SettingsCommands
     public class ChangeLoginPasswordCommand : CommandBase
     {
         #region Dependencies
-        private SettingsStore _settingsStore;
+        private ISettingsStore _settingsStore;
         private SettingNavigationStore _settingNavigationStore;
         private ISecuritySettingsViewModel _securitySettingViewModel;
         #endregion
@@ -20,7 +20,7 @@ namespace My_Library.Command.SettingsCommands
         /// <param name="securitySettingsViewModel"></param>
         /// <param name="settingNavigationStore"></param>
         /// <param name="settingsStore"></param>
-        public ChangeLoginPasswordCommand(ISecuritySettingsViewModel securitySettingsViewModel, SettingNavigationStore settingNavigationStore, SettingsStore settingsStore)
+        public ChangeLoginPasswordCommand(ISecuritySettingsViewModel securitySettingsViewModel, SettingNavigationStore settingNavigationStore, ISettingsStore settingsStore)
         {
             _settingsStore = settingsStore;
             _settingNavigationStore = settingNavigationStore;

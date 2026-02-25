@@ -1,5 +1,4 @@
-﻿using System.Windows.Input;
-using My_Library.Command;
+﻿using My_Library.Command;
 using My_Library.Command.BooksCommands;
 using My_Library.Command.ClientsCommands;
 using My_Library.Command.LoansCommands;
@@ -8,6 +7,7 @@ using My_Library.Command.ReservCommands;
 using My_Library.Command.SettingsCommands;
 using My_Library.Service;
 using My_Library.Store;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
@@ -45,7 +45,7 @@ namespace My_Library.ViewModel
             BooksStore booksStore,
             LoansStore loansStore,
             LoanRepository loanRepository,
-            SettingsStore settingsStore,
+            ISettingsStore settingsStore,
             BooksRepository booksRepository,
             ReservedBooksRepository reservedBooksRepository,
             ClientsRepository clientsRepository

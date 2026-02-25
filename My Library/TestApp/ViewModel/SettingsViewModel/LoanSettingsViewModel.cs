@@ -1,12 +1,12 @@
-﻿using System.Windows;
-using My_Library.Store;
+﻿using My_Library.Store;
+using System.Windows;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
     public class LoanSettingsViewModel : ViewModelBase, ILoanSettingsViewModel
     {
         #region Dependencies
-        private SettingsStore _settingsStore;
+        private ISettingsStore _settingsStore;
         private int _maxBooksCount;
         public string MaxBooksCount
         {

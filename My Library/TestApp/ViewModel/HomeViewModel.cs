@@ -6,7 +6,7 @@ namespace My_Library.ViewModel
     {
 
         #region Dependencies
-        private SettingsStore _settingsStore;
+        private ISettingsStore _settingsStore;
         private string _clientsCount;
         private string _booksCount;
 
