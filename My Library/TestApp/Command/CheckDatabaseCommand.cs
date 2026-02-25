@@ -7,14 +7,14 @@ namespace My_Library.Command
     {
         #region Dependencies
         private ILoanRepository _loansRepository;
-        private DbContextFactory _dbContextFactory;
+        private IDbContextFactory _dbContextFactory;
         #endregion
 
         #region Contructor
         /// <summary>
         /// check ans validate database and tables
         /// </summary>
-        public CheckDatabaseCommand(ILoanRepository loanRepository, DbContextFactory dbContextFactory)
+        public CheckDatabaseCommand(ILoanRepository loanRepository, IDbContextFactory dbContextFactory)
         {
             _loansRepository = loanRepository;
             _dbContextFactory = dbContextFactory;

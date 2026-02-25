@@ -9,7 +9,7 @@ namespace My_Library.Service
     public class ReservedBooksRepository : IReservedBooksRepository
     {
         #region Dependencies
-        private DbContextFactory _dbContextFactory;
+        private IDbContextFactory _dbContextFactory;
         private ILogger _logger;
         #endregion
 

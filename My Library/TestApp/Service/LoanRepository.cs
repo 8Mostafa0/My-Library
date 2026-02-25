@@ -10,7 +10,7 @@ namespace My_Library.Service
     public class LoanRepository : ILoanRepository
     {
         #region Contructor
-        private readonly DbContextFactory _dbContextFactory;
+        private readonly IDbContextFactory _dbContextFactory;
         private ILogger _logger;
         #endregion
 

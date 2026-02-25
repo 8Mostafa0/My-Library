@@ -9,7 +9,7 @@ namespace My_Library.Service
     public class ClientsRepository : IClientsRepository
     {
         #region Dependencies
-        private readonly DbContextFactory _dbContextFactory;
+        private readonly IDbContextFactory _dbContextFactory;
         private ILogger _logger;
         #endregion
 
