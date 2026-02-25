@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using My_Library.Command.SettingsCommands;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
@@ -7,6 +8,6 @@ namespace My_Library.ViewModel.SettingsViewModel
         IViewModelBase CurrentSettingViewModel { get; }
         ICommand NavigateLayoutSettingCommand { get; }
         ICommand NavigateLoanSettingsCommand { get; }
-        ICommand NavigateSecuritySettingsCommand { get; }
+        INavigateSecuritySettingsCommand NavigateSecuritySettingsCommand { get; }
     }
 }
