@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.LoansCommands
 {
-    public class ReloadLoansListCommand : CommandBase
+    public class ReloadLoansListCommand : CommandBase, IReloadLoansListCommand
     {
         #region Dependencies
         private ILoansStore _loansStore;
