@@ -6,7 +6,7 @@ using My_Library.ViewModel.ModelsViewModel;
 
 namespace My_Library.Store
 {
-    public class LoansStore
+    public class LoansStore : ILoansStore
     {
 
         #region Dependencies
