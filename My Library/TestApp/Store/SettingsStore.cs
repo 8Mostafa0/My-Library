@@ -3,7 +3,7 @@ using Serilog;
 
 namespace My_Library.Store
 {
-    public class SettingsStore
+    public class SettingsStore : ISettingsStore
     {
         #region Dependencies
         private ILogger _logger;
