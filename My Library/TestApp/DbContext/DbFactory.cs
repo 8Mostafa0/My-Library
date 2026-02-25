@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace My_Library.DbContext
 {
-    public class DbFactory
+    public class DbFactory : IDbFactory
     {
         #region Dependencies
         private readonly string _masterConnectionStrin;
