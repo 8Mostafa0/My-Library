@@ -61,7 +61,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 
         public ICommand LoadReservedBooksCommand { get; }
 
-        public ICommand SearchBookNameInReservedBookCommand { get; }
+        public SearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
         #endregion
 
         #region Contructor
