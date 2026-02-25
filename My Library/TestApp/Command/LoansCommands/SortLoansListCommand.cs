@@ -6,7 +6,7 @@ namespace My_Library.Command.LoansCommands
     public class SortLoansListCommand : CommandBase
     {
         #region Dependencies
-        private LoansStore _loansStore;
+        private ILoansStore _loansStore;
         private ILoansViewModel _loansViewModel;
         #endregion
 
@@ -20,7 +20,7 @@ namespace My_Library.Command.LoansCommands
         /// </summary>
         /// <param name="loansViewModel"></param>
         /// <param name="loansStore"></param>
-        public SortLoansListCommand(ILoansViewModel loansViewModel, LoansStore loansStore)
+        public SortLoansListCommand(ILoansViewModel loansViewModel, ILoansStore loansStore)
         {
             _loansViewModel = loansViewModel;
             _loansStore = loansStore;

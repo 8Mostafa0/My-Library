@@ -25,7 +25,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="settingsStore"></param>
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public NavigateLoansCommand(INavigationStore navigationStore, IModalNavigationStore modalNavigationStore, LoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
+        public NavigateLoansCommand(INavigationStore navigationStore, IModalNavigationStore modalNavigationStore, ILoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _navigationStore = navigationStore;
             _loansViewModel = LoansViewModel.LoadViewModel(modalNavigationStore, loansStore, clientsStore, booksStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository);

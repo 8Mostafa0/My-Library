@@ -22,7 +22,7 @@ namespace My_Library.ViewModel.LoanViewModels
         int SortIndex { get; set; }
         ICommand SortLoansListCommand { get; }
 
-        static abstract ILoansViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, LoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository);
+        static abstract ILoansViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository);
         void UpdateLoans();
     }
 }

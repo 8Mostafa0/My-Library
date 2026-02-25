@@ -7,6 +7,10 @@ namespace My_Library.Store
     {
         IEnumerable<ILoanViewModel> Loans { get; }
 
+        event Action LoansUpdated;
+        event Action<ILoan> LoanIsAdded;
+        event Action<ILoan> LoanIsDeleted;
+        event Action<ILoan> LoanIsUpdated;
         Task AddLoan(ILoan loan);
         Task GetAllLoans(string customSql = "");
         Task Load();

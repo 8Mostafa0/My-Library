@@ -16,10 +16,10 @@ namespace My_Library.Store
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
 
-        public Action LoansUpdated;
-        public Action<ILoan> LoanIsAdded;
-        public Action<ILoan> LoanIsDeleted;
-        public Action<ILoan> LoanIsUpdated;
+        public event Action LoansUpdated;
+        public event Action<ILoan> LoanIsAdded;
+        public event Action<ILoan> LoanIsDeleted;
+        public event Action<ILoan> LoanIsUpdated;
         public Lazy<Task> _initilizeLazy;
         #endregion
 

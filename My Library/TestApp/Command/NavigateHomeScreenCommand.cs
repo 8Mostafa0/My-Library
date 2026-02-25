@@ -6,7 +6,7 @@ namespace My_Library.Command
     public class NavigateHomeScreenCommand : CommandBase
     {
         #region Dependencies
-        private LoansStore _loansStore;
+        private ILoansStore _loansStore;
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;
         private HomeViewModel _homeViewModel;
@@ -21,7 +21,7 @@ namespace My_Library.Command
         /// <param name="loansStore"></param>
         /// <param name="clientsStore"></param>
         /// <param name="booksStore"></param>
-        public NavigateHomeScreenCommand(INavigationStore navigationStore, LoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore)
+        public NavigateHomeScreenCommand(INavigationStore navigationStore, ILoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore)
         {
             _navigationStore = navigationStore;
             _clientsStore = clientsStore;
