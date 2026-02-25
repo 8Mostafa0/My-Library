@@ -39,7 +39,7 @@ namespace My_Library
                 clientsRepository
                 );
 
-            IViewModelBase layoutViewModel = new LayoutViewModel(navigationStore);
+            ILayoutViewModel layoutViewModel = new LayoutViewModel(navigationStore);
 
             MainWindow = new MainWindow()
             {
