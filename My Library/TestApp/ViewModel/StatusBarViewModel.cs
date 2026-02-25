@@ -1,13 +1,13 @@
-﻿using System.Timers;
-using My_Library.Store;
+﻿using My_Library.Store;
+using System.Timers;
 
 namespace My_Library.ViewModel
 {
-    public class StatusBarViewModel : ViewModelBase
+    public class StatusBarViewModel : ViewModelBase, IStatusBarViewModel
     {
         #region Dependencies
         private static System.Timers.Timer aTimer;
-        private TimeStore _timeStore = new TimeStore();
+        private TimeStore _timeStore = new();
         public DateTime CloclString => _timeStore.CurrentTime;
         #endregion
 
