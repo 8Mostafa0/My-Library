@@ -10,7 +10,7 @@ namespace My_Library.Command.ReservCommands
     {
         #region Dependencies
         private ILoanRepository _loanRepository;
-        private ClientsRepository _clientsRepository;
+        private IClientsRepository _clientsRepository;
         private IReservedBooksStore _reservedBookStore;
         private IModalNavigationStore _modalNavigationStore;
         private IReservedBooksRepository _reservedbooksRepository;
@@ -34,7 +34,7 @@ namespace My_Library.Command.ReservCommands
             IReservedBooksStore reservedBooksStore,
             ILoanRepository loanRepository,
             IReservedBooksRepository reservedBooksRepository,
-            ClientsRepository clientsRepository
+            IClientsRepository clientsRepository
             )
         {
             _loanRepository = loanRepository;

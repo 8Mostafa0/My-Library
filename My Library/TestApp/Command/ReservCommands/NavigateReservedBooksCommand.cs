@@ -34,7 +34,7 @@ namespace My_Library.Command.ReservCommands
             IClientsStore clientsStore,
             IBooksStore booksStore,
             ILoanRepository loansRepository,
-            ClientsRepository clientsRepository,
+            IClientsRepository clientsRepository,
             IReservedBooksRepository reservedBooksRepository
             )
         {

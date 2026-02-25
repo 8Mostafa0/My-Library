@@ -48,7 +48,7 @@ namespace My_Library.ViewModel
             ISettingsStore settingsStore,
             BooksRepository booksRepository,
             IReservedBooksRepository reservedBooksRepository,
-            ClientsRepository clientsRepository
+            IClientsRepository clientsRepository
             )
         {
             _navigationStore = navigationStore;

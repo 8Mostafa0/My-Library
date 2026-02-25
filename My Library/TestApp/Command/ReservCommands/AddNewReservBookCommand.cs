@@ -13,7 +13,7 @@ namespace My_Library.Command.ReservCommands
         private IModalNavigationStore _modalNavigationStore;
         private IReservedBooksRepository _reservedBooksRepository;
         private ILoanRepository _loanRepository;
-        private ClientsRepository _clientsRepository;
+        private IClientsRepository _clientsRepository;
         #endregion
 
 
@@ -36,7 +36,7 @@ namespace My_Library.Command.ReservCommands
             IBooksStore booksStore,
             ILoanRepository loanRepository,
             IReservedBooksRepository reservedBooksRepository,
-            ClientsRepository clientsRepository
+            IClientsRepository clientsRepository
             )
         {
             _booksStore = booksStore;

@@ -8,7 +8,7 @@ namespace My_Library.Store
 
         #region Dependencies
 
-        private readonly ClientsRepository _clientRepository;
+        private readonly IClientsRepository _clientRepository;
         private List<IClient> _clients;
 
         private readonly Lazy<Task> _initiilizeLazy;

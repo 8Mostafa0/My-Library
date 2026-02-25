@@ -22,7 +22,7 @@ namespace My_Library
             IReservedBooksStore reservedBooksStore = new ReservedBooksStore();
             IReservedBooksRepository reservedBooksRepository = new ReservedBooksRepository();
             BooksRepository booksRepository = new();
-            ClientsRepository clientsRepository = new();
+            IClientsRepository clientsRepository = new ClientsRepository();
             navigationStore.ContentScreen = new HomeViewModel(clientsStore, booksStore, loansStore);
             navigationStore.StatusBarViewModel = new StatusBarViewModel();
 

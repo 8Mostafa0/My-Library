@@ -11,7 +11,7 @@ namespace My_Library.Command.ReservCommands
         private IBooksStore _booksStore;
         private IClientsStore _clientsStore;
         private ILoanRepository _loansRepository;
-        private ClientsRepository _clientRepository;
+        private IClientsRepository _clientRepository;
         private IReservedBooksStore _reservedBooksStore;
         private IModalNavigationStore _modalNavigationStore;
         private IReservedBooksViewModel _reservedBooksViewModel;
@@ -35,7 +35,7 @@ namespace My_Library.Command.ReservCommands
             IBooksStore booksStore,
             IClientsStore clientsStore,
             ILoanRepository loanRepository,
-            ClientsRepository clientsRepository,
+            IClientsRepository clientsRepository,
             IReservedBooksStore reservedBooksStore,
             IModalNavigationStore modalNavigationStore,
             IReservedBooksViewModel reservedBooksViewModel,
