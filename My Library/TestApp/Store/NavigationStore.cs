@@ -9,7 +9,7 @@ namespace My_Library.Store
         public event Action ContentViewModelChanged;
         public event Action StatusBarViewModelChanged;
 
-        private IViewModelBase _mainContentViewModel;
+        private INavigationBarViewModel _mainContentViewModel;
         private IViewModelBase _contentScreen;
         private IStatusBarViewModel _statusBarViewModel;
 
@@ -28,7 +28,7 @@ namespace My_Library.Store
             StatusBarViewModelChanged?.Invoke();
         }
 
-        public IViewModelBase MainContentViewModel
+        public INavigationBarViewModel MainContentViewModel
         {
             get => _mainContentViewModel;
             set

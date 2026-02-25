@@ -13,5 +13,7 @@ namespace My_Library.ViewModel
         ICommand NavigateReservedBooksCommand { get; }
         ICommand NavigateToSettingsCommand { get; }
         ICommand OpenModalCommand { get; }
+        virtual void Dispose() { }
     }
+
 }

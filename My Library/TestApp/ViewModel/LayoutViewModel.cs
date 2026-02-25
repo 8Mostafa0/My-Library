@@ -7,9 +7,9 @@ namespace My_Library.ViewModel
         #region Dependencies
         private readonly NavigationStore _navigationStore;
         public IViewModelBase contentViewModel => _navigationStore.ContentScreen;
-        public IViewModelBase MainContentViewModel => _navigationStore.MainContentViewModel;
+        public INavigationBarViewModel MainContentViewModel => _navigationStore.MainContentViewModel;
 
-        public IViewModelBase StatusBarViewModel => _navigationStore.StatusBarViewModel;
+        public IStatusBarViewModel StatusBarViewModel => _navigationStore.StatusBarViewModel;
 
         #endregion
 
