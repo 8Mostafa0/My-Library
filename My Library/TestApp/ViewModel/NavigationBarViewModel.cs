@@ -11,7 +11,7 @@ using My_Library.Store;
 
 namespace My_Library.ViewModel
 {
-    public class NavigationBarViewModel : ViewModelBase
+    public class NavigationBarViewModel : ViewModelBase, INavigationBarViewModel
     {
         #region Dependencies
         private readonly NavigationStore _navigationStore;
