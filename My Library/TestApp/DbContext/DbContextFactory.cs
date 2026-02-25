@@ -2,9 +2,9 @@
 using Microsoft.Data.SqlClient;
 using Serilog;
 using System.Windows;
-using TestApp.Constants;
+using My_Library.Constants;
 
-namespace TestApp.DbContext
+namespace My_Library.DbContext
 {
     public class DbContextFactory
     {

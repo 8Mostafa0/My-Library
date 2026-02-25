@@ -1,4 +1,4 @@
-﻿namespace TestApp.Service
+﻿namespace My_Library.Service
 {
     public interface INavigationService
     {

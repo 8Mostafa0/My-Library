@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace TestApp.Command.LoginCommands
+namespace My_Library.Command.LoginCommands
 {
     public class CloseAppCommand : CommandBase
     {

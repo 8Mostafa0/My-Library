@@ -1,8 +1,8 @@
 ﻿using System.Windows.Input;
-using TestApp.Command.SettingsCommands;
-using TestApp.Store;
+using My_Library.Command.SettingsCommands;
+using My_Library.Store;
 
-namespace TestApp.ViewModel.SettingsViewModel
+namespace My_Library.ViewModel.SettingsViewModel
 {
     public class SettingsViewModel : ViewModelBase
     {

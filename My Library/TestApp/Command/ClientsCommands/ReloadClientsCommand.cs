@@ -1,7 +1,7 @@
-﻿using TestApp.Store;
-using TestApp.ViewModel;
+﻿using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp.Command.ClientsCommands
+namespace My_Library.Command.ClientsCommands
 {
     public class ReloadClientsCommand : CommandBase
     {

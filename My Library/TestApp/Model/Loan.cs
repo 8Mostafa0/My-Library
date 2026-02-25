@@ -1,4 +1,4 @@
-﻿namespace TestApp.Model
+﻿namespace My_Library.Model
 {
     public class Loan
     {

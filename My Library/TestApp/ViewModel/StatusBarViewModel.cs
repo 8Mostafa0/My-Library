@@ -1,7 +1,7 @@
 ﻿using System.Timers;
-using TestApp.Store;
+using My_Library.Store;
 
-namespace TestApp.ViewModel
+namespace My_Library.ViewModel
 {
     public class StatusBarViewModel : ViewModelBase
     {

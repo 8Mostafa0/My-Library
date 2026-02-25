@@ -2,12 +2,12 @@
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
-using TestApp.Command.BooksCommands;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
+using My_Library.Command.BooksCommands;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
 
-namespace TestApp.ViewModel
+namespace My_Library.ViewModel
 {
     public class BooksViewModel : ViewModelBase
     {

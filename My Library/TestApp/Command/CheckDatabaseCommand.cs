@@ -1,7 +1,7 @@
-﻿using TestApp.DbContext;
-using TestApp.Service;
+﻿using My_Library.DbContext;
+using My_Library.Service;
 
-namespace TestApp.Command
+namespace My_Library.Command
 {
     public class CheckDatabaseCommand : CommandBase
     {

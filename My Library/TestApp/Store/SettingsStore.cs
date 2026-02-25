@@ -1,7 +1,7 @@
 ﻿using Microsoft.Win32;
 using Serilog;
 
-namespace TestApp.Store
+namespace My_Library.Store
 {
     public class SettingsStore
     {

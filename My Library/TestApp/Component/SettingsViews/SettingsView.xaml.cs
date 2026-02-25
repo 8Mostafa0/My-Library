@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TestApp.Component.SettingsViews
+namespace My_Library.Component.SettingsViews
 {
     /// <summary>
     /// Interaction logic for SettingsView.xaml

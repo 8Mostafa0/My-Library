@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\TestApp.csproj": {}
+    "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\TestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\TestApp.csproj": {
+    "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\TestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\TestApp.csproj",
+        "projectUniqueName": "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\TestApp.csproj",
         "projectName": "TestApp",
-        "projectPath": "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\TestApp.csproj",
+        "projectPath": "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\TestApp.csproj",
         "packagesPath": "C:\\Users\\Dev10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\obj\\",
+        "outputPath": "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dev10\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,10 +1,10 @@
 ﻿using System.Windows;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp.Command.BooksCommands
+namespace My_Library.Command.BooksCommands
 {
     public class DeleteBookCommand : CommandBase
     {

@@ -1,7 +1,7 @@
-﻿using TestApp.Store;
-using TestApp.ViewModel;
+﻿using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp.Command
+namespace My_Library.Command
 {
     public class OpenModalCommand : CommandBase
     {

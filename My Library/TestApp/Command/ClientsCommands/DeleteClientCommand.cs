@@ -1,10 +1,10 @@
 ﻿using System.Windows;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp.Command.ClientsCommands
+namespace My_Library.Command.ClientsCommands
 {
     public class DeleteClientCommand : CommandBase
     {

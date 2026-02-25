@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace TestApp.ViewModel
+namespace My_Library.ViewModel
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TestApp.Component
+namespace My_Library.Component
 {
     /// <summary>
     /// Interaction logic for BooksView.xaml

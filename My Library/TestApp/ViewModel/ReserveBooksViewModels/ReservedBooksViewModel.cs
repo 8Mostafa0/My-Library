@@ -1,13 +1,13 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
-using TestApp.Command.ReservCommands;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel.ModelsViewModel;
+using My_Library.Command.ReservCommands;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel.ModelsViewModel;
 
-namespace TestApp.ViewModel.ReserveBooksViewModels
+namespace My_Library.ViewModel.ReserveBooksViewModels
 {
     public class ReservedBooksViewModel : ViewModelBase
     {

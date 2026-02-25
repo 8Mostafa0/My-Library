@@ -1,6 +1,6 @@
-﻿using TestApp.ViewModel;
+﻿using My_Library.ViewModel;
 
-namespace TestApp.Store
+namespace My_Library.Store
 {
     public class NavigationStore
     {

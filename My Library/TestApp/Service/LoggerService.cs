@@ -1,7 +1,7 @@
 ﻿// using serilog
 using Serilog;
 
-namespace TestApp
+namespace My_Library
 {
     /// <summary>
     /// class for recording logs

@@ -2,7 +2,7 @@
 using Microsoft.Data.SqlClient;
 using System.Windows;
 
-namespace TestApp.DbContext
+namespace My_Library.DbContext
 {
     public class DbFactory
     {

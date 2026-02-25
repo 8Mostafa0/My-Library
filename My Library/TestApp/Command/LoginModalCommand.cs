@@ -1,9 +1,9 @@
-﻿using TestApp.DbContext;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel;
+﻿using My_Library.DbContext;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp.Command
+namespace My_Library.Command
 {
     public class LoginModalCommand : CommandBase
     {

@@ -1,10 +1,10 @@
-﻿using TestApp.Command;
-using TestApp.Command.BooksCommands;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.ViewModel.ModelsViewModel;
+﻿using My_Library.Command;
+using My_Library.Command.BooksCommands;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.ViewModel.ModelsViewModel;
 
-namespace TestApp.Store
+namespace My_Library.Store
 {
     public class LoansStore
     {

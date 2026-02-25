@@ -1,6 +1,6 @@
-﻿using TestApp.Store;
+﻿using My_Library.Store;
 
-namespace TestApp.ViewModel.SettingsViewModel
+namespace My_Library.ViewModel.SettingsViewModel
 {
     public class MainLayoutSettingViewModel : ViewModelBase
     {

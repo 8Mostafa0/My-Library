@@ -1,6 +1,6 @@
-﻿using TestApp.Store;
+﻿using My_Library.Store;
 
-namespace TestApp.Command.LoansCommands
+namespace My_Library.Command.LoansCommands
 {
     public class CloseModalCommand : CommandBase
     {

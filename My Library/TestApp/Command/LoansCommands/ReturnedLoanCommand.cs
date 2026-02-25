@@ -1,9 +1,9 @@
 ﻿using System.Windows;
-using TestApp.Store;
-using TestApp.ViewModel.LoanViewModels;
-using TestApp.ViewModel.ModelsViewModel;
+using My_Library.Store;
+using My_Library.ViewModel.LoanViewModels;
+using My_Library.ViewModel.ModelsViewModel;
 
-namespace TestApp.Command.LoansCommands
+namespace My_Library.Command.LoansCommands
 {
     public class ReturnedLoanCommand : CommandBase
     {

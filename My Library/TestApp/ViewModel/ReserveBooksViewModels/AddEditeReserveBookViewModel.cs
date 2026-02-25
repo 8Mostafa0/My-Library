@@ -1,15 +1,15 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using TestApp.Command;
-using TestApp.Command.BooksCommands;
-using TestApp.Command.ClientsCommands;
-using TestApp.Command.LoansCommands;
-using TestApp.Command.ReservCommands;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
+using My_Library.Command;
+using My_Library.Command.BooksCommands;
+using My_Library.Command.ClientsCommands;
+using My_Library.Command.LoansCommands;
+using My_Library.Command.ReservCommands;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
 
-namespace TestApp.ViewModel.ReserveBooksViewModels
+namespace My_Library.ViewModel.ReserveBooksViewModels
 {
     public class AddEditeReserveBookViewModel : ViewModelBase
     {

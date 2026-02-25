@@ -1,4 +1,4 @@
-﻿namespace TestApp.Store
+﻿namespace My_Library.Store
 {
     public class TimeStore
     {

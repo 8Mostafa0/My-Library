@@ -1,7 +1,7 @@
-﻿using TestApp.Store;
-using TestApp.ViewModel.LoanViewModels;
+﻿using My_Library.Store;
+using My_Library.ViewModel.LoanViewModels;
 
-namespace TestApp.Command.LoansCommands
+namespace My_Library.Command.LoansCommands
 {
     public class SortLoansListCommand : CommandBase
     {

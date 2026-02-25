@@ -1,6 +1,6 @@
-﻿using TestApp.Store;
+﻿using My_Library.Store;
 
-namespace TestApp.Command
+namespace My_Library.Command
 {
     public class LoadClientsCommand : CommandBase
     {

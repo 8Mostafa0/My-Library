@@ -1,0 +1,107 @@
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\My Library.exe
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\My Library.deps.json
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\My Library.runtimeconfig.json
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\My Library.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\My Library.pdb
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Dapper.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Serilog.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Serilog.Sinks.Console.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\Serilog.Sinks.File.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\ModalControl.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.csproj.AssemblyReference.cache
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\BooksView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\ClientsView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\DatabaseTestView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\HomeView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LayoutView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LoanComponents\AddEditeLoanView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LoanComponents\LoansView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LoginView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\NavigationBarView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\ReserveBookViews\AddEditeReserveBookView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\ReserveBookViews\ReservedBooksView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\HomeLayoutSettingsView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\LoansSettingsView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\SecureitySettingsView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\SettingsView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\StatusBarView.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library_MarkupCompile.cache
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library_MarkupCompile.lref
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\BooksView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\ClientsView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\DatabaseTestView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\HomeView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LayoutView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LoanComponents\AddEditeLoanView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LoanComponents\LoansView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\LoginView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\NavigationBarView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\ReserveBookViews\AddEditeReserveBookView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\ReserveBookViews\ReservedBooksView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\HomeLayoutSettingsView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\LoansSettingsView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\SecureitySettingsView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\SettingsViews\SettingsView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\Component\StatusBarView.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.g.resources
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.AssemblyInfoInputs.cache
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.AssemblyInfo.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.csproj.CoreCompileInputs.cache
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.sourcelink.json
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.csproj.Up2Date
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\refint\My Library.dll
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.pdb
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\My Library.genruntimeconfig.cache
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Debug\net8.0-windows\ref\My Library.dll

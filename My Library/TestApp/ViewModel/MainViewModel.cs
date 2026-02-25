@@ -1,9 +1,9 @@
-﻿using TestApp.Command;
-using TestApp.DbContext;
-using TestApp.Service;
-using TestApp.Store;
+﻿using My_Library.Command;
+using My_Library.DbContext;
+using My_Library.Service;
+using My_Library.Store;
 
-namespace TestApp.ViewModel
+namespace My_Library.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {

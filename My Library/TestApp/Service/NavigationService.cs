@@ -1,7 +1,7 @@
-﻿using TestApp.Store;
-using TestApp.ViewModel;
+﻿using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp.Service
+namespace My_Library.Service
 {
     public class NavigationService : INavigationService
     {

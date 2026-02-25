@@ -1,9 +1,9 @@
 ﻿using System.Windows;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp
+namespace My_Library
 {
     /// <summary>
     /// Interaction logic for App.xaml

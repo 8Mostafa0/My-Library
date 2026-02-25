@@ -1,11 +1,11 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.Windows.Input;
-using TestApp.Command.LoginCommands;
-using TestApp.DbContext;
-using TestApp.Service;
-using TestApp.Store;
+using My_Library.Command.LoginCommands;
+using My_Library.DbContext;
+using My_Library.Service;
+using My_Library.Store;
 
-namespace TestApp.ViewModel
+namespace My_Library.ViewModel
 {
     public class LoginViewModel : ViewModelBase
     {

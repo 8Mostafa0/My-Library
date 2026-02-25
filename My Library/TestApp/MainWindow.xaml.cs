@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace TestApp
+namespace My_Library
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

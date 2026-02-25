@@ -1,10 +1,10 @@
 ﻿using System.Windows;
-using TestApp.DbContext;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel;
+using My_Library.DbContext;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel;
 
-namespace TestApp.Command.LoginCommands
+namespace My_Library.Command.LoginCommands
 {
     public class LoginCommand : CommandBase
     {

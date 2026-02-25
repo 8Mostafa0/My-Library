@@ -1,8 +1,8 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using TestApp.Store;
-using TestApp.ViewModel.ReserveBooksViewModels;
+using My_Library.Store;
+using My_Library.ViewModel.ReserveBooksViewModels;
 
-namespace TestApp.Command.ReservCommands
+namespace My_Library.Command.ReservCommands
 {
     public class SearchBookNameInReservedBookCommand : CommandBase
     {

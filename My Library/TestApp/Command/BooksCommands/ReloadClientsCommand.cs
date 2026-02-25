@@ -1,6 +1,6 @@
-﻿using TestApp.Store;
+﻿using My_Library.Store;
 
-namespace TestApp.Command.BooksCommands
+namespace My_Library.Command.BooksCommands
 {
     public class ReloadClientsCommand : CommandBase
     {

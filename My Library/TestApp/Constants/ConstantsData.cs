@@ -1,4 +1,4 @@
-﻿namespace TestApp.Constants
+﻿namespace My_Library.Constants
 {
     public static class ConstantsData
     {

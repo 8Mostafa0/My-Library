@@ -1,8 +1,8 @@
-﻿using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel.ReserveBooksViewModels;
+﻿using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel.ReserveBooksViewModels;
 
-namespace TestApp.Command.ReservCommands
+namespace My_Library.Command.ReservCommands
 {
     public class AddNewReservBookCommand : CommandBase
     {

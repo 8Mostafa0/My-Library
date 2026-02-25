@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace TestApp.Command
+namespace My_Library.Command
 {
     public abstract class CommandBase : ICommand
     {

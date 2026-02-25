@@ -1,6 +1,6 @@
-﻿using TestApp.Store;
+﻿using My_Library.Store;
 
-namespace TestApp.ViewModel
+namespace My_Library.ViewModel
 {
     public class HomeViewModel : ViewModelBase
     {

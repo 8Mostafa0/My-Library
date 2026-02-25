@@ -2752,11 +2752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\TestApp.csproj",
-      "projectName": "TestApp",
-      "projectPath": "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\TestApp.csproj",
+      "projectUniqueName": "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\My Library.csproj",
+      "projectName": "My Library",
+      "projectPath": "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\My Library.csproj",
       "packagesPath": "C:\\Users\\Dev10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dev10\\Desktop\\TestMyLibrary\\Poject\\TestApp\\obj\\",
+      "outputPath": "C:\\Users\\Dev10\\Desktop\\My-Library\\My Library\\TestApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev10\\AppData\\Roaming\\NuGet\\NuGet.Config",

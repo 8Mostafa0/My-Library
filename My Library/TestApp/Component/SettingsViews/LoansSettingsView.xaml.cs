@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TestApp.Component.SettingsViews
+namespace My_Library.Component.SettingsViews
 {
     /// <summary>
     /// Interaction logic for LoansSettingsView.xaml

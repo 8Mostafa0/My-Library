@@ -2,13 +2,13 @@
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
-using TestApp.Command;
-using TestApp.Command.ClientsCommands;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
+using My_Library.Command;
+using My_Library.Command.ClientsCommands;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
 
-namespace TestApp.ViewModel
+namespace My_Library.ViewModel
 {
     public class ClientsViewModel : ViewModelBase
     {

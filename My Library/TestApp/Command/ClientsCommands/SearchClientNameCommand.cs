@@ -1,6 +1,6 @@
-﻿using TestApp.Store;
+﻿using My_Library.Store;
 
-namespace TestApp.Command.ClientsCommands
+namespace My_Library.Command.ClientsCommands
 {
     public class SearchClientNameCommand : CommandBase
     {

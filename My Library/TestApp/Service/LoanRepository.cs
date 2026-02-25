@@ -2,10 +2,10 @@
 using Microsoft.Data.SqlClient;
 using Serilog;
 using System.Windows;
-using TestApp.DbContext;
-using TestApp.Model;
+using My_Library.DbContext;
+using My_Library.Model;
 
-namespace TestApp.Service
+namespace My_Library.Service
 {
     public class LoanRepository
     {

@@ -1,0 +1,20 @@
+﻿My Library
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\obj\Release\net8.0-windows\
+My_Library
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\Dev10\Desktop\My-Library\My Library\TestApp\App.xaml
+17-820514153
+
+112-1114388011
+222-580933553
+Component\BooksView.xaml;Component\ClientsView.xaml;Component\DatabaseTestView.xaml;Component\HomeView.xaml;Component\LayoutView.xaml;Component\LoanComponents\AddEditeLoanView.xaml;Component\LoanComponents\LoansView.xaml;Component\LoginView.xaml;Component\NavigationBarView.xaml;Component\ReserveBookViews\AddEditeReserveBookView.xaml;Component\ReserveBookViews\ReservedBooksView.xaml;Component\SettingsViews\HomeLayoutSettingsView.xaml;Component\SettingsViews\LoansSettingsView.xaml;Component\SettingsViews\SecureitySettingsView.xaml;Component\SettingsViews\SettingsView.xaml;Component\StatusBarView.xaml;MainWindow.xaml;
+
+True
+

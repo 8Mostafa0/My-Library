@@ -1,7 +1,7 @@
-﻿using TestApp.Model;
-using TestApp.Service;
+﻿using My_Library.Model;
+using My_Library.Service;
 
-namespace TestApp.Store
+namespace My_Library.Store
 {
 
     public class BooksStore

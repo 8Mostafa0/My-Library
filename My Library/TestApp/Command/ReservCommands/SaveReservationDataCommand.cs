@@ -1,10 +1,10 @@
 ﻿using System.Windows;
-using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel.ReserveBooksViewModels;
+using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel.ReserveBooksViewModels;
 
-namespace TestApp.Command.ReservCommands
+namespace My_Library.Command.ReservCommands
 {
     public class SaveReservationDataCommand : CommandBase
     {

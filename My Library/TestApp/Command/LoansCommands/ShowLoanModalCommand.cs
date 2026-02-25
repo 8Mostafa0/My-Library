@@ -1,9 +1,9 @@
-﻿using TestApp.Model;
-using TestApp.Service;
-using TestApp.Store;
-using TestApp.ViewModel.LoanViewModels;
+﻿using My_Library.Model;
+using My_Library.Service;
+using My_Library.Store;
+using My_Library.ViewModel.LoanViewModels;
 
-namespace TestApp.Command.LoansCommands
+namespace My_Library.Command.LoansCommands
 {
     public class ShowLoanModalCommand : CommandBase
     {

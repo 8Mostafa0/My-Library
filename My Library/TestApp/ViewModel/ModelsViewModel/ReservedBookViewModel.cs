@@ -1,7 +1,7 @@
-﻿using TestApp.Model;
-using TestApp.Store;
+﻿using My_Library.Model;
+using My_Library.Store;
 
-namespace TestApp.ViewModel.ModelsViewModel
+namespace My_Library.ViewModel.ModelsViewModel
 {
     public class ReservedBookViewModel : ViewModelBase
     {

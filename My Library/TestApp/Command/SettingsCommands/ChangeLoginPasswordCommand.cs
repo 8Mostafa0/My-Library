@@ -1,8 +1,8 @@
 ﻿using System.Windows;
-using TestApp.Store;
-using TestApp.ViewModel.SettingsViewModel;
+using My_Library.Store;
+using My_Library.ViewModel.SettingsViewModel;
 
-namespace TestApp.Command.SettingsCommands
+namespace My_Library.Command.SettingsCommands
 {
     public class ChangeLoginPasswordCommand : CommandBase
     {
