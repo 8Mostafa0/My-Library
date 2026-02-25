@@ -11,9 +11,9 @@ namespace My_Library.Store
 
         private IViewModelBase _mainContentViewModel;
         private IViewModelBase _contentScreen;
-        private IViewModelBase _statusBarViewModel;
+        private IStatusBarViewModel _statusBarViewModel;
 
-        public IViewModelBase StatusBarViewModel
+        public IStatusBarViewModel StatusBarViewModel
         {
             get => _statusBarViewModel;
             set
