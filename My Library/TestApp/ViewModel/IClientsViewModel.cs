@@ -1,4 +1,5 @@
-﻿using My_Library.Model;
+﻿using My_Library.Command.ClientsCommands;
+using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using System.Windows.Input;
@@ -15,7 +16,7 @@ namespace My_Library.ViewModel
         string LastName { get; set; }
         ICommand LoadClientsCommand { get; }
         ICommand OrderClientsCommand { get; }
-        ICommand ReloadClientsCommand { get; }
+        IReloadClientsCommand ReloadClientsCommand { get; }
         IClient SelectedClient { get; set; }
         string SortOrder { get; set; }
         int Tier { get; set; }

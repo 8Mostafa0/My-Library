@@ -103,7 +103,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         public ICloseModalCommand CloseModalCommand { get; }
         public SaveReservationDataCommand SaveReservedBookDataCommand { get; }
         public ICommand SearchBookNameCommand { get; }
-        public ICommand SearchClientNameCommand { get; }
+        public ISearchClientNameCommand SearchClientNameCommand { get; }
         public ICommand LoadClientsCommand { get; }
         public ICommand LoadBooksCommand { get; }
         public ICommand OrderBooksCommand { get; }

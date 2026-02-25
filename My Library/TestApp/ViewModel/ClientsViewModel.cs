@@ -76,7 +76,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Commands
-        public ICommand ReloadClientsCommand { get; }
+        public IReloadClientsCommand ReloadClientsCommand { get; }
         public ICommand LoadClientsCommand { get; }
         public ICommand DeleteClientCommand { get; }
         public ICommand AddNewClientCommand { get; }
