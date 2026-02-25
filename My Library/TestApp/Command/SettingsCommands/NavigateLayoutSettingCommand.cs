@@ -8,7 +8,7 @@ namespace My_Library.Command.SettingsCommands
     {
         #region Dependencies
         private SettingNavigationStore _settingNavigationStore;
-        private MainLayoutSettingViewModel _mainLayoutSettingViewModel = new MainLayoutSettingViewModel();
+        private IMainLayoutSettingViewModel _mainLayoutSettingViewModel = new MainLayoutSettingViewModel();
         #endregion
 
         #region Contructor
