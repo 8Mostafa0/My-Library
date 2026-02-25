@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using My_Library.Model;
+﻿using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.LoanViewModels;
+using System.Windows;
 
 namespace My_Library.Command.LoansCommands
 {
@@ -105,7 +105,13 @@ namespace My_Library.Command.LoansCommands
 
                 List<ReservedBook> BookReservs = await _reservedBooksRepository.GetReservationForBook(_addEditeLoanViewModel.SelectedBook.ID);
 
-                Loan loan = new Loan()
+                if (BookCopies is not null && BookCopies.Count() - 1 < NotReturnedLoansCount)
+                {
+                    MessageBox.Show("تمامی نسخه های این کتاب به امانت داده شده اند", "ثبت امانت");
+                    return;
+                }
+
+                Loan loan = new()
                 {
                     ClientId = _addEditeLoanViewModel.SelectedClient.ID,
                     BookId = _addEditeLoanViewModel.SelectedBook.ID,
@@ -113,13 +119,9 @@ namespace My_Library.Command.LoansCommands
                     CreatedAt = DateTime.Now,
                     UpdatedAt = DateTime.Now
                 };
+
                 if (_addEditeLoanViewModel.SelectedLoan is null)
                 {
-                    if (BookCopies is not null && BookCopies.Count() - 1 < NotReturnedLoansCount)
-                    {
-                        MessageBox.Show("تمامی نسخه های این کتاب به امانت داده شده اند", "ثبت امانت");
-                        return;
-                    }
                     bool IsUserReservedBook = false;
                     if (BookReservs.Count > 0)
                     {
