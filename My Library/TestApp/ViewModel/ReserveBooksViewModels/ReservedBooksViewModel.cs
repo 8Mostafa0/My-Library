@@ -5,7 +5,6 @@ using My_Library.Store;
 using My_Library.ViewModel.ModelsViewModel;
 using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
@@ -53,7 +52,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         #region Commands
         public IViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
 
-        public ICommand AddNewReservBookCommand { get; }
+        public AddNewReservBookCommand AddNewReservBookCommand { get; }
         public RemoveReservBookCommand RemoveReservBookCommand { get; }
 
         public EditeReservBookCommand EditeReservBookCommand { get; }

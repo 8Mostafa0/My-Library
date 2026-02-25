@@ -2,13 +2,12 @@
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.ModelsViewModel;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
     public interface IReservedBooksViewModel : IViewModelBase
     {
-        ICommand AddNewReservBookCommand { get; }
+        AddNewReservBookCommand AddNewReservBookCommand { get; }
         string BookName { get; set; }
         IViewModelBase CurrentModalViewModel { get; }
         EditeReservBookCommand EditeReservBookCommand { get; }
