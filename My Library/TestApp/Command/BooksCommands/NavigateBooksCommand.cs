@@ -4,7 +4,7 @@ using My_Library.ViewModel;
 
 namespace My_Library.Command.BooksCommands
 {
-    public class NavigateBooksCommand : CommandBase
+    public class NavigateBooksCommand : CommandBase, INavigateBooksCommand
     {
         #region Dipendencies
         private IBooksStore _booksStore;
