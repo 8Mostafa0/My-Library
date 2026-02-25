@@ -13,7 +13,7 @@ namespace My_Library.ViewModel
         ICommand DatabaseCommand { get; }
         ICommand NavigateBooksCommand { get; }
         INavigateHomeScreenCommand NavigateHomeCommand { get; }
-        ICommand NavigateLoansCommand { get; }
+        INavigateLoansCommand NavigateLoansCommand { get; }
         NavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
         INavigateToSettingsCommand NavigateToSettingsCommand { get; }
         ICommand OpenModalCommand { get; }

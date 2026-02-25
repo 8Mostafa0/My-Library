@@ -31,7 +31,7 @@ namespace My_Library.ViewModel
         public ICommand NavigateBooksCommand { get; }
 
         public ICommand OpenModalCommand { get; }
-        public ICommand NavigateLoansCommand { get; }
+        public INavigateLoansCommand NavigateLoansCommand { get; }
         public INavigateToSettingsCommand NavigateToSettingsCommand { get; }
         public NavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
         public CloseAppCommand CloseAppCommand { get; }
