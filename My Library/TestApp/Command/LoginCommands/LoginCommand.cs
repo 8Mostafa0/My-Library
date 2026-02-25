@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using My_Library.DbContext;
+﻿using My_Library.DbContext;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel;
+using System.Windows;
 
 namespace My_Library.Command.LoginCommands
 {
@@ -11,7 +11,7 @@ namespace My_Library.Command.LoginCommands
         #region Dependencies
         private SettingsStore _settinsStore;
         private LoanRepository _loanRepository;
-        private LoginViewModel _loginViewModel;
+        private ILoginViewModel _loginViewModel;
         private DbContextFactory _dbContextFactory;
         private ModalNavigationStore _modalNavigationStore;
         #endregion
@@ -26,7 +26,7 @@ namespace My_Library.Command.LoginCommands
         /// <param name="loanRepository"></param>
         /// <param name="dbContextFactory"></param>
         /// <param name="settingsStore"></param>
-        public LoginCommand(LoginViewModel loginViewModel, ModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, SettingsStore settingsStore)
+        public LoginCommand(ILoginViewModel loginViewModel, ModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, SettingsStore settingsStore)
         {
             _loginViewModel = loginViewModel;
             _loanRepository = loanRepository;

@@ -2,7 +2,7 @@
 
 namespace My_Library.ViewModel
 {
-    public interface ILoginViewModel
+    public interface ILoginViewModel : IViewModelBase
     {
         ICommand CloseAppCommand { get; }
         bool FirstOpen { get; }
