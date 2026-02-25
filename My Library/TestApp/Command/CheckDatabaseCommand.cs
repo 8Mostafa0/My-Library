@@ -3,7 +3,7 @@ using My_Library.Service;
 
 namespace My_Library.Command
 {
-    public class CheckDatabaseCommand : CommandBase
+    public class CheckDatabaseCommand : CommandBase, ICheckDatabaseCommand
     {
         #region Dependencies
         private ILoanRepository _loansRepository;
