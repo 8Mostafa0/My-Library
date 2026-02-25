@@ -2,7 +2,7 @@
 
 namespace My_Library.Store
 {
-    public class SettingNavigationStore
+    public class SettingNavigationStore : ISettingNavigationStore
     {
         #region Dependencies
         public event Action SettingViewModelChanged;
