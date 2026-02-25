@@ -101,7 +101,7 @@ namespace My_Library.ViewModel.LoanViewModels
         /// calles each time all loans list of loans store get changed
         /// </summary>
         /// <param name="loan"></param>
-        private void LoanIsUpdated(Loan loan)
+        private void LoanIsUpdated(ILoan loan)
         {
             var updatedVm = new LoanViewModel(loan, _clientsStore, _booksStore);
 

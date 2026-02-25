@@ -70,7 +70,7 @@ namespace My_Library.Service
         /// <returns Loan></returns>
         public async Task<Loan?> GetLoan(string customSql, string executionPart)
         {
-            Loan? loan = new();
+            ILoan? loan = new Loan();
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try

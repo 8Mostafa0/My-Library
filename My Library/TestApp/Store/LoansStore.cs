@@ -17,9 +17,9 @@ namespace My_Library.Store
         private BooksStore _booksStore;
 
         public Action LoansUpdated;
-        public Action<Loan> LoanIsAdded;
-        public Action<Loan> LoanIsDeleted;
-        public Action<Loan> LoanIsUpdated;
+        public Action<ILoan> LoanIsAdded;
+        public Action<ILoan> LoanIsDeleted;
+        public Action<ILoan> LoanIsUpdated;
         public Lazy<Task> _initilizeLazy;
         #endregion
 
@@ -29,7 +29,7 @@ namespace My_Library.Store
         /// </summary>
         public LoansStore()
         {
-            _loans = new List<LoanViewModel>();
+            _loans = [];
             _initilizeLazy = new Lazy<Task>(Initialize);
             _loanRepository = new LoanRepository();
             _clientsStore = new ClientsStore();
@@ -56,7 +56,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task LoanDeleted(Loan loan)
+        public async Task LoanDeleted(ILoan loan)
         {
             await _loanRepository.DeleteLoanInDB(loan);
             LoanIsDeleted?.Invoke(loan);
@@ -67,7 +67,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task LoanUpdated(Loan loan)
+        public async Task LoanUpdated(ILoan loan)
         {
             await _loanRepository.UpdateLoanAtDb(loan);
             LoanIsUpdated?.Invoke(loan);
@@ -77,7 +77,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task AddLoan(Loan loan)
+        public async Task AddLoan(ILoan loan)
         {
             await _loanRepository.AddNewLoanToDb(loan);
             LoanIsAdded?.Invoke(loan);
@@ -90,11 +90,11 @@ namespace My_Library.Store
         /// <returns></returns>
         public async Task GetAllLoans(string customSql = "")
         {
-            IEnumerable<Loan> loans = await _loanRepository.GetAllLoans(customSql);
+            IEnumerable<ILoan> loans = await _loanRepository.GetAllLoans(customSql);
             _loans.Clear();
-            foreach (Loan loan in loans)
+            foreach (ILoan loan in loans)
             {
-                LoanViewModel loanViewModel = new LoanViewModel(loan, _clientsStore, _booksStore);
+                LoanViewModel loanViewModel = new(loan, _clientsStore, _booksStore);
                 _loans.Add(loanViewModel);
             }
             LoansUpdated?.Invoke();
@@ -106,11 +106,11 @@ namespace My_Library.Store
         /// <returns></returns>
         private async Task Initialize()
         {
-            IEnumerable<Loan> loans = await _loanRepository.GetAllLoans();
+            IEnumerable<ILoan> loans = await _loanRepository.GetAllLoans();
             _loans.Clear();
-            foreach (Loan loan in loans)
+            foreach (ILoan loan in loans)
             {
-                LoanViewModel loanViewModel = new LoanViewModel(loan, _clientsStore, _booksStore);
+                LoanViewModel loanViewModel = new(loan, _clientsStore, _booksStore);
                 _loans.Add(loanViewModel);
             }
             LoansUpdated?.Invoke();
@@ -121,7 +121,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task UpdateLoan(Loan loan)
+        public async Task UpdateLoan(ILoan loan)
         {
             await _loanRepository.UpdateLoanAtDb(loan);
             LoanIsUpdated?.Invoke(loan);

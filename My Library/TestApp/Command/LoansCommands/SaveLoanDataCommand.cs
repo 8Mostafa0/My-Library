@@ -161,7 +161,7 @@ namespace My_Library.Command.LoansCommands
 
 
                 #region Save Book
-                Loan loan = new()
+                ILoan loan = new Loan()
                 {
                     ClientId = _addEditeLoanViewModel.SelectedClient.ID,
                     BookId = _addEditeLoanViewModel.SelectedBook.ID,
