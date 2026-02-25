@@ -8,7 +8,7 @@ namespace My_Library.Command.ReservCommands
     public class EditeReservBookCommand : CommandBase
     {
         #region Dependencies
-        private BooksStore _booksStore;
+        private IBooksStore _booksStore;
         private IClientsStore _clientsStore;
         private LoanRepository _loansRepository;
         private ClientsRepository _clientRepository;
@@ -32,7 +32,7 @@ namespace My_Library.Command.ReservCommands
         /// <param name="reservedBooksViewModel"></param>
         /// <param name="reservedBooksRepository"></param>
         public EditeReservBookCommand(
-            BooksStore booksStore,
+            IBooksStore booksStore,
             IClientsStore clientsStore,
             LoanRepository loanRepository,
             ClientsRepository clientsRepository,

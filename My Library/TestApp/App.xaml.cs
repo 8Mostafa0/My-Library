@@ -16,7 +16,7 @@ namespace My_Library
             INavigationStore navigationStore = new NavigationStore();
             IClientsStore clientsStore = new ClientsStore();
             ILoansStore loansStore = new LoansStore();
-            BooksStore booksStore = new();
+            IBooksStore booksStore = new BooksStore();
             ISettingsStore settingsStore = new SettingsStore();
             LoanRepository loanRepository = new();
             IReservedBooksStore reservedBooksStore = new ReservedBooksStore();

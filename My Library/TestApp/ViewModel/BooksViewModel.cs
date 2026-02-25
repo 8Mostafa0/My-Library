@@ -12,7 +12,7 @@ namespace My_Library.ViewModel
     public class BooksViewModel : ViewModelBase, IBooksViewModel
     {
         #region Dependencies
-        private BooksStore _booksStore;
+        private IBooksStore _booksStore;
         private ObservableCollection<IBook> _books;
         private IBook _selectedBook;
         public IBook SelectedBook
@@ -114,7 +114,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Constructor
-        public BooksViewModel(BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
+        public BooksViewModel(IBooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
         {
             _booksStore = booksStore;
             _books = [];
@@ -201,7 +201,7 @@ namespace My_Library.ViewModel
         /// <param name="reservedBooksRepository"></param>
         /// <param name="booksRepository"></param>
         /// <returns></returns>
-        public static IBooksViewModel LoadViewModel(BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
+        public static IBooksViewModel LoadViewModel(IBooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
         {
             IBooksViewModel ViewModel = new BooksViewModel(booksStore, loanRepository, reservedBooksRepository, booksRepository);
             ViewModel.LoadBooksCommand.Execute(null);

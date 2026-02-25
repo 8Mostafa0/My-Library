@@ -1,12 +1,12 @@
-﻿using System.Windows;
-using My_Library.Store;
+﻿using My_Library.Store;
+using System.Windows;
 
 namespace My_Library.Command.ReservCommands
 {
     public class OrderBooksBySubjectCommand : CommandBase
     {
         #region Dependencies
-        private BooksStore _booksStore;
+        private IBooksStore _booksStore;
         #endregion
 
         #region Contructor
@@ -14,7 +14,7 @@ namespace My_Library.Command.ReservCommands
         /// Order Book By Entered Subject
         /// </summary>
         /// <param name="booksStore"></param>
-        public OrderBooksBySubjectCommand(BooksStore booksStore)
+        public OrderBooksBySubjectCommand(IBooksStore booksStore)
         {
             _booksStore = booksStore;
         }

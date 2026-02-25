@@ -14,7 +14,7 @@ namespace My_Library.Store
         private List<ILoanViewModel> _loans;
         private LoanRepository _loanRepository;
         private IClientsStore _clientsStore;
-        private BooksStore _booksStore;
+        private IBooksStore _booksStore;
 
         public event Action LoansUpdated;
         public event Action<ILoan> LoanIsAdded;

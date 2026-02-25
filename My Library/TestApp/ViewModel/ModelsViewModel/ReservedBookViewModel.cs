@@ -7,7 +7,7 @@ namespace My_Library.ViewModel.ModelsViewModel
     {
         #region Properties
         private IClientsStore _clientsStore;
-        private BooksStore _booksStore;
+        private IBooksStore _booksStore;
         private IReservedBook _reservedBook;
         public int ID => _reservedBook.ID;
         public int BookId => _reservedBook.BookId;
@@ -19,7 +19,7 @@ namespace My_Library.ViewModel.ModelsViewModel
         #endregion
 
         #region Constructor
-        public ReservedBookViewModel(IReservedBook reservedBook, IClientsStore clientsStore, BooksStore booksStore)
+        public ReservedBookViewModel(IReservedBook reservedBook, IClientsStore clientsStore, IBooksStore booksStore)
         {
             _reservedBook = reservedBook ?? throw new ArgumentNullException(nameof(reservedBook));
             _clientsStore = clientsStore ?? throw new ArgumentNullException(nameof(clientsStore));

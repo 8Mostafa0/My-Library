@@ -17,7 +17,7 @@ namespace My_Library.ViewModel.LoanViewModels
         #region Dependencies
         private ILoan _selectedLoan;
         private IClientsStore _clientsStore;
-        private BooksStore _booksStore;
+        private IBooksStore _booksStore;
         private ObservableCollection<IBook> _books;
         private ObservableCollection<IClient> _clients;
         private IClient _seletedClient;
@@ -133,7 +133,7 @@ namespace My_Library.ViewModel.LoanViewModels
         #endregion
 
         #region Contructor
-        public AddEditeLoanViewModel(IModalNavigationStore modalNavigationStore, IClientsStore clientsStore, BooksStore booksStore, ILoansStore loanStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
+        public AddEditeLoanViewModel(IModalNavigationStore modalNavigationStore, IClientsStore clientsStore, IBooksStore booksStore, ILoansStore loanStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
         {
             _clients = [];
             _books = [];
@@ -229,7 +229,7 @@ namespace My_Library.ViewModel.LoanViewModels
         /// <param name="reservedBooksRepository"></param>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public static IAddEditeLoanViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, BooksStore booksStore, IClientsStore clientsStore, ILoansStore loansStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
+        public static IAddEditeLoanViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, IBooksStore booksStore, IClientsStore clientsStore, ILoansStore loansStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
         {
             IAddEditeLoanViewModel ViewModel = new AddEditeLoanViewModel(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
             ViewModel.LoadBooksCommand.Execute(null);
