@@ -1,6 +1,5 @@
 ﻿using My_Library.Command.SettingsCommands;
 using My_Library.Store;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
@@ -14,7 +13,7 @@ namespace My_Library.ViewModel.SettingsViewModel
         #endregion
 
         #region Commands
-        public ICommand NavigateLayoutSettingCommand { get; }
+        public INavigateLayoutSettingCommand NavigateLayoutSettingCommand { get; }
         public INavigateLoanSettingsCommand NavigateLoanSettingsCommand { get; }
         public INavigateSecuritySettingsCommand NavigateSecuritySettingsCommand { get; }
         #endregion
