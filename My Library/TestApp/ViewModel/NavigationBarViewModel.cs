@@ -28,7 +28,7 @@ namespace My_Library.ViewModel
 
         public INavigateClientScreenCommand ClientsCreenCommand { get; }
 
-        public ICommand NavigateBooksCommand { get; }
+        public INavigateBooksCommand NavigateBooksCommand { get; }
 
         public ICommand OpenModalCommand { get; }
         public INavigateLoansCommand NavigateLoansCommand { get; }
