@@ -9,7 +9,7 @@ namespace My_Library.ViewModel
 {
     public interface INavigationBarViewModel
     {
-        ICommand ClientsCreenCommand { get; }
+        INavigateClientScreenCommand ClientsCreenCommand { get; }
         CloseAppCommand CloseAppCommand { get; }
         ICommand DatabaseCommand { get; }
         ICommand NavigateBooksCommand { get; }

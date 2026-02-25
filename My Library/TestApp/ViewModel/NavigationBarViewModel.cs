@@ -26,7 +26,7 @@ namespace My_Library.ViewModel
         public INavigateHomeScreenCommand NavigateHomeCommand { get; }
         public ICommand DatabaseCommand { get; }
 
-        public ICommand ClientsCreenCommand { get; }
+        public INavigateClientScreenCommand ClientsCreenCommand { get; }
 
         public ICommand NavigateBooksCommand { get; }
 
