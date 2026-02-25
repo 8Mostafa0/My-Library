@@ -126,7 +126,7 @@ namespace My_Library.ViewModel.LoanViewModels
         public ICommand LoadBooksCommand { get; }
         public ICommand LoadClientsCommand { get; }
         public ICommand CloseModalCommand { get; }
-        public ICommand SaveLoanDataCommand { get; }
+        public ISaveLoanDataCommand SaveLoanDataCommand { get; }
         public ICommand SearchBookNameCommand { get; }
         public ICommand OrderBooksBySubjectCommand { get; }
         public ICommand SearchClientNameCommand { get; }

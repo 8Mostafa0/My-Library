@@ -1,4 +1,5 @@
-﻿using My_Library.Model;
+﻿using My_Library.Command.LoansCommands;
+using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using System.Windows.Input;
@@ -18,7 +19,7 @@ namespace My_Library.ViewModel.LoanViewModels
         ICommand LoadClientsCommand { get; }
         ICommand OrderBooksBySubjectCommand { get; }
         DateTime ReturnDate { get; set; }
-        ICommand SaveLoanDataCommand { get; }
+        ISaveLoanDataCommand SaveLoanDataCommand { get; }
         ICommand SearchBookNameCommand { get; }
         ICommand SearchClientNameCommand { get; }
         IBook SelectedBook { get; set; }
