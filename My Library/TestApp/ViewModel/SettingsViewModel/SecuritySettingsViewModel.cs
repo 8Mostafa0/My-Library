@@ -6,7 +6,7 @@ using System.Windows.Input;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
-    public class SecuritySettingsViewModel : ViewModelBase
+    public class SecuritySettingsViewModel : ViewModelBase, ISecuritySettingsViewModel
     {
         #region Dependencies
         private string _password;
