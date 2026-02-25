@@ -62,6 +62,12 @@ namespace My_Library.ViewModel.ModelsViewModel
                 UpdatedAt = UpdatedAt
             };
         }
+        /// <summary>
+        /// Generate Empty Instance of loanViewModel
+        /// Book Store is null
+        /// Client Store is null
+        /// </summary>
+        /// <returns></returns>
         public static LoanViewModel Empty()
         {
             return new LoanViewModel(new Loan() { Id = 0, BookId = 0, ClientId = 0 }, null, null);
