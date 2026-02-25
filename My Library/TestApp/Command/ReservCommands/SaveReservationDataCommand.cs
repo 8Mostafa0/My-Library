@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace My_Library.Command.ReservCommands
 {
-    public class SaveReservationDataCommand : CommandBase
+    public class SaveReservationDataCommand : CommandBase, ISaveReservationDataCommand
     {
         #region Dependencies
         private ILoanRepository _loanRepository;
