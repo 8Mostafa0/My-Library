@@ -6,7 +6,7 @@ using Serilog;
 
 namespace My_Library.Service
 {
-    public class ClientsRepository
+    public class ClientsRepository : IClientsRepository
     {
         #region Dependencies
         private readonly DbContextFactory _dbContextFactory;
