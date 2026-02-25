@@ -14,7 +14,7 @@
         xmlns:svm="clr-namespace:My_Library.ViewModel.SettingsViewModel"
         xmlns:modals="clr-namespace:ModalControl;assembly=ModalControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000">
+        Title="My Library" Height="600" Width="1000">
     <Grid >
         <Grid.Resources>
             <DataTemplate DataType="{x:Type vm:LayoutViewModel}">
