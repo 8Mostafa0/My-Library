@@ -3,7 +3,7 @@ using My_Library.ViewModel.SettingsViewModel;
 
 namespace My_Library.Command.SettingsCommands
 {
-    public class NavigateSecuritySettingsCommand : CommandBase
+    public class NavigateSecuritySettingsCommand : CommandBase, INavigateSecuritySettingsCommand
     {
         #region Dependencies
         private ISettingNavigationStore _settingNavigationStore;
