@@ -15,7 +15,7 @@ namespace My_Library.ViewModel
         string FirstName { get; set; }
         string LastName { get; set; }
         ICommand LoadClientsCommand { get; }
-        ICommand OrderClientsCommand { get; }
+        IOrderClientsCommand OrderClientsCommand { get; }
         IReloadClientsCommand ReloadClientsCommand { get; }
         IClient SelectedClient { get; set; }
         string SortOrder { get; set; }

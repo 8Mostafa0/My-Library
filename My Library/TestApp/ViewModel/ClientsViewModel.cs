@@ -80,7 +80,7 @@ namespace My_Library.ViewModel
         public ICommand LoadClientsCommand { get; }
         public ICommand DeleteClientCommand { get; }
         public ICommand AddNewClientCommand { get; }
-        public ICommand OrderClientsCommand { get; }
+        public IOrderClientsCommand OrderClientsCommand { get; }
 
         public ICommand EditClientCommand { get; }
 
