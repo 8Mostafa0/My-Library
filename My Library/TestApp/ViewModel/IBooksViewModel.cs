@@ -14,7 +14,7 @@ namespace My_Library.ViewModel
         ICommand EditBookCommand { get; }
         ICommand LoadBooksCommand { get; }
         string Name { get; set; }
-        ICommand OrderBooksCommand { get; }
+        IOrderBooksByStateCommand OrderBooksCommand { get; }
         string PublicationDate { get; set; }
         string Publisher { get; set; }
         IReloadBooksCommand ReloadBooksCommand { get; }
