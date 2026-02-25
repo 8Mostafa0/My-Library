@@ -1,6 +1,6 @@
 ﻿namespace My_Library.Model
 {
-    public class Book
+    public class Book : IBook
     {
         public int ID { get; set; }
         public string Name { get; set; }
