@@ -21,7 +21,7 @@ namespace My_Library
             ILoanRepository loanRepository = new LoanRepository();
             IReservedBooksStore reservedBooksStore = new ReservedBooksStore();
             IReservedBooksRepository reservedBooksRepository = new ReservedBooksRepository();
-            BooksRepository booksRepository = new();
+            IBooksRepository booksRepository = new BooksRepository();
             IClientsRepository clientsRepository = new ClientsRepository();
             navigationStore.ContentScreen = new HomeViewModel(clientsStore, booksStore, loansStore);
             navigationStore.StatusBarViewModel = new StatusBarViewModel();

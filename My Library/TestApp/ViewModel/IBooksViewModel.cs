@@ -22,7 +22,7 @@ namespace My_Library.ViewModel
         string Subject { get; set; }
         int Tier { get; set; }
 
-        static abstract IBooksViewModel LoadViewModel(IBooksStore booksStore, ILoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository);
+        static abstract IBooksViewModel LoadViewModel(IBooksStore booksStore, ILoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository, IBooksRepository booksRepository);
         void AddNewBook(IBook book);
         void UpdateBooks();
     }

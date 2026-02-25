@@ -22,7 +22,7 @@ namespace My_Library.Command.BooksCommands
         /// <param name="loanRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <param name="booksRepository"></param>
-        public NavigateBooksCommand(INavigationStore navigationStore, IBooksStore booksStore, ILoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository, BooksRepository booksRepository)
+        public NavigateBooksCommand(INavigationStore navigationStore, IBooksStore booksStore, ILoanRepository loanRepository, IReservedBooksRepository reservedBooksRepository, IBooksRepository booksRepository)
         {
             _navigationStore = navigationStore;
             _booksStore = booksStore;

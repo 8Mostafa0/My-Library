@@ -26,6 +26,6 @@ namespace My_Library.ViewModel.LoanViewModels
         ILoan SelectedLoan { get; set; }
         string TitleOfLoanScreen { get; set; }
 
-        static abstract IAddEditeLoanViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, IBooksStore booksStore, IClientsStore clientsStore, ILoansStore loansStore, ILoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository, ILoan loan = null);
+        static abstract IAddEditeLoanViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, IBooksStore booksStore, IClientsStore clientsStore, ILoansStore loansStore, ILoanRepository loanRepository, ISettingsStore settingsStore, IBooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository, ILoan loan = null);
     }
 }

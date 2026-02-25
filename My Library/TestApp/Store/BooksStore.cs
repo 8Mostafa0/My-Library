@@ -8,7 +8,7 @@ namespace My_Library.Store
     {
         #region Dependencies
         private List<IBook> _books;
-        private BooksRepository _booksRepository;
+        private IBooksRepository _booksRepository;
         public IEnumerable<IBook> Books => _books;
 
         public Lazy<Task> _initilizerLazy;
