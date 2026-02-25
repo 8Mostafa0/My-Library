@@ -23,7 +23,7 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Commands
-        public NavigateHomeScreenCommand NavigateHomeCommand { get; }
+        public INavigateHomeScreenCommand NavigateHomeCommand { get; }
         public ICommand DatabaseCommand { get; }
 
         public ICommand ClientsCreenCommand { get; }
