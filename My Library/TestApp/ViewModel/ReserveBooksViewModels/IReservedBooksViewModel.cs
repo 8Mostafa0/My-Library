@@ -16,7 +16,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         ICommand LoadReservedBooksCommand { get; }
         ICommand RemoveReservBookCommand { get; }
         IEnumerable<IReservedBookViewModel> ReservedBooks { get; }
-        ICommand ResetReservBookCommand { get; }
+        ResetReservBookCommand ResetReservBookCommand { get; }
         SearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
         IReservedBookViewModel SelectedReservedBook { get; set; }
 
