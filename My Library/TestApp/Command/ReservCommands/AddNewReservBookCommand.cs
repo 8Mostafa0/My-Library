@@ -10,7 +10,7 @@ namespace My_Library.Command.ReservCommands
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;
         private IReservedBooksStore _reservedBooksStore;
-        private ModalNavigationStore _modalNavigationStore;
+        private IModalNavigationStore _modalNavigationStore;
         private ReservedBooksRepository _reservedBooksRepository;
         private LoanRepository _loanRepository;
         private ClientsRepository _clientsRepository;
@@ -30,7 +30,7 @@ namespace My_Library.Command.ReservCommands
         /// <param name="reservedBooksRepository"></param>
         /// <param name="clientsRepository"></param>
         public AddNewReservBookCommand(
-            ModalNavigationStore modalNavigationStore,
+            IModalNavigationStore modalNavigationStore,
             IReservedBooksStore reservedBooksStore,
             ClientsStore clientsStore,
             BooksStore booksStore,

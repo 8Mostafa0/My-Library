@@ -8,7 +8,7 @@ namespace My_Library.Command.LoansCommands
     public class ShowLoanModalCommand : CommandBase
     {
         #region Dependencies
-        private ModalNavigationStore _modalNavigationStore;
+        private IModalNavigationStore _modalNavigationStore;
         private IAddEditeLoanViewModel _addEditeLoanViewModel;
         #endregion
 
@@ -26,7 +26,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         /// <param name="loan"></param>
-        public ShowLoanModalCommand(ModalNavigationStore modalNavigationStore, BooksStore booksStore, ClientsStore clientsStore, LoansStore loansStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
+        public ShowLoanModalCommand(IModalNavigationStore modalNavigationStore, BooksStore booksStore, ClientsStore clientsStore, LoansStore loansStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, ILoan loan = null)
         {
             _modalNavigationStore = modalNavigationStore;
             _addEditeLoanViewModel = AddEditeLoanViewModel.LoadViewModel(modalNavigationStore, booksStore, clientsStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);

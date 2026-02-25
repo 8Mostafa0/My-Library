@@ -9,7 +9,7 @@ namespace My_Library.ViewModel
     {
         #region Dependencies
         private readonly IViewModelBase _layoutViewModel;
-        private ModalNavigationStore _modalNavigationStore;
+        private IModalNavigationStore _modalNavigationStore;
         public IViewModelBase CurrentViewModel => _layoutViewModel;
         public IViewModelBase CurrentModalView => _modalNavigationStore.CurrentViewModel;
 

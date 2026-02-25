@@ -13,7 +13,7 @@ namespace My_Library.Command.LoginCommands
         private LoanRepository _loanRepository;
         private ILoginViewModel _loginViewModel;
         private DbContextFactory _dbContextFactory;
-        private ModalNavigationStore _modalNavigationStore;
+        private IModalNavigationStore _modalNavigationStore;
         #endregion
 
 
@@ -26,7 +26,7 @@ namespace My_Library.Command.LoginCommands
         /// <param name="loanRepository"></param>
         /// <param name="dbContextFactory"></param>
         /// <param name="settingsStore"></param>
-        public LoginCommand(ILoginViewModel loginViewModel, ModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, ISettingsStore settingsStore)
+        public LoginCommand(ILoginViewModel loginViewModel, IModalNavigationStore modalNavigationStore, LoanRepository loanRepository, DbContextFactory dbContextFactory, ISettingsStore settingsStore)
         {
             _loginViewModel = loginViewModel;
             _loanRepository = loanRepository;

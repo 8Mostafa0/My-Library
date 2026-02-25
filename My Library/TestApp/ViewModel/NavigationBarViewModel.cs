@@ -15,7 +15,7 @@ namespace My_Library.ViewModel
     {
         #region Dependencies
         private readonly INavigationStore _navigationStore;
-        private readonly ModalNavigationStore _modalNavigationStore;
+        private readonly IModalNavigationStore _modalNavigationStore;
         private IReservedBooksStore _reservedBooksStore;
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;

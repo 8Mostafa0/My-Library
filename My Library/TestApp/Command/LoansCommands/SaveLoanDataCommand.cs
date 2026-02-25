@@ -13,7 +13,7 @@ namespace My_Library.Command.LoansCommands
         private ISettingsStore _settingsStore;
         private LoanRepository _loanRepository;
         private BooksRepository _bookRepository;
-        private ModalNavigationStore _modalNavigationStore;
+        private IModalNavigationStore _modalNavigationStore;
         private IAddEditeLoanViewModel _addEditeLoanViewModel;
         private ReservedBooksRepository _reservedBooksRepository;
         #endregion
@@ -30,7 +30,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="settingsStore"></param>
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public SaveLoanDataCommand(IAddEditeLoanViewModel addEditeLoanViewModel, LoansStore loansStore, ModalNavigationStore modalNavigationStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
+        public SaveLoanDataCommand(IAddEditeLoanViewModel addEditeLoanViewModel, LoansStore loansStore, IModalNavigationStore modalNavigationStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _loansStore = loansStore;
             _settingsStore = settingsStore;

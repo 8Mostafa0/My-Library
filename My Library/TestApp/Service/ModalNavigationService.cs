@@ -6,7 +6,7 @@ namespace My_Library.Service
     public class ModalNavigationService<TViewModel> : INavigationService where TViewModel : IViewModelBase
     {
         #region Dependencies
-        private readonly ModalNavigationStore _navigationStore;
+        private readonly IModalNavigationStore _navigationStore;
         private readonly Func<TViewModel> _createView;
         #endregion
         #region Contructor
@@ -15,7 +15,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="navigationStore"></param>
         /// <param name="createView"></param>
-        public ModalNavigationService(ModalNavigationStore navigationStore, Func<TViewModel> createView)
+        public ModalNavigationService(IModalNavigationStore navigationStore, Func<TViewModel> createView)
         {
             _navigationStore = navigationStore;
             _createView = createView;
