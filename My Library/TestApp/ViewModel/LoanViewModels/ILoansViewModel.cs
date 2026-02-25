@@ -18,10 +18,10 @@ namespace My_Library.ViewModel.LoanViewModels
         ICommand ReturnedLoanCommand { get; }
         ICommand SearchBookCommand { get; }
         ILoanViewModel SelectedLoan { get; set; }
-        ICommand ShowAddLoanModalCommand { get; }
+        IShowLoanModalCommand ShowAddLoanModalCommand { get; }
         ICommand ShowEditLoanViewModel { get; }
         int SortIndex { get; set; }
-        SortLoansListCommand SortLoansListCommand { get; }
+        ISortLoansListCommand SortLoansListCommand { get; }
 
         static abstract ILoansViewModel LoadViewModel(IModalNavigationStore modalNavigationStore, ILoansStore loansStore, IClientsStore clientsStore, IBooksStore booksStore, ILoanRepository loanRepository, ISettingsStore settingsStore, IBooksRepository booksRepository, IReservedBooksRepository reservedBooksRepository);
         void UpdateLoans();

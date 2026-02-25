@@ -34,15 +34,6 @@ namespace My_Library.Command.LoginCommands
             _modalNavigationStore = modalNavigationStore;
             _settinsStore = settingsStore;
         }
-
-        public LoginCommand(ISettingsStore settinsStore, ILoanRepository loanRepository, ILoginViewModel loginViewModel, IDbContextFactory dbContextFactory, IModalNavigationStore modalNavigationStore)
-        {
-            _settinsStore = settinsStore;
-            _loanRepository = loanRepository;
-            _loginViewModel = loginViewModel;
-            _dbContextFactory = dbContextFactory;
-            _modalNavigationStore = modalNavigationStore;
-        }
         #endregion
 
 

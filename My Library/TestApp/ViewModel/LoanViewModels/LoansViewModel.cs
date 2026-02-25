@@ -58,14 +58,14 @@ namespace My_Library.ViewModel.LoanViewModels
 
         #region Commands
 
-        public ICommand ShowAddLoanModalCommand { get; }
+        public IShowLoanModalCommand ShowAddLoanModalCommand { get; }
         public ICommand ShowEditLoanViewModel { get; }
         public ICommand LoadLoansCommand { get; }
         public ICommand OrderBooksCommand { get; }
         public ICommand SearchBookCommand { get; }
         public ICommand ReturnedLoanCommand { get; }
         public ICommand ReloadLoansListCommand { get; }
-        public SortLoansListCommand SortLoansListCommand { get; }
+        public ISortLoansListCommand SortLoansListCommand { get; }
         #endregion
 
         #region Constructor
