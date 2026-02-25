@@ -6,7 +6,7 @@ using My_Library.Constants;
 
 namespace My_Library.DbContext
 {
-    public class DbContextFactory
+    public class DbContextFactory : IDbContextFactory
     {
         #region Dependencies
         private ILogger _logger;
