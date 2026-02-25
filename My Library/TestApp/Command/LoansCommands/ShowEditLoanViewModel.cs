@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using My_Library.Service;
+﻿using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.LoanViewModels;
+using System.Windows;
 
 namespace My_Library.Command.LoansCommands
 {
@@ -12,7 +12,7 @@ namespace My_Library.Command.LoansCommands
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;
         private SettingsStore _settingsStore;
-        private LoansViewModel _loansViewModel;
+        private ILoansViewModel _loansViewModel;
         private LoanRepository _loanRepository;
         private BooksRepository _booksRepository;
         private ModalNavigationStore _modalNavigationStore;
@@ -34,7 +34,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="settingsStore"></param>
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public ShowEditLoanViewModel(ModalNavigationStore modalNavigationStore, LoansStore loansStore, BooksStore booksStore, ClientsStore clientsStore, LoansViewModel loansViewModel, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
+        public ShowEditLoanViewModel(ModalNavigationStore modalNavigationStore, LoansStore loansStore, BooksStore booksStore, ClientsStore clientsStore, ILoansViewModel loansViewModel, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _loansStore = loansStore;
             _booksStore = booksStore;

@@ -7,7 +7,7 @@ namespace My_Library.Command.LoansCommands
     public class NavigateLoansCommand : CommandBase
     {
         #region Dependencies
-        private LoansViewModel _loansViewModel;
+        private ILoansViewModel _loansViewModel;
         private NavigationStore _navigationStore;
         #endregion
 
