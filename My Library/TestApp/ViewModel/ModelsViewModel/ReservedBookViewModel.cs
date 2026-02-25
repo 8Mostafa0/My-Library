@@ -3,7 +3,7 @@ using My_Library.Store;
 
 namespace My_Library.ViewModel.ModelsViewModel
 {
-    public class ReservedBookViewModel : ViewModelBase
+    public class ReservedBookViewModel : ViewModelBase, IReservedBookViewModel
     {
         #region Properties
         private ClientsStore _clientsStore;
