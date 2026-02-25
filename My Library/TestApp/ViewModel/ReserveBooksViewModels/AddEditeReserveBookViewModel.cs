@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
-    public class AddEditeReserveBookViewModel : ViewModelBase
+    public class AddEditeReserveBookViewModel : ViewModelBase, IAddEditeReserveBookViewModel
     {
         #region Dependencies
         private ModalNavigationStore _modalNavigationStore;
