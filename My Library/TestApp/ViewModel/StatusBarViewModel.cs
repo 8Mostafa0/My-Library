@@ -7,7 +7,7 @@ namespace My_Library.ViewModel
     {
         #region Dependencies
         private static System.Timers.Timer aTimer;
-        private TimeStore _timeStore = new();
+        private ITimeStore _timeStore = new TimeStore();
         public DateTime CloclString => _timeStore.CurrentTime;
         #endregion
 
