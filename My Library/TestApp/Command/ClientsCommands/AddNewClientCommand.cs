@@ -1,0 +1,62 @@
+﻿using System.Windows;
+using TestApp.Model;
+using TestApp.Store;
+using TestApp.ViewModel;
+
+namespace TestApp.Command.ClientsCommands
+{
+    public class AddNewClientCommand : CommandBase
+    {
+        #region Dependencies
+        private readonly ClientsStore _clientStore;
+        private readonly ClientsViewModel _clientViewModel;
+        #endregion
+
+        #region Contructor
+        /// <summary>
+        /// Checks To Validate Clients Data First Then Add New Client Using Clients Store
+        /// </summary>
+        /// <param name="clientsViewModel"></param>
+        /// <param name="clientStore"></param>
+        public AddNewClientCommand(ClientsViewModel clientsViewModel, ClientsStore clientStore)
+        {
+            _clientStore = clientStore;
+            _clientViewModel = clientsViewModel;
+        }
+        #endregion
+
+
+        #region Execcution
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="parameter">No Perameer Needed</param>
+        public override async void Execute(object? parameter)
+        {
+            if (string.IsNullOrEmpty(_clientViewModel.FirstName))
+            {
+                MessageBox.Show("لطفا ابتدا نام را وارد کنید", "افزودن کاربر");
+                return;
+            }
+            if (string.IsNullOrEmpty(_clientViewModel.LastName))
+            {
+                MessageBox.Show("لطفا ابتدا فامیلی را وارد کنید", "افزودن کاربر");
+                return;
+            }
+            Client client = new Client()
+            {
+                FirstName = _clientViewModel.FirstName,
+                LastName = _clientViewModel.LastName,
+                Tier = _clientViewModel.Tier,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+            };
+            await _clientStore.AddNewClient(client);
+            _clientViewModel.FirstName = "";
+            _clientViewModel.LastName = "";
+            _clientViewModel.Tier = 0;
+
+        }
+        #endregion
+    }
+}

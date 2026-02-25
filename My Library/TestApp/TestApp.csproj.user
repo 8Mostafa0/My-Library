@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Component\BooksView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\ClientsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\DatabaseTestView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\LayoutView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\LoanComponents\AddEditeLoanView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\LoanComponents\LoansView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\NavigationBarView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\ReserveBookViews\AddEditeReserveBookView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\ReserveBookViews\ReservedBooksView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\SettingsViews\HomeLayoutSettingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\SettingsViews\LoansSettingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\SettingsViews\SecureitySettingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\SettingsViews\SettingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\StatusBarView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

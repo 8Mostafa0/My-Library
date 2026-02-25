@@ -1,0 +1,11 @@
+C:\Users\Dev10\Desktop\test\ViewModels\bin\Debug\net8.0-windows\ViewModels.deps.json
+C:\Users\Dev10\Desktop\test\ViewModels\bin\Debug\net8.0-windows\ViewModels.dll
+C:\Users\Dev10\Desktop\test\ViewModels\bin\Debug\net8.0-windows\ViewModels.pdb
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\ViewModels.AssemblyInfoInputs.cache
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\ViewModels.AssemblyInfo.cs
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\ViewModels.dll
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\refint\ViewModels.dll
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\ViewModels.pdb
+C:\Users\Dev10\Desktop\test\ViewModels\obj\Debug\net8.0-windows\ref\ViewModels.dll
