@@ -13,7 +13,7 @@ namespace My_Library
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            NavigationStore navigationStore = new();
+            INavigationStore navigationStore = new NavigationStore();
             ClientsStore clientsStore = new();
             LoansStore loansStore = new();
             BooksStore booksStore = new();

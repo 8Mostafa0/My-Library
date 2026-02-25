@@ -8,7 +8,7 @@ namespace My_Library.Command.ClientsCommands
     {
         #region Dependencies
         private ClientsStore _clientsStore;
-        private NavigationStore _navigationStore;
+        private INavigationStore _navigationStore;
         private IClientsViewModel _clientsViewModel;
         #endregion
 
@@ -20,7 +20,7 @@ namespace My_Library.Command.ClientsCommands
         /// <param name="clientsStore"></param>
         /// <param name="loanRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public NavigateClientScreenCommand(NavigationStore navigationStore, ClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
+        public NavigateClientScreenCommand(INavigationStore navigationStore, ClientsStore clientsStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _navigationStore = navigationStore;
             _clientsStore = clientsStore;

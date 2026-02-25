@@ -8,7 +8,7 @@ namespace My_Library.Command.LoansCommands
     {
         #region Dependencies
         private ILoansViewModel _loansViewModel;
-        private NavigationStore _navigationStore;
+        private INavigationStore _navigationStore;
         #endregion
 
 
@@ -25,7 +25,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="settingsStore"></param>
         /// <param name="booksRepository"></param>
         /// <param name="reservedBooksRepository"></param>
-        public NavigateLoansCommand(NavigationStore navigationStore, ModalNavigationStore modalNavigationStore, LoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
+        public NavigateLoansCommand(INavigationStore navigationStore, ModalNavigationStore modalNavigationStore, LoansStore loansStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ISettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository)
         {
             _navigationStore = navigationStore;
             _loansViewModel = LoansViewModel.LoadViewModel(modalNavigationStore, loansStore, clientsStore, booksStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository);

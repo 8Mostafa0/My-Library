@@ -9,7 +9,7 @@ namespace My_Library.Command.ReservCommands
         #region Dependencies
         private BooksStore _booksStore;
         private ClientsStore _clientsStore;
-        private NavigationStore _navigationStore;
+        private INavigationStore _navigationStore;
         private IReservedBooksStore _reservedBooksStore;
         private ModalNavigationStore _modalNavigationStore;
         private IReservedBooksViewModel _reservedBooksViewModel;
@@ -28,7 +28,7 @@ namespace My_Library.Command.ReservCommands
         /// <param name="clientsRepository"></param>
         /// <param name="reservedBooksRepository"></param>
         public NavigateReservedBooksCommand(
-            NavigationStore navigationStore,
+            INavigationStore navigationStore,
             ModalNavigationStore modalNavigationStore,
             IReservedBooksStore reservedBooksStore,
             ClientsStore clientsStore,
