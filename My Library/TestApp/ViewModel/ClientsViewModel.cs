@@ -126,8 +126,19 @@ namespace My_Library.ViewModel
         /// <param name="client"></param>
         private void OnClientDeleted(Client client)
         {
+            ClearInputs();
             _clients.Remove(client);
             MessageBox.Show("کاربر با موفقیت حذف شد", "حذف کاربر");
+        }
+
+        /// <summary>
+        /// Clear Inputs data
+        /// </summary>
+        private void ClearInputs()
+        {
+            FirstName = "";
+            LastName = "";
+            Tier = 0;
         }
 
         /// <summary>
@@ -135,10 +146,7 @@ namespace My_Library.ViewModel
         /// </summary>
         public void UpdateClients()
         {
-            SortOrder = "0";
-            FirstName = "";
-            LastName = "";
-            Tier = 0;
+            ClearInputs();
             _clients.Clear();
             foreach (Client client in _clientsStore.Clients)
             {
@@ -151,9 +159,11 @@ namespace My_Library.ViewModel
         /// <param name="client"></param>
         private void OnClientAdded(Client client)
         {
+            ClearInputs();
             client.ID = _clients.Any() ? _clients.Last().ID + 1 : 1;
             _clients.Add(client);
             MessageBox.Show("کاربر با موفقیت اضافه شد", "افزودن کاربر");
+
         }
         /// <summary>
         /// fill value of first name and last name when select a client

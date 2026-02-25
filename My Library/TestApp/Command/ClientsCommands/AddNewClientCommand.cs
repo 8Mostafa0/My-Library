@@ -52,9 +52,6 @@ namespace My_Library.Command.ClientsCommands
                 UpdatedAt = DateTime.Now,
             };
             await _clientStore.AddNewClient(client);
-            _clientViewModel.FirstName = "";
-            _clientViewModel.LastName = "";
-            _clientViewModel.Tier = 0;
 
         }
         #endregion
