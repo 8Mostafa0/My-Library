@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.BooksCommands
 {
-    public class LoadBooksCommand : CommandBase
+    public class LoadBooksCommand : CommandBase, ILoadBooksCommand
     {
         #region Dependencies
         private readonly IBooksStore _booksStore;
