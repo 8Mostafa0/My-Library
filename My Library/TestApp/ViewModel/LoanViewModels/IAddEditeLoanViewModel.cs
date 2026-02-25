@@ -1,4 +1,6 @@
-﻿using My_Library.Command.ClientsCommands;
+﻿using My_Library.Command;
+using My_Library.Command.BooksCommands;
+using My_Library.Command.ClientsCommands;
 using My_Library.Command.LoansCommands;
 using My_Library.Model;
 using My_Library.Service;
@@ -21,7 +23,7 @@ namespace My_Library.ViewModel.LoanViewModels
         ICommand OrderBooksBySubjectCommand { get; }
         DateTime ReturnDate { get; set; }
         ISaveLoanDataCommand SaveLoanDataCommand { get; }
-        ICommand SearchBookNameCommand { get; }
+        ISearchBookNameCommand SearchBookNameCommand { get; }
         ISearchClientNameCommand SearchClientNameCommand { get; }
         IBook SelectedBook { get; set; }
         IClient SelectedClient { get; set; }
