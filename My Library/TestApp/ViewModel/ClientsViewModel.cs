@@ -78,7 +78,7 @@ namespace My_Library.ViewModel
         #region Commands
         public IReloadClientsCommand ReloadClientsCommand { get; }
         public ILoadClientsCommand LoadClientsCommand { get; }
-        public ICommand DeleteClientCommand { get; }
+        public IDeleteClientCommand DeleteClientCommand { get; }
         public ICommand AddNewClientCommand { get; }
         public IOrderClientsCommand OrderClientsCommand { get; }
 
