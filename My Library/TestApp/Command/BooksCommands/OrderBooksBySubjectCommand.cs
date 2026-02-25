@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace My_Library.Command.ReservCommands
 {
-    public class OrderBooksBySubjectCommand : CommandBase
+    public class OrderBooksBySubjectCommand : CommandBase, IOrderBooksBySubjectCommand
     {
         #region Dependencies
         private IBooksStore _booksStore;
