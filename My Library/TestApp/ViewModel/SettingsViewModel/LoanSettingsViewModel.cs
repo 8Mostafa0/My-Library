@@ -3,7 +3,7 @@ using My_Library.Store;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
-    public class LoanSettingsViewModel : ViewModelBase
+    public class LoanSettingsViewModel : ViewModelBase, ILoanSettingsViewModel
     {
         #region Dependencies
         private SettingsStore _settingsStore;
