@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace My_Library.ViewModel.SettingsViewModel
 {
-    public class SettingsViewModel : ViewModelBase
+    public class SettingsViewModel : ViewModelBase, ISettingsViewModel
     {
         #region Dependencies
         private SettingNavigationStore _settingNavigationStore;
