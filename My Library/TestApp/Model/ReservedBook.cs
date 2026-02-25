@@ -1,6 +1,6 @@
 ﻿namespace My_Library.Model
 {
-    public class ReservedBook
+    public class ReservedBook : IReservedBook
     {
         public int ID { get; set; }
         public int BookId { get; set; }
