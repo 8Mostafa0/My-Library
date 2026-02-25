@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace My_Library.Service
 {
-    public class LoanRepository
+    public class LoanRepository : ILoanRepository
     {
         #region Contructor
         private readonly DbContextFactory _dbContextFactory;
