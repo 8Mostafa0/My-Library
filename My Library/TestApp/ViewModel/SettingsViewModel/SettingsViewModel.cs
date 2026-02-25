@@ -15,7 +15,7 @@ namespace My_Library.ViewModel.SettingsViewModel
 
         #region Commands
         public ICommand NavigateLayoutSettingCommand { get; }
-        public ICommand NavigateLoanSettingsCommand { get; }
+        public INavigateLoanSettingsCommand NavigateLoanSettingsCommand { get; }
         public INavigateSecuritySettingsCommand NavigateSecuritySettingsCommand { get; }
         #endregion
 
