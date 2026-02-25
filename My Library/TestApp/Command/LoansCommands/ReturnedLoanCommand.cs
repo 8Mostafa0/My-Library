@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using My_Library.Store;
+﻿using My_Library.Store;
 using My_Library.ViewModel.LoanViewModels;
 using My_Library.ViewModel.ModelsViewModel;
+using System.Windows;
 
 namespace My_Library.Command.LoansCommands
 {
@@ -33,7 +33,7 @@ namespace My_Library.Command.LoansCommands
         /// <param name="parameter">no marametes needed</param>
         public override async void Execute(object? parameter)
         {
-            LoanViewModel loan = _loanViewModel.SelectedLoan;
+            ILoanViewModel loan = _loanViewModel.SelectedLoan;
             if (loan != null)
             {
                 bool IsReturnedLoan = DateTime.TryParse(loan.ReturnedDate, out DateTime _);

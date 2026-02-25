@@ -13,7 +13,7 @@ namespace My_Library.ViewModel.LoanViewModels
     {
         #region Dependencies
         private ModalNavigationStore _modalNavigationStore;
-        private ObservableCollection<LoanViewModel> _loans;
+        private ObservableCollection<ILoanViewModel> _loans;
         private LoansStore _loansStore;
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
@@ -22,7 +22,7 @@ namespace My_Library.ViewModel.LoanViewModels
         private BooksRepository _booksRepository;
         private ReservedBooksRepository _reservedBooksRepository;
         public IViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
-        public IEnumerable<LoanViewModel> Loans => _loans;
+        public IEnumerable<ILoanViewModel> Loans => _loans;
 
         private int _sortIndex;
         public int SortIndex
@@ -43,8 +43,8 @@ namespace My_Library.ViewModel.LoanViewModels
                 OnProperychanged(nameof(BookName));
             }
         }
-        private LoanViewModel _selectedLoan;
-        public LoanViewModel SelectedLoan
+        private ILoanViewModel _selectedLoan;
+        public ILoanViewModel SelectedLoan
         {
             get => _selectedLoan;
             set
@@ -140,7 +140,7 @@ namespace My_Library.ViewModel.LoanViewModels
         public void UpdateLoans()
         {
             _loans.Clear();
-            foreach (LoanViewModel loan in _loansStore.Loans)
+            foreach (ILoanViewModel loan in _loansStore.Loans)
             {
                 _loans.Add(loan);
             }

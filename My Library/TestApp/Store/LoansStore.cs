@@ -10,8 +10,8 @@ namespace My_Library.Store
     {
 
         #region Dependencies
-        public IEnumerable<LoanViewModel> Loans => _loans;
-        private List<LoanViewModel> _loans;
+        public IEnumerable<ILoanViewModel> Loans => _loans;
+        private List<ILoanViewModel> _loans;
         private LoanRepository _loanRepository;
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
@@ -94,7 +94,7 @@ namespace My_Library.Store
             _loans.Clear();
             foreach (ILoan loan in loans)
             {
-                LoanViewModel loanViewModel = new(loan, _clientsStore, _booksStore);
+                ILoanViewModel loanViewModel = new LoanViewModel(loan, _clientsStore, _booksStore);
                 _loans.Add(loanViewModel);
             }
             LoansUpdated?.Invoke();
@@ -110,7 +110,7 @@ namespace My_Library.Store
             _loans.Clear();
             foreach (ILoan loan in loans)
             {
-                LoanViewModel loanViewModel = new(loan, _clientsStore, _booksStore);
+                ILoanViewModel loanViewModel = new LoanViewModel(loan, _clientsStore, _booksStore);
                 _loans.Add(loanViewModel);
             }
             LoansUpdated?.Invoke();

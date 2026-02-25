@@ -72,7 +72,7 @@ namespace My_Library.ViewModel.ModelsViewModel
         /// Client Store is null
         /// </summary>
         /// <returns></returns>
-        public static LoanViewModel Empty()
+        public static ILoanViewModel Empty()
         {
             return new LoanViewModel(new Loan() { Id = 0, BookId = 0, ClientId = 0 }, null, null);
         }

@@ -15,7 +15,6 @@ namespace My_Library.ViewModel.ModelsViewModel
         string ReturnedDate { get; set; }
         DateTime UpdatedAt { get; }
 
-        static abstract LoanViewModel Empty();
         ILoan ToLoan();
     }
 }
