@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
-    public class ReservedBooksViewModel : ViewModelBase
+    public class ReservedBooksViewModel : ViewModelBase, IReservedBooksViewModel
     {
         #region Dependencies
         private ModalNavigationStore _modalNavigationStore;
