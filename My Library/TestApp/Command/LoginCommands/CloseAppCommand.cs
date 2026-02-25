@@ -2,7 +2,7 @@
 
 namespace My_Library.Command.LoginCommands
 {
-    public class CloseAppCommand : CommandBase
+    public class CloseAppCommand : CommandBase, ICloseAppCommand
     {
         #region Contructor
         /// <summary>
