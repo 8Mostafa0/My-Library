@@ -4,7 +4,7 @@ namespace My_Library.ViewModel
 {
     public interface ILoginViewModel : IViewModelBase
     {
-        ICloseAppCommand CloseAppCommand { get; }
+        CloseAppCommand CloseAppCommand { get; }
         bool FirstOpen { get; }
         ILoginCommand LoginCommand { get; }
         string Password { get; set; }
