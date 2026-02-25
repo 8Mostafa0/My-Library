@@ -6,7 +6,6 @@ using My_Library.Store;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
@@ -79,7 +78,7 @@ namespace My_Library.ViewModel
         public IReloadClientsCommand ReloadClientsCommand { get; }
         public ILoadClientsCommand LoadClientsCommand { get; }
         public IDeleteClientCommand DeleteClientCommand { get; }
-        public ICommand AddNewClientCommand { get; }
+        public IAddNewClientCommand AddNewClientCommand { get; }
         public IOrderClientsCommand OrderClientsCommand { get; }
 
         public IEditClientCommand EditClientCommand { get; }

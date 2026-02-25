@@ -3,13 +3,12 @@ using My_Library.Command.ClientsCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
     public interface IClientsViewModel : IViewModelBase
     {
-        ICommand AddNewClientCommand { get; }
+        IAddNewClientCommand AddNewClientCommand { get; }
         IEnumerable<IClient> Clients { get; }
         IDeleteClientCommand DeleteClientCommand { get; }
         IEditClientCommand EditClientCommand { get; }
