@@ -32,7 +32,7 @@ namespace My_Library.ViewModel
 
         public ICommand OpenModalCommand { get; }
         public ICommand NavigateLoansCommand { get; }
-        public ICommand NavigateToSettingsCommand { get; }
+        public NavigateToSettingsCommand NavigateToSettingsCommand { get; }
         public ICommand NavigateReservedBooksCommand { get; }
         public ICommand CloseAppCommand { get; }
         #endregion
