@@ -2,13 +2,12 @@
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
     public interface IBooksViewModel : IViewModelBase
     {
-        ICommand AddNewBookCommand { get; }
+        IAddNewBookCommand AddNewBookCommand { get; }
         IEnumerable<IBook> Books { get; }
         IDeleteBookCommand DeleteBookCommand { get; }
         IEditBookCommand EditBookCommand { get; }

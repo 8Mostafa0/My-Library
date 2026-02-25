@@ -5,7 +5,6 @@ using My_Library.Store;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel
 {
@@ -103,7 +102,7 @@ namespace My_Library.ViewModel
 
         #region Commands
         public ILoadBooksCommand LoadBooksCommand { get; }
-        public ICommand AddNewBookCommand { get; }
+        public IAddNewBookCommand AddNewBookCommand { get; }
 
         public IDeleteBookCommand DeleteBookCommand { get; }
         public IEditBookCommand EditBookCommand { get; }
