@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace My_Library.Command.ReservCommands
 {
-    public class EditeReservBookCommand : CommandBase
+    public class EditeReservBookCommand : CommandBase, IEditeReservBookCommand
     {
         #region Dependencies
         private IBooksStore _booksStore;
