@@ -28,23 +28,27 @@ namespace My_Library.ViewModel.ModelsViewModel
 
         public LoanViewModel(Loan loan, ClientsStore clientsStore, BooksStore booksStore)
         {
-            _loan = loan ?? throw new ArgumentNullException(nameof(loan));
-            _clientsStore = clientsStore ?? throw new ArgumentNullException(nameof(clientsStore));
-            _booksStore = booksStore ?? throw new ArgumentNullException(nameof(booksStore));
+            if (clientsStore is not null && booksStore is not null)
+            {
 
-            var client = clientsStore.Clients.FirstOrDefault(c => c.ID == loan.ClientId);
-            ClientName = client != null
-                ? $"{client.FirstName} {client.LastName}".Trim()
-                : $"Client #{loan.ClientId} (not found)";
+                _loan = loan ?? throw new ArgumentNullException(nameof(loan));
+                _clientsStore = clientsStore ?? throw new ArgumentNullException(nameof(clientsStore));
+                _booksStore = booksStore ?? throw new ArgumentNullException(nameof(booksStore));
 
-            var book = booksStore.Books.FirstOrDefault(b => b.ID == loan.BookId);
-            BookName = book?.Name ?? $"Book #{loan.BookId} (not found)";
+                var client = clientsStore.Clients.FirstOrDefault(c => c.ID == loan.ClientId);
+                ClientName = client != null
+                    ? $"{client.FirstName} {client.LastName}".Trim()
+                    : $"Client #{loan.ClientId} (not found)";
 
-            BookSubject = book?.Subject ?? $"Book #{loan.BookId} (not found)";
+                var book = booksStore.Books.FirstOrDefault(b => b.ID == loan.BookId);
+                BookName = book?.Name ?? $"Book #{loan.BookId} (not found)";
 
-            ReturnedDate = loan.ReturnedDate.HasValue
-                ? loan.ReturnedDate.Value.ToString("yyyy-MM-dd")
-                : "خیر";
+                BookSubject = book?.Subject ?? $"Book #{loan.BookId} (not found)";
+
+                ReturnedDate = loan.ReturnedDate.HasValue
+                    ? loan.ReturnedDate.Value.ToString("yyyy-MM-dd")
+                    : "خیر";
+            }
         }
         #endregion
 
