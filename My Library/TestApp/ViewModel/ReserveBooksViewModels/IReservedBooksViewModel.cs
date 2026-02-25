@@ -14,10 +14,10 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         bool IsModalOpen { get; }
         ICommand LoadReservedBooksCommand { get; }
         ICommand RemoveReservBookCommand { get; }
-        IEnumerable<ReservedBookViewModel> ReservedBooks { get; }
+        IEnumerable<IReservedBookViewModel> ReservedBooks { get; }
         ICommand ResetReservBookCommand { get; }
         ICommand SearchBookNameInReservedBookCommand { get; }
-        ReservedBookViewModel SelectedReservedBook { get; set; }
+        IReservedBookViewModel SelectedReservedBook { get; set; }
 
         static abstract IReservedBooksViewModel LoadViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository);
     }

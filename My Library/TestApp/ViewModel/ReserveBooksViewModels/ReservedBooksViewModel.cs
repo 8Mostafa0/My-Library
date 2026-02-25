@@ -17,12 +17,12 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private ClientsStore _clientsStore;
         private ReservedBooksStore _reservedBooksStore;
         private string _bookName;
-        private ObservableCollection<ReservedBookViewModel> _reservedBooks;
+        private ObservableCollection<IReservedBookViewModel> _reservedBooks;
 
-        public IEnumerable<ReservedBookViewModel> ReservedBooks => _reservedBooks;
-        private ReservedBookViewModel _selectedReservBook;
+        public IEnumerable<IReservedBookViewModel> ReservedBooks => _reservedBooks;
+        private IReservedBookViewModel _selectedReservBook;
 
-        public ReservedBookViewModel SelectedReservedBook
+        public IReservedBookViewModel SelectedReservedBook
         {
             get => _selectedReservBook;
             set
@@ -112,7 +112,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <param name="book"></param>
         private void OnReservedBookUpdate(IReservedBook book)
         {
-            ReservedBookViewModel Reserv = new(book, _clientsStore, _booksStore);
+            IReservedBookViewModel Reserv = new ReservedBookViewModel(book, _clientsStore, _booksStore);
             int index = _reservedBooks.IndexOf(Reserv);
             _reservedBooks[index] = Reserv;
             MessageBox.Show("رزرو با موفقیت ویرایش شد", "ویرایش رزرو");
@@ -134,7 +134,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private void OnReservedBookAdded(IReservedBook book)
         {
             book.ID = _reservedBooks.Any() ? _reservedBooks.Last().ID + 1 : 1;
-            ReservedBookViewModel Reserv = new(book, _clientsStore, _booksStore);
+            IReservedBookViewModel Reserv = new ReservedBookViewModel(book, _clientsStore, _booksStore);
             _reservedBooks.Add(Reserv);
             MessageBox.Show("کتاب با موفقیت رزرو شد", "رزور کتاب");
         }
