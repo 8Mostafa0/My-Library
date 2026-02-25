@@ -2,7 +2,7 @@
 
 namespace My_Library.Store
 {
-    public class ModalNavigationStore
+    public class ModalNavigationStore : IModalNavigationStore
     {
         #region Dependencies
         private IViewModelBase _currentViewModel;
