@@ -153,6 +153,7 @@ namespace My_Library.ViewModel
         {
             client.ID = _clients.Any() ? _clients.Last().ID + 1 : 1;
             _clients.Add(client);
+            MessageBox.Show("کاربر با موفقیت اضافه شد", "افزودن کاربر");
         }
         /// <summary>
         /// fill value of first name and last name when select a client
