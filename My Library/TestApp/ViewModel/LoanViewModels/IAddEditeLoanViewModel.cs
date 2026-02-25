@@ -21,7 +21,7 @@ namespace My_Library.ViewModel.LoanViewModels
         DateTime ReturnDate { get; set; }
         ISaveLoanDataCommand SaveLoanDataCommand { get; }
         ICommand SearchBookNameCommand { get; }
-        ICommand SearchClientNameCommand { get; }
+        ISearchClientNameCommand SearchClientNameCommand { get; }
         IBook SelectedBook { get; set; }
         IClient SelectedClient { get; set; }
         ILoan SelectedLoan { get; set; }

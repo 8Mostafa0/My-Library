@@ -129,7 +129,7 @@ namespace My_Library.ViewModel.LoanViewModels
         public ISaveLoanDataCommand SaveLoanDataCommand { get; }
         public ICommand SearchBookNameCommand { get; }
         public ICommand OrderBooksBySubjectCommand { get; }
-        public ICommand SearchClientNameCommand { get; }
+        public ISearchClientNameCommand SearchClientNameCommand { get; }
         #endregion
 
         #region Contructor

@@ -1,4 +1,5 @@
-﻿using My_Library.Command.LoansCommands;
+﻿using My_Library.Command.ClientsCommands;
+using My_Library.Command.LoansCommands;
 using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
@@ -21,7 +22,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         ICommand OrderBooksCommand { get; }
         SaveReservationDataCommand SaveReservedBookDataCommand { get; }
         ICommand SearchBookNameCommand { get; }
-        ICommand SearchClientNameCommand { get; }
+        ISearchClientNameCommand SearchClientNameCommand { get; }
         IBook SelectedBook { get; set; }
         IClient SelectedClient { get; set; }
         IReservedBook SelectedReservedBook { get; set; }
