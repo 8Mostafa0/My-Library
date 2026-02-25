@@ -3,7 +3,7 @@ using My_Library.Service;
 
 namespace My_Library.Store
 {
-    public class ClientsStore
+    public class ClientsStore : IClientsStore
     {
 
         #region Dependencies
