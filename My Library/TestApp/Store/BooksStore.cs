@@ -7,15 +7,15 @@ namespace My_Library.Store
     public class BooksStore
     {
         #region Dependencies
-        private List<Book> _books;
+        private List<IBook> _books;
         private BooksRepository _booksRepository;
-        public IEnumerable<Book> Books => _books;
+        public IEnumerable<IBook> Books => _books;
 
         public Action BooksUpdated;
         public Lazy<Task> _initilizerLazy;
-        public Action<Book> BookAdded;
-        public Action<Book> BookEdited;
-        public Action<Book> BookDeleted;
+        public Action<IBook> BookAdded;
+        public Action<IBook> BookEdited;
+        public Action<IBook> BookDeleted;
 
         public string SearchBookName { get; set; }
         public int SearchSubject { get; set; }
@@ -27,7 +27,7 @@ namespace My_Library.Store
         /// </summary>
         public BooksStore()
         {
-            _books = new List<Book>();
+            _books = [];
             _initilizerLazy = new Lazy<Task>(Initilize);
             _booksRepository = new BooksRepository();
         }
@@ -47,7 +47,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="book"></param>
         /// <returns></returns>
-        public async Task DeleteBook(Book book)
+        public async Task DeleteBook(IBook book)
         {
             await _booksRepository.DeleteBookInDb(book);
             BookDeleted?.Invoke(book);
@@ -58,7 +58,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="book"></param>
         /// <returns></returns>
-        public async Task EditBook(Book book)
+        public async Task EditBook(IBook book)
         {
             await _booksRepository.EditeBookInDb(book);
             BookEdited?.Invoke(book);
@@ -69,7 +69,7 @@ namespace My_Library.Store
         /// </summary>
         /// <param name="book"></param>
         /// <returns></returns>
-        public async Task AddNewBook(Book book)
+        public async Task AddNewBook(IBook book)
         {
             await _booksRepository.AddNewBookToDb(book);
             _books.Add(book);
@@ -95,7 +95,7 @@ namespace My_Library.Store
         /// <returns></returns>
         private async Task Initilize()
         {
-            IEnumerable<Book> books = await _booksRepository.GetAllBooks();
+            IEnumerable<IBook> books = await _booksRepository.GetAllBooks();
             _books.Clear();
             _books.AddRange(books);
             BooksUpdated?.Invoke();

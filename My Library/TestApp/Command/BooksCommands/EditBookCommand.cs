@@ -40,7 +40,7 @@ namespace My_Library.Command.BooksCommands
         /// Data : Name,Publisher,Subject,PublicationDate</param>
         public override async void Execute(object? parameter)
         {
-            Book SelectedBook = _booksViewModel.SelectedBook;
+            IBook SelectedBook = _booksViewModel.SelectedBook;
             if (SelectedBook == null)
             {
                 MessageBox.Show("لطفا کتابی را برای ویرایش انتخاب کنید", "ویرایش کتاب");

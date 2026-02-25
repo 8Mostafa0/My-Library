@@ -18,17 +18,17 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private ReservedBooksStore _reservedBooksStore;
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
-        private Book _selectedBook;
+        private IBook _selectedBook;
         private IClient _selectedClient;
         private ReservedBook _selectedReservedBook;
         private string _bookName;
         private string _clientName;
         private int _bookSubject;
 
-        private ObservableCollection<Book> _books;
+        private ObservableCollection<IBook> _books;
         private ObservableCollection<IClient> _clients;
 
-        public IEnumerable<Book> Books => _books;
+        public IEnumerable<IBook> Books => _books;
         public IEnumerable<IClient> Clients => _clients;
 
         public string BookName
@@ -53,7 +53,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
             }
         }
 
-        public Book SelectedBook
+        public IBook SelectedBook
         {
             get => _selectedBook;
             set
@@ -154,7 +154,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private void OnBooksUpdated()
         {
             _books.Clear();
-            foreach (Book book in _booksStore.Books)
+            foreach (IBook book in _booksStore.Books)
             {
                 _books.Add(book);
             }
@@ -175,7 +175,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// </summary>
         private void SetDataOfSelectedReservedBook()
         {
-            Book? book = _books.SingleOrDefault(b => b.ID == _selectedReservedBook.BookId);
+            IBook? book = _books.SingleOrDefault(b => b.ID == _selectedReservedBook.BookId);
             _selectedBook = book;
             IClient? client = _clients.SingleOrDefault(c => c.ID == _selectedReservedBook.ClientId);
             _selectedClient = client;

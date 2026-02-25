@@ -18,10 +18,10 @@ namespace My_Library.ViewModel.LoanViewModels
         private Loan _selectedLoan;
         private ClientsStore _clientsStore;
         private BooksStore _booksStore;
-        private ObservableCollection<Book> _books;
+        private ObservableCollection<IBook> _books;
         private ObservableCollection<IClient> _clients;
         private IClient _seletedClient;
-        private Book _selectedBook;
+        private IBook _selectedBook;
         private LoansStore _loansStore;
         private LoanRepository _loanRepository;
         private ModalNavigationStore _modalNavigationStore;
@@ -47,7 +47,7 @@ namespace My_Library.ViewModel.LoanViewModels
                 OnProperychanged(nameof(TitleOfLoanScreen));
             }
         }
-        public IEnumerable<Book> Books => _books;
+        public IEnumerable<IBook> Books => _books;
         public IEnumerable<IClient> Clients => _clients;
         public IClient SelectedClient
         {
@@ -60,7 +60,7 @@ namespace My_Library.ViewModel.LoanViewModels
         }
 
 
-        public Book SelectedBook
+        public IBook SelectedBook
         {
             get => _selectedBook;
             set
@@ -177,7 +177,7 @@ namespace My_Library.ViewModel.LoanViewModels
         private void OnBooksUpdated()
         {
             _books.Clear();
-            foreach (Book book in _booksStore.Books)
+            foreach (IBook book in _booksStore.Books)
             {
                 _books.Add(book);
             }
@@ -202,7 +202,7 @@ namespace My_Library.ViewModel.LoanViewModels
             if (_selectedLoan is not null)
             {
 
-                Book? book = _books.SingleOrDefault(b => b.ID == _selectedLoan.BookId);
+                IBook? book = _books.SingleOrDefault(b => b.ID == _selectedLoan.BookId);
                 SelectedBook = book;
                 IClient? client = _clients.SingleOrDefault(c => c.ID == _selectedLoan.ClientId);
                 SelectedClient = client;

@@ -115,7 +115,7 @@ namespace My_Library.Command.LoansCommands
                 {
                     List<Book> BookCopies = await _bookRepository.GetBooksByName(_addEditeLoanViewModel.SelectedBook.Name);
                     int NotReturnedLoansCount = 0;
-                    foreach (Book book in BookCopies)
+                    foreach (IBook book in BookCopies)
                     {
                         List<Loan> NotReturnedLoans = await _loanRepository.GetNotReturnedLoanOfBook(book.ID);
                         NotReturnedLoansCount += NotReturnedLoans.Count();

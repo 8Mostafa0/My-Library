@@ -13,9 +13,9 @@ namespace My_Library.ViewModel
     {
         #region Dependencies
         private BooksStore _booksStore;
-        private ObservableCollection<Book> _books;
-        private Book _selectedBook;
-        public Book SelectedBook
+        private ObservableCollection<IBook> _books;
+        private IBook _selectedBook;
+        public IBook SelectedBook
         {
             get => _selectedBook;
             set
@@ -34,7 +34,7 @@ namespace My_Library.ViewModel
                 OnProperychanged(nameof(SelectedBook));
             }
         }
-        public IEnumerable<Book> Books => _books;
+        public IEnumerable<IBook> Books => _books;
         private string _name;
         public string Name
         {
@@ -150,7 +150,7 @@ namespace My_Library.ViewModel
         /// called each time a book delete event get trigered and delete book from books list
         /// </summary>
         /// <param name="book"></param>
-        private void BookDeleted(Book book)
+        private void BookDeleted(IBook book)
         {
             ClearInputs();
             _books.Remove(book);
@@ -161,7 +161,7 @@ namespace My_Library.ViewModel
         /// called each time a book edited event trigred and update it in the books list
         /// </summary>
         /// <param name="book"></param>
-        private void BookEdited(Book book)
+        private void BookEdited(IBook book)
         {
             ClearInputs();
             int index = _books.IndexOf(book);
@@ -177,7 +177,7 @@ namespace My_Library.ViewModel
         {
             ClearInputs();
             _books.Clear();
-            foreach (Book book in _booksStore.Books)
+            foreach (IBook book in _booksStore.Books)
             {
                 _books.Add(book);
             }
@@ -186,7 +186,7 @@ namespace My_Library.ViewModel
         /// get called each time a new book event trigred and add new book to books list
         /// </summary>
         /// <param name="book"></param>
-        public void AddNewBook(Book book)
+        public void AddNewBook(IBook book)
         {
             ClearInputs();
             book.ID = _books.Any() ? _books.Last().ID + 1 : 1;

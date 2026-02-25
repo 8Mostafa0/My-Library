@@ -1,8 +1,8 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
-using Serilog;
 using My_Library.DbContext;
 using My_Library.Model;
+using Serilog;
 
 namespace My_Library.Service
 {
@@ -33,7 +33,7 @@ namespace My_Library.Service
         /// <returns List<Book>> Generic List Of Selecte Books</returns>
         public async Task<List<Book>> GetAllBooks(string customSql = "")
         {
-            List<Book> Books = new List<Book>();
+            List<Book> Books = [];
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -67,9 +67,9 @@ namespace My_Library.Service
         /// <param name="id"></param>
         /// <param name="customSql"></param>
         /// <returns Book></returns>
-        public async Task<Book> GetBookById(int id, string customSql)
+        public async Task<IBook> GetBookById(int id, string customSql)
         {
-            Book Book = new Book();
+            IBook Book = new Book();
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -103,7 +103,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="book"></param>
         /// <returns></returns>
-        public async Task AddNewBookToDb(Book book)
+        public async Task AddNewBookToDb(IBook book)
         {
             string NewBookSql = $"INSERT INTO Books(Name,Publisher,Subject,PublicationDate,Tier,CreatedAt,UpdatedAt)VALUES(N'{book.Name}',N'{book.Publisher}',N'{book.Subject}','{book.PublicationDate}','{book.Tier}',GETDATE(),GETDATE())";
             await _dbContextFactory.ExecuteQueryAsync(NewBookSql, "AddNewBookToDb");
@@ -114,7 +114,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="book"></param>
         /// <returns></returns>
-        public async Task EditeBookInDb(Book book)
+        public async Task EditeBookInDb(IBook book)
         {
             string EditeSql = $"UPDATE books SET Name=N'{book.Name}',Subject=N'{book.Subject}',Publisher=N'{book.Publisher}',PublicationDate='{book.PublicationDate}',Tier='{book.Tier}',UpdatedAt=GETDATE() WHERE Id='{book.ID}'";
             await _dbContextFactory.ExecuteQueryAsync(EditeSql, "EditeBookInDb");
@@ -125,7 +125,7 @@ namespace My_Library.Service
         /// </summary>
         /// <param name="book"></param>
         /// <returns></returns>
-        public async Task DeleteBookInDb(Book book)
+        public async Task DeleteBookInDb(IBook book)
         {
             string DeleteSql = $"DELETE FROM books WHERE ID='{book.ID}'";
             await _dbContextFactory.ExecuteQueryAsync(DeleteSql, "DeleteBookInDb");
