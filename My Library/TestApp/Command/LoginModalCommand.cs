@@ -5,7 +5,7 @@ using My_Library.ViewModel;
 
 namespace My_Library.Command
 {
-    public class LoginModalCommand : CommandBase
+    public class LoginModalCommand : CommandBase, ILoginModalCommand
     {
         #region Dependencies
         private ILoginViewModel _loginViewModel;
