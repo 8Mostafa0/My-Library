@@ -2,7 +2,7 @@
 
 namespace My_Library.ViewModel.ModelsViewModel
 {
-    public interface IReservedBookViewModel : IViewModelBase
+    public interface IReservedBookViewModel
     {
         int BookId { get; }
         string BookName { get; set; }
