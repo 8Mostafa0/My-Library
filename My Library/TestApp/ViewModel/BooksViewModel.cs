@@ -134,12 +134,25 @@ namespace My_Library.ViewModel
 
         #region Methods
 
+
+        /// <summary>
+        /// Clear all inouts and set default values
+        /// </summary>
+        private void ClearInputs()
+        {
+            Name = "";
+            Publisher = "";
+            Subject = "رمان";
+            PublicationDate = "";
+            Tier = 0;
+        }
         /// <summary>
         /// called each time a book delete event get trigered and delete book from books list
         /// </summary>
         /// <param name="book"></param>
         private void BookDeleted(Book book)
         {
+            ClearInputs();
             _books.Remove(book);
             MessageBox.Show("کتاب با موفقیت حذف شد", "حذف کتاب");
         }
@@ -150,6 +163,7 @@ namespace My_Library.ViewModel
         /// <param name="book"></param>
         private void BookEdited(Book book)
         {
+            ClearInputs();
             int index = _books.IndexOf(book);
             _books[index] = book;
             CollectionViewSource.GetDefaultView(_books)?.Refresh();
@@ -161,7 +175,7 @@ namespace My_Library.ViewModel
         /// </summary>
         public void UpdateBooks()
         {
-            Tier = 0;
+            ClearInputs();
             _books.Clear();
             foreach (Book book in _booksStore.Books)
             {
@@ -174,13 +188,9 @@ namespace My_Library.ViewModel
         /// <param name="book"></param>
         public void AddNewBook(Book book)
         {
+            ClearInputs();
             book.ID = _books.Any() ? _books.Last().ID + 1 : 1;
             _books.Add(book);
-            Name = "";
-            Publisher = "";
-            Subject = "رمان";
-            PublicationDate = "";
-            Tier = 0;
             MessageBox.Show("کتاب با موفقیت افزوده شد", "افزودن کتاب");
         }
         /// <summary>
