@@ -59,7 +59,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         public ICommand EditeReservBookCommand { get; }
         public ResetReservBookCommand ResetReservBookCommand { get; }
 
-        public ICommand LoadReservedBooksCommand { get; }
+        public LoadReservedBooksCommand LoadReservedBooksCommand { get; }
 
         public SearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
         #endregion
