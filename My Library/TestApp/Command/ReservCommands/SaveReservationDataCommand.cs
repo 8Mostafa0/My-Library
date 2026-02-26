@@ -82,6 +82,12 @@ namespace My_Library.Command.ReservCommands
                     MessageBox.Show("کاربر امانتی تحویل نداده و با تاخیر دارد", "رزرو کتاب");
                     return;
                 }
+                ReservedBook? UserReservs = await _reservedbooksRepository.UserHaveReservedBook(_addediteReserveBookViewModel.SelectedClient.ID);
+                if (UserReservs is not null)
+                {
+                    MessageBox.Show("این کاربر کتابی را از قبل رزرو کرده است", "رزرو کتاب");
+                    return;
+                }
             }
             #endregion
 
@@ -89,12 +95,6 @@ namespace My_Library.Command.ReservCommands
             if (_addediteReserveBookViewModel.SelectedBook.ID != _addediteReserveBookViewModel.SelectedReservedBook.BookId)
             {
 
-                ReservedBook? UserReservs = await _reservedbooksRepository.UserHaveReservedBook(_addediteReserveBookViewModel.SelectedClient.ID);
-                if (UserReservs is not null)
-                {
-                    MessageBox.Show("این کاربر کتابی را از قبل رزرو کرده است", "رزرو کتاب");
-                    return;
-                }
                 ReservedBook? BookReservs = await _reservedbooksRepository.BookAlreadyRegistred(_addediteReserveBookViewModel.SelectedBook.ID);
                 if (BookReservs is not null)
                 {

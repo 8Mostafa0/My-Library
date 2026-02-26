@@ -114,7 +114,6 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         {
             ReservedBookViewModel reserveBook = _reservedBooks.SingleOrDefault(t => t.ID == book.ID);
             int index = _reservedBooks.IndexOf(reserveBook);
-            MessageBox.Show(index.ToString());
             _reservedBooks[index] = reserveBook;
             MessageBox.Show("رزرو با موفقیت ویرایش شد", "ویرایش رزرو");
         }
