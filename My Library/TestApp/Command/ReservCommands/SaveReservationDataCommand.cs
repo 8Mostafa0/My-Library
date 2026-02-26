@@ -107,7 +107,7 @@ namespace My_Library.Command.ReservCommands
             #endregion
 
             #region Edit ReservedBook
-            if (_addediteReserveBookViewModel.SelectedReservedBook == null)
+            if (_addediteReserveBookViewModel.SelectedReservedBook.ID == 0)
             {
 
                 ReservedBook reservedBook = new()

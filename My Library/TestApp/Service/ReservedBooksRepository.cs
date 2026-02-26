@@ -33,7 +33,7 @@ namespace My_Library.Service
         /// <returns >List<ReservedBook></returns>
         public async Task<List<ReservedBook>> GetAllReservedBooks(string customSql = "")
         {
-            List<ReservedBook> ReservedBooks = new List<ReservedBook>();
+            List<ReservedBook> ReservedBooks = [];
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -69,7 +69,7 @@ namespace My_Library.Service
         /// <returns ReservedBook></returns>
         public async Task<ReservedBook> GetReservedBook(string customSql, string executionPart)
         {
-            ReservedBook? ReservedBook = new ReservedBook();
+            ReservedBook? ReservedBook = new();
             using (SqlConnection? Connection = _dbContextFactory.GetConnection())
             {
                 try
@@ -115,7 +115,7 @@ namespace My_Library.Service
         /// <returns></returns>
         public async Task EditReservBookToDb(ReservedBook reservedBook)
         {
-            string EditeReservSql = $"UPDATE ReservedBook SET BookId='{reservedBook.BookId}',ClientI='{reservedBook.ClientId}',UpdatedAt=GETDATE() WHERE Id='{reservedBook.ID}'";
+            string EditeReservSql = $"UPDATE ReservedBooks SET BookId='{reservedBook.BookId}',ClientId='{reservedBook.ClientId}',UpdatedAt=GETDATE() WHERE Id='{reservedBook.ID}'";
             await _dbContextFactory.ExecuteQueryAsync(EditeReservSql, "EditReservBookToDb");
         }
         /// <summary>

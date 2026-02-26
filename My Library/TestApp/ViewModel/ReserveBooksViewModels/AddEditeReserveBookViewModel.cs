@@ -1,6 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
-using My_Library.Command;
+﻿using My_Library.Command;
 using My_Library.Command.BooksCommands;
 using My_Library.Command.ClientsCommands;
 using My_Library.Command.LoansCommands;
@@ -8,6 +6,8 @@ using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
@@ -116,12 +116,22 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 
         public AddEditeReserveBookViewModel(ModalNavigationStore modalNavigationStore, ReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, ReservedBook reservedBook = null)
         {
-            _clients = new ObservableCollection<Client>();
-            _books = new ObservableCollection<Book>();
+            _clients = [];
+            _books = [];
             _modalNavigationStore = modalNavigationStore;
             _reservedBooksStore = reservedBooksStore;
             _clientsStore = clientsStore;
             _booksStore = booksStore;
+            SelectedReservedBook = reservedBook;
+            if (SelectedReservedBook != null)
+            {
+                TitleOfLoanScreen = "ویرایش نوبت رزرو";
+
+            }
+            else
+            {
+                TitleOfLoanScreen = "رزرو نوبت جدید";
+            }
             _booksStore.BooksUpdated += OnBooksUpdated;
             _clientsStore.ClientsUpdated += OnClientsUpdated;
             LoadBooksCommand = new LoadBooksCommand(_booksStore);
@@ -132,16 +142,6 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
             OrderBooksCommand = new OrderBooksBySubjectCommand(_booksStore);
             SaveReservedBookDataCommand = new SaveReservationDataCommand(this, _modalNavigationStore, _reservedBooksStore, loanRepository, reservedBooksRepository, clientsRepository);
             OrderBooksBySubjectCommand = new OrderBooksBySubjectCommand(_booksStore);
-            SelectedReservedBook = reservedBook;
-            if (reservedBook != null)
-            {
-                TitleOfLoanScreen = "ویرایش نوبت رزرو";
-
-            }
-            else
-            {
-                TitleOfLoanScreen = "رزرو نوبت جدید";
-            }
         }
         #endregion
 
@@ -175,10 +175,13 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// </summary>
         private void SetDataOfSelectedReservedBook()
         {
-            Book? book = _books.SingleOrDefault(b => b.ID == _selectedReservedBook.BookId);
-            _selectedBook = book;
-            Client? client = _clients.SingleOrDefault(c => c.ID == _selectedReservedBook.ClientId);
-            _selectedClient = client;
+            if (_selectedReservedBook is not null)
+            {
+                Book? book = _books.SingleOrDefault(b => b.ID == _selectedReservedBook.BookId);
+                _selectedBook = book;
+                Client? client = _clients.SingleOrDefault(c => c.ID == _selectedReservedBook.ClientId);
+                _selectedClient = client;
+            }
         }
         /// <summary>
         /// Loader for add edite reservedbook view model
@@ -194,9 +197,10 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <returns></returns>
         public static AddEditeReserveBookViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, ReservedBooksStore reservedBooksStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loanRepository, ReservedBooksRepository reservedBooksRepository, ClientsRepository clientsRepository, ReservedBook reservedBook = null)
         {
-            AddEditeReserveBookViewModel ViewModel = new AddEditeReserveBookViewModel(modalNavigationStore, reservedBooksStore, clientsStore, booksStore, loanRepository, reservedBooksRepository, clientsRepository, reservedBook);
+            AddEditeReserveBookViewModel ViewModel = new(modalNavigationStore, reservedBooksStore, clientsStore, booksStore, loanRepository, reservedBooksRepository, clientsRepository, reservedBook);
             ViewModel.LoadBooksCommand.Execute(null);
             ViewModel.LoadClientsCommand.Execute(null);
+            ViewModel.SelectedReservedBook = reservedBook is null ? new ReservedBook() { ID = 0, BookId = 0, ClientId = 0 } : reservedBook;
             return ViewModel;
         }
         #endregion

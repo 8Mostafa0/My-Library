@@ -1,11 +1,11 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows;
-using System.Windows.Input;
-using My_Library.Command.ReservCommands;
+﻿using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.ModelsViewModel;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.ReserveBooksViewModels
 {
@@ -68,7 +68,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 
         public ReservedBooksViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            _reservedBooks = new ObservableCollection<ReservedBookViewModel>();
+            _reservedBooks = [];
             _modalNavigationStore = modalNavigationStore;
             _clientsStore = clientsStore;
             _booksStore = booksStore;
@@ -112,9 +112,10 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <param name="book"></param>
         private void OnReservedBookUpdate(ReservedBook book)
         {
-            ReservedBookViewModel Reserv = new ReservedBookViewModel(book, _clientsStore, _booksStore);
-            int index = _reservedBooks.IndexOf(Reserv);
-            _reservedBooks[index] = Reserv;
+            ReservedBookViewModel reserveBook = _reservedBooks.SingleOrDefault(t => t.ID == book.ID);
+            int index = _reservedBooks.IndexOf(reserveBook);
+            MessageBox.Show(index.ToString());
+            _reservedBooks[index] = reserveBook;
             MessageBox.Show("رزرو با موفقیت ویرایش شد", "ویرایش رزرو");
         }
         /// <summary>
@@ -134,7 +135,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         private void OnReservedBookAdded(ReservedBook book)
         {
             book.ID = _reservedBooks.Any() ? _reservedBooks.Last().ID + 1 : 1;
-            ReservedBookViewModel Reserv = new ReservedBookViewModel(book, _clientsStore, _booksStore);
+            ReservedBookViewModel Reserv = new(book, _clientsStore, _booksStore);
             _reservedBooks.Add(Reserv);
             MessageBox.Show("کتاب با موفقیت رزرو شد", "رزور کتاب");
         }
@@ -171,7 +172,7 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         /// <returns></returns>
         public static ReservedBooksViewModel LoadViewModel(ReservedBooksStore reservedBooksStore, ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoanRepository loansRepository, ClientsRepository clientsRepository, ReservedBooksRepository reservedBooksRepository)
         {
-            ReservedBooksViewModel ViewModel = new ReservedBooksViewModel(reservedBooksStore, modalNavigationStore, clientsStore, booksStore, loansRepository, clientsRepository, reservedBooksRepository);
+            ReservedBooksViewModel ViewModel = new(reservedBooksStore, modalNavigationStore, clientsStore, booksStore, loansRepository, clientsRepository, reservedBooksRepository);
             ViewModel.LoadReservedBooksCommand.Execute(null);
             return ViewModel;
         }
