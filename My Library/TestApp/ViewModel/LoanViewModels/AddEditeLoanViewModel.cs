@@ -151,12 +151,6 @@ namespace My_Library.ViewModel.LoanViewModels
             LoadClientsCommand = new LoadClientsCommand(clientsStore);
             if (loan is null)
             {
-                SelectedLoan = new Loan()
-                {
-                    Id = 0,
-                    ClientId = 0,
-                    BookId = 0
-                };
                 TitleOfLoanScreen = "امانت جدید";
                 ReturnDate = DateTime.Now;
             }
@@ -241,6 +235,12 @@ namespace My_Library.ViewModel.LoanViewModels
             AddEditeLoanViewModel ViewModel = new(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
             ViewModel.LoadBooksCommand.Execute(null);
             ViewModel.LoadClientsCommand.Execute(null);
+            ViewModel.SelectedLoan = loan is null ? new Loan()
+            {
+                Id = 0,
+                ClientId = 0,
+                BookId = 0
+            } : loan;
             return ViewModel;
 
         }

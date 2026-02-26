@@ -125,6 +125,7 @@ namespace My_Library.ViewModel.LoanViewModels
             loan.Id = _loans.Any() ? _loans.Last().ID + 1 : 1;
             var vm = new LoanViewModel(loan, _clientsStore, _booksStore);
             _loans.Add(vm);
+            MessageBox.Show("امانت با موفقیت ثبت شد", "افزودن امانت");
         }
 
         /// <summary>
