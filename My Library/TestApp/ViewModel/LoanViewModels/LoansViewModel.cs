@@ -1,11 +1,11 @@
-﻿using My_Library.Command.LoansCommands;
+﻿using My_Library.Command.BooksCommands;
+using My_Library.Command.LoansCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.ModelsViewModel;
 using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
@@ -61,7 +61,7 @@ namespace My_Library.ViewModel.LoanViewModels
         public IShowLoanModalCommand ShowAddLoanModalCommand { get; }
         public IShowEditLoanViewModel ShowEditLoanViewModel { get; }
         public ILoadLoansCommand LoadLoansCommand { get; }
-        public ICommand OrderBooksCommand { get; }
+        public IOrderBooksByStateCommand OrderBooksCommand { get; }
         public ISearchBookCommand SearchBookCommand { get; }
         public IReturnedLoanCommand ReturnedLoanCommand { get; }
         public IReloadLoansListCommand ReloadLoansListCommand { get; }

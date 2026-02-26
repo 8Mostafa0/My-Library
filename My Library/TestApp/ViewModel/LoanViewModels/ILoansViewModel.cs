@@ -1,8 +1,8 @@
-﻿using My_Library.Command.LoansCommands;
+﻿using My_Library.Command.BooksCommands;
+using My_Library.Command.LoansCommands;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel.ModelsViewModel;
-using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
@@ -13,7 +13,7 @@ namespace My_Library.ViewModel.LoanViewModels
         bool IsModalOpen { get; }
         ILoadLoansCommand LoadLoansCommand { get; }
         IEnumerable<ILoanViewModel> Loans { get; }
-        ICommand OrderBooksCommand { get; }
+        IOrderBooksByStateCommand OrderBooksCommand { get; }
         IReloadLoansListCommand ReloadLoansListCommand { get; }
         IReturnedLoanCommand ReturnedLoanCommand { get; }
         ISearchBookCommand SearchBookCommand { get; }

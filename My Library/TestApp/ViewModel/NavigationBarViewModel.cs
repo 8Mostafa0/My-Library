@@ -30,11 +30,11 @@ namespace My_Library.ViewModel
 
         public INavigateBooksCommand NavigateBooksCommand { get; }
 
-        public ICommand OpenModalCommand { get; }
+        public IOpenModalCommand OpenModalCommand { get; }
         public INavigateLoansCommand NavigateLoansCommand { get; }
         public INavigateToSettingsCommand NavigateToSettingsCommand { get; }
-        public NavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
-        public CloseAppCommand CloseAppCommand { get; }
+        public INavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
+        public ICloseAppCommand CloseAppCommand { get; }
         #endregion
 
         #region Constructr

@@ -52,15 +52,15 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
         #region Commands
         public IViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
 
-        public AddNewReservBookCommand AddNewReservBookCommand { get; }
-        public RemoveReservBookCommand RemoveReservBookCommand { get; }
+        public IAddNewReservBookCommand AddNewReservBookCommand { get; }
+        public IRemoveReservBookCommand RemoveReservBookCommand { get; }
 
-        public EditeReservBookCommand EditeReservBookCommand { get; }
-        public ResetReservBookCommand ResetReservBookCommand { get; }
+        public IEditeReservBookCommand EditeReservBookCommand { get; }
+        public IResetReservBookCommand ResetReservBookCommand { get; }
 
-        public LoadReservedBooksCommand LoadReservedBooksCommand { get; }
+        public ILoadReservedBooksCommand LoadReservedBooksCommand { get; }
 
-        public SearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
+        public ISearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
         #endregion
 
         #region Contructor

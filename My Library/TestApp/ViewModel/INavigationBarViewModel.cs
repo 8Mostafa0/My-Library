@@ -12,14 +12,14 @@ namespace My_Library.ViewModel
     public interface INavigationBarViewModel
     {
         INavigateClientScreenCommand ClientsCreenCommand { get; }
-        CloseAppCommand CloseAppCommand { get; }
+        ICloseAppCommand CloseAppCommand { get; }
         ICommand DatabaseCommand { get; }
         INavigateBooksCommand NavigateBooksCommand { get; }
         INavigateHomeScreenCommand NavigateHomeCommand { get; }
         INavigateLoansCommand NavigateLoansCommand { get; }
-        NavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
+        INavigateReservedBooksCommand NavigateReservedBooksCommand { get; }
         INavigateToSettingsCommand NavigateToSettingsCommand { get; }
-        ICommand OpenModalCommand { get; }
+        IOpenModalCommand OpenModalCommand { get; }
         virtual void Dispose() { }
     }
 

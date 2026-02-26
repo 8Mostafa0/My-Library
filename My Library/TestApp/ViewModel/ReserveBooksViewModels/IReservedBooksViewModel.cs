@@ -7,16 +7,16 @@ namespace My_Library.ViewModel.ReserveBooksViewModels
 {
     public interface IReservedBooksViewModel : IViewModelBase
     {
-        AddNewReservBookCommand AddNewReservBookCommand { get; }
-        string BookName { get; set; }
-        IViewModelBase CurrentModalViewModel { get; }
-        EditeReservBookCommand EditeReservBookCommand { get; }
         bool IsModalOpen { get; }
-        LoadReservedBooksCommand LoadReservedBooksCommand { get; }
-        RemoveReservBookCommand RemoveReservBookCommand { get; }
+        string BookName { get; set; }
+        IAddNewReservBookCommand AddNewReservBookCommand { get; }
+        IViewModelBase CurrentModalViewModel { get; }
+        IEditeReservBookCommand EditeReservBookCommand { get; }
+        ILoadReservedBooksCommand LoadReservedBooksCommand { get; }
+        IRemoveReservBookCommand RemoveReservBookCommand { get; }
         IEnumerable<IReservedBookViewModel> ReservedBooks { get; }
-        ResetReservBookCommand ResetReservBookCommand { get; }
-        SearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
+        IResetReservBookCommand ResetReservBookCommand { get; }
+        ISearchBookNameInReservedBookCommand SearchBookNameInReservedBookCommand { get; }
         IReservedBookViewModel SelectedReservedBook { get; set; }
 
         static abstract IReservedBooksViewModel LoadViewModel(IReservedBooksStore reservedBooksStore, IModalNavigationStore modalNavigationStore, IClientsStore clientsStore, IBooksStore booksStore, ILoanRepository loansRepository, IClientsRepository clientsRepository, IReservedBooksRepository reservedBooksRepository);
