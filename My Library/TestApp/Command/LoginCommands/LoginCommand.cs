@@ -1,8 +1,9 @@
-﻿using System.Windows;
+﻿using Microsoft.IdentityModel.Tokens;
 using My_Library.DbContext;
 using My_Library.Service;
 using My_Library.Store;
 using My_Library.ViewModel;
+using System.Windows;
 
 namespace My_Library.Command.LoginCommands
 {
@@ -44,6 +45,11 @@ namespace My_Library.Command.LoginCommands
         public override void Execute(object? parameter)
         {
             new CheckDatabaseCommand(_loanRepository, _dbContextFactory).Execute(null);
+            if (_loginViewModel.Password.IsNullOrEmpty())
+            {
+                MessageBox.Show("لطفا مقادیری برای رمز وارد کنید", "خطا");
+                return;
+            }
             if (_loginViewModel.FirstOpen)
             {
                 _settinsStore.SaveNoneHashedPassword(_loginViewModel.Password);
