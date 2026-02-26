@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using My_Library.Store;
+﻿using My_Library.Store;
 using My_Library.ViewModel.LoanViewModels;
 using My_Library.ViewModel.ModelsViewModel;
+using System.Windows;
 
 namespace My_Library.Command.LoansCommands
 {
@@ -46,7 +46,7 @@ namespace My_Library.Command.LoansCommands
                 if (AskMessage == MessageBoxResult.Yes)
                 {
                     loan.ReturnedDate = DateTime.Now.ToString();
-                    await _loansStore.LoanUpdated(loan.ToLoan());
+                    await _loansStore.LoanReturned(loan.ToLoan());
                 }
             }
             else

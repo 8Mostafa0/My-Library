@@ -90,17 +90,18 @@ namespace My_Library.ViewModel.LoanViewModels
             _loansStore.LoansUpdated += UpdateLoans;
             _loansStore.LoanIsAdded += LoanAdded;
             _loansStore.LoanIsUpdated += LoanIsUpdated;
-            _loansStore.LoanIsDeleted += LoanIsDeleted;
+            _loansStore.LoanIsReturned += LoanIsReturned;
             _modalNavigationStore.CurrentViewModelChanged += OnModalViewModelChanged;
             SelectedLoan = LoanViewModel.Empty();
 
         }
 
-        private void LoanIsDeleted(Loan loan)
+        private void LoanIsReturned(Loan loan)
         {
             LoanViewModel loanViewModel = _loans.SingleOrDefault(t => t._loan.Id == loan.Id);
-            _loans.Remove(loanViewModel);
-            MessageBox.Show("امانت با موفقیت حذف شد", "حذف امانت");
+            int index = _loans.IndexOf(loanViewModel);
+            _loans[index] = new LoanViewModel(loan, _clientsStore, _booksStore);
+            MessageBox.Show("امانت با موفقیت بازگشت شد", "بازگشت امانت");
         }
         #endregion
 

@@ -18,7 +18,7 @@ namespace My_Library.Store
 
         public Action LoansUpdated;
         public Action<Loan> LoanIsAdded;
-        public Action<Loan> LoanIsDeleted;
+        public Action<Loan> LoanIsReturned;
         public Action<Loan> LoanIsUpdated;
         public Lazy<Task> _initilizeLazy;
         #endregion
@@ -29,7 +29,7 @@ namespace My_Library.Store
         /// </summary>
         public LoansStore()
         {
-            _loans = new List<LoanViewModel>();
+            _loans = [];
             _initilizeLazy = new Lazy<Task>(Initialize);
             _loanRepository = new LoanRepository();
             _clientsStore = new ClientsStore();
@@ -52,14 +52,14 @@ namespace My_Library.Store
         }
 
         /// <summary>
-        /// call for delete loan method of database and invoke delete loand event
+        /// call for setloanreturned method of database and invoke returned loand event
         /// </summary>
         /// <param name="loan"></param>
         /// <returns></returns>
-        public async Task LoanDeleted(Loan loan)
+        public async Task LoanReturned(Loan loan)
         {
-            await _loanRepository.DeleteLoanInDB(loan);
-            LoanIsDeleted?.Invoke(loan);
+            await _loanRepository.SetLoanReturned(loan);
+            LoanIsReturned?.Invoke(loan);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace My_Library.Store
             _loans.Clear();
             foreach (Loan loan in loans)
             {
-                LoanViewModel loanViewModel = new LoanViewModel(loan, _clientsStore, _booksStore);
+                LoanViewModel loanViewModel = new(loan, _clientsStore, _booksStore);
                 _loans.Add(loanViewModel);
             }
             LoansUpdated?.Invoke();
@@ -110,7 +110,7 @@ namespace My_Library.Store
             _loans.Clear();
             foreach (Loan loan in loans)
             {
-                LoanViewModel loanViewModel = new LoanViewModel(loan, _clientsStore, _booksStore);
+                LoanViewModel loanViewModel = new(loan, _clientsStore, _booksStore);
                 _loans.Add(loanViewModel);
             }
             LoansUpdated?.Invoke();

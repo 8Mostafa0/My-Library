@@ -127,7 +127,7 @@ namespace My_Library.Service
         /// <returns></returns>
         public async Task DeleteLoanInDB(Loan loan)
         {
-            string DeleteLoanSql = $"DELETE FROM Loans WHERE Id='{loan.Id}'";
+            string DeleteLoanSql = $"UPDATE Loans SET ReturnedDate=GETDATE() WHERE Id='{loan.Id}'";
             await _dbContextFactory.ExecuteQueryAsync(DeleteLoanSql, "DEleteLoanInDB");
         }
 
@@ -182,6 +182,17 @@ namespace My_Library.Service
         {
             string deleteSql = $"DELETE FROM Loans WHERE BookId='{bookId}'";
             await _dbContextFactory.ExecuteQueryAsync(deleteSql, "RemoveBookLoans");
+        }
+
+        /// <summary>
+        /// set ReturnDate of loan to Now
+        /// </summary>
+        /// <param name="loan"></param>
+        /// <returns></returns>
+        public async Task SetLoanReturned(Loan loan)
+        {
+            string DeleteLoanSql = $"UPDATE Loans SET ReturnedDate=GETDATE() WHERE Id='{loan.Id}'";
+            await _dbContextFactory.ExecuteQueryAsync(DeleteLoanSql, "DEleteLoanInDB");
         }
         #endregion
     }
