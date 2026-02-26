@@ -90,9 +90,17 @@ namespace My_Library.ViewModel.LoanViewModels
             _loansStore.LoansUpdated += UpdateLoans;
             _loansStore.LoanIsAdded += LoanAdded;
             _loansStore.LoanIsUpdated += LoanIsUpdated;
+            _loansStore.LoanIsDeleted += LoanIsDeleted;
             _modalNavigationStore.CurrentViewModelChanged += OnModalViewModelChanged;
             SelectedLoan = LoanViewModel.Empty();
 
+        }
+
+        private void LoanIsDeleted(Loan loan)
+        {
+            LoanViewModel loanViewModel = _loans.SingleOrDefault(t => t._loan.Id == loan.Id);
+            _loans.Remove(loanViewModel);
+            MessageBox.Show("امانت با موفقیت حذف شد", "حذف امانت");
         }
         #endregion
 
