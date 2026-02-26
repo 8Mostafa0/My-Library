@@ -14,9 +14,12 @@ namespace My_Library.ViewModel
         #endregion
 
         #region Constructor
-        public LayoutViewModel(INavigationStore navigationStore)
+        public LayoutViewModel(INavigationStore navigationStore, INavigationBarViewModel navigationBarViewModel, IHomeViewModel homeViewModel, IStatusBarViewModel statusBarViewModel)
         {
             _navigationStore = navigationStore;
+            _navigationStore.ContentScreen = homeViewModel;
+            _navigationStore.MainContentViewModel = navigationBarViewModel;
+            _navigationStore.StatusBarViewModel = statusBarViewModel;
             _navigationStore.ContentViewModelChanged += OnContentViewModelChanged;
             _navigationStore.MainContentViewModelChanged += OnMainContentViewModelChanged;
         }

@@ -16,12 +16,12 @@ namespace My_Library.ViewModel
         public bool IsModalOpen => _modalNavigationStore.IsModalOpen;
         #endregion
         #region Constructor
-        public MainViewModel(IViewModelBase layoutViewModel)
+        public MainViewModel(ILayoutViewModel layoutViewModel, IModalNavigationStore modalNavigationStore, ILoanRepository loanRepository, IDbContextFactory dbContextFactory, ISettingsStore settingsStore)
         {
             _layoutViewModel = layoutViewModel;
-            _modalNavigationStore = new ModalNavigationStore();
+            _modalNavigationStore = modalNavigationStore;
             _modalNavigationStore.CurrentViewModelChanged += OnModalChanged;
-            new LoginModalCommand(_modalNavigationStore, new LoanRepository(), new DbContextFactory(), new SettingsStore()).Execute(null);
+            new LoginModalCommand(_modalNavigationStore, loanRepository, dbContextFactory, settingsStore).Execute(null);
 
         }
         #endregion
