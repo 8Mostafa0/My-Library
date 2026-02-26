@@ -1,6 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
-using My_Library.Command;
+﻿using My_Library.Command;
 using My_Library.Command.BooksCommands;
 using My_Library.Command.ClientsCommands;
 using My_Library.Command.LoansCommands;
@@ -8,6 +6,8 @@ using My_Library.Command.ReservCommands;
 using My_Library.Model;
 using My_Library.Service;
 using My_Library.Store;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace My_Library.ViewModel.LoanViewModels
 {
@@ -135,8 +135,8 @@ namespace My_Library.ViewModel.LoanViewModels
         #region Contructor
         public AddEditeLoanViewModel(ModalNavigationStore modalNavigationStore, ClientsStore clientsStore, BooksStore booksStore, LoansStore loanStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, Loan loan = null)
         {
-            _clients = new ObservableCollection<Client>();
-            _books = new ObservableCollection<Book>();
+            _clients = [];
+            _books = [];
             _clientsStore = clientsStore;
             _clientsStore.ClientsUpdated += OnClientsUpdated;
             _booksStore = booksStore;
@@ -149,23 +149,30 @@ namespace My_Library.ViewModel.LoanViewModels
             _reservedBooksRepository = reservedBooksRepository;
             LoadBooksCommand = new LoadBooksCommand(booksStore);
             LoadClientsCommand = new LoadClientsCommand(clientsStore);
-            SaveLoanDataCommand = new SaveLoanDataCommand(this, _loansStore, _modalNavigationStore, _loanRepository, _settingsStore, _booksRepository, _reservedBooksRepository);
-            CloseModalCommand = new CloseModalCommand(_modalNavigationStore);
-            SearchBookNameCommand = new SearchBookNameCommand(_booksStore);
-            OrderBooksBySubjectCommand = new OrderBooksBySubjectCommand(_booksStore);
-            SearchClientNameCommand = new SearchClientNameCommand(_clientsStore);
-            _modalNavigationStore.CurrentViewModelChanged += ModalViewModelChange;
-            SelectedLoan = loan;
             if (loan is null)
             {
+                SelectedLoan = new Loan()
+                {
+                    Id = 0,
+                    ClientId = 0,
+                    BookId = 0
+                };
                 TitleOfLoanScreen = "امانت جدید";
                 ReturnDate = DateTime.Now;
             }
             else
             {
                 TitleOfLoanScreen = "ویرایش امانت";
+                SelectedLoan = loan;
                 ReturnDate = loan.ReturnDate;
             }
+            SaveLoanDataCommand = new SaveLoanDataCommand(this, _loansStore, _modalNavigationStore, _loanRepository, _settingsStore, _booksRepository, _reservedBooksRepository);
+            CloseModalCommand = new CloseModalCommand(_modalNavigationStore);
+            SearchBookNameCommand = new SearchBookNameCommand(_booksStore);
+            OrderBooksBySubjectCommand = new OrderBooksBySubjectCommand(_booksStore);
+            SearchClientNameCommand = new SearchClientNameCommand(_clientsStore);
+            _modalNavigationStore.CurrentViewModelChanged += ModalViewModelChange;
+
         }
 
         #endregion
@@ -231,10 +238,9 @@ namespace My_Library.ViewModel.LoanViewModels
         /// <returns></returns>
         public static AddEditeLoanViewModel LoadViewModel(ModalNavigationStore modalNavigationStore, BooksStore booksStore, ClientsStore clientsStore, LoansStore loansStore, LoanRepository loanRepository, SettingsStore settingsStore, BooksRepository booksRepository, ReservedBooksRepository reservedBooksRepository, Loan loan = null)
         {
-            AddEditeLoanViewModel ViewModel = new AddEditeLoanViewModel(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
+            AddEditeLoanViewModel ViewModel = new(modalNavigationStore, clientsStore, booksStore, loansStore, loanRepository, settingsStore, booksRepository, reservedBooksRepository, loan);
             ViewModel.LoadBooksCommand.Execute(null);
             ViewModel.LoadClientsCommand.Execute(null);
-            ViewModel.SelectedLoan = loan;
             return ViewModel;
 
         }

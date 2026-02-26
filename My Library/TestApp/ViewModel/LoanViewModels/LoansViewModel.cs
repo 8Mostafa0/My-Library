@@ -92,6 +92,7 @@ namespace My_Library.ViewModel.LoanViewModels
             _loansStore.LoanIsUpdated += LoanIsUpdated;
             _modalNavigationStore.CurrentViewModelChanged += OnModalViewModelChanged;
             SelectedLoan = LoanViewModel.Empty();
+
         }
         #endregion
 

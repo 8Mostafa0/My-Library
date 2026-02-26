@@ -170,7 +170,7 @@ namespace My_Library.Command.LoansCommands
                     UpdatedAt = DateTime.Now
                 };
 
-                if (_addEditeLoanViewModel.SelectedLoan is null)
+                if (_addEditeLoanViewModel.SelectedLoan.Id == 0)
                 {
                     await _loansStore.AddLoan(loan);
 
