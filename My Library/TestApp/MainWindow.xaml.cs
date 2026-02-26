@@ -1,5 +1,4 @@
-﻿using My_Library.ViewModel;
-using System.Windows;
+﻿using System.Windows;
 
 namespace My_Library
 {
@@ -8,10 +7,9 @@ namespace My_Library
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(MainViewModel mainViewModel)
+        public MainWindow()
         {
             InitializeComponent();
-            DataContext = mainViewModel;
         }
     }
 }

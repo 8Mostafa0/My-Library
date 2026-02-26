@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using My_Library.ViewModel;
 using System.Windows;
 
 namespace My_Library
@@ -16,6 +17,8 @@ namespace My_Library
             using (var scope = container.BeginLifetimeScope())
             {
                 var app = scope.Resolve<MainWindow>();
+                IMainViewModel mainViewModel = scope.Resolve<MainViewModel>();
+                app.DataContext = mainViewModel;
                 app.Show();
             }
         }
